@@ -1,5 +1,49 @@
-h1 
-    font-family: 'PT Mono', monospace
-    font-size: 31px
+.headerContainer
+    margin: 0px auto
+    text-align: center
+    height: 100%
+    width: 100%
+    h1 
+        padding: 40px
+        font-family: 'PT Mono', monospace
+        font-size: 25px
+        letter-spacing: 10px
+        text-transform: uppercase
+
+    .logo img
+        margin-top: 0px 
+        width: 250px
+        margin-bottom: 60px
     
-    
+    .menu
+        width: 1250px
+        border-block: 3px solid black
+        margin: 0 auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-bottom: 50px !important
+
+        .blocks
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+
+
+            .block
+                border-right: 3px solid black
+                width: 250px
+                align-items: center     
+                text-align: center
+                padding: 20px 0px
+                text-decoration: none
+                font-family: 'PT Mono', monospace
+                text-transform: uppercase
+                font-size: 25px
+                color: black
+
+                &:last-child
+                    border: none
+                &:hover 
+                    background-color: #343434
+                    color: white
