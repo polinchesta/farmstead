@@ -1,28 +1,81 @@
 .location
     width: 400px
     border: 3px solid black
-    margin: 0 auto
+    margin: 0px auto 50px auto
     display: flex
     flex-direction: column
     align-items: center
     @media (max-width: 768px)
-        max-width: 340px 
-        font-size: 22px 
-    &:hover 
+        max-width: 340px
+        font-size: 22px
+    &:hover
         background: #343434
         a
-            color: white 
+            color: white
 
-        
     .block
-        align-items: center     
+        align-items: center
         text-align: right
         text-decoration: none
         font-family: 'PT Mono', monospace
         text-transform: uppercase
         font-size: 25px
         color: black
-  
+
+h4
+    margin: 20px 0px
+    text-align: left
+    font-family: 'PT Mono', monospace
+    font-size: 25px
+    letter-spacing: 10px
+    text-transform: uppercase
+
+.flexDiv
+    display: flex
+    margin: 0 auto
+    width: 1225px
+    border-top: 3px solid black
+    border-bottom: 3px solid black
+    border-radius: 2px
+    padding: 20px 0px
+
+    .flexContainer
+        width: 710px
+        border-right: 3px solid black
+        padding-right: 50px
+
+    .news
+        padding: 5px 35px
+        p
+            font-family: 'PT Mono', monospace   
+            color: black
+            text-align: justify
+            font-size: 18px
+            line-height: 20px
+            margin-top: 10px
+
+        img
+            margin-left: -35px
+            width: 200px
+
+        .form
+            label
+                font-family: 'PT Mono', monospace   
+                color: black
+                text-align: center
+                font-size: 18px
+                line-height: 20px
+                margin-top: 10px
+                 
+            input
+                width: 310px
+            
+.videoText
+    text-align: center
+    font-family: 'PT Mono', monospace
+    font-size: 25px
+    letter-spacing: 10px
+    text-transform: uppercase
 
 .video
     width: 700px
@@ -39,7 +92,7 @@
         max-width: 540px
         height: 300px
         padding: 20px 20px
-        
+
     @media (max-width: 550px)
         max-width: 440px
         height: 280px

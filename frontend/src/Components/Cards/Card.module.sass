@@ -2,9 +2,10 @@
     border: 2px solid black
     display: flex
     width: 670px
-    margin: 25px 85px
+    margin: 25px 0px
+    height: 254px
 
-    .date, .title, .minutsForRead, .information
+    .date, .title, .minutsForRead, .information, .readMore
         font-family: 'PT Mono', monospace   
         color: black
         text-align: justify
@@ -20,3 +21,16 @@
     img
         width: 340px
         margin-bottom: -5px
+        height: 100%
+        filter: grayscale(100%)
+        &:hover 
+            filter: none
+
+    .readMore
+        font-size: 17px
+        margin: 10px 15px
+        padding: 10px 20px
+        background: none
+        &:hover
+            color: white
+            background: #343434

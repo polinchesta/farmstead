@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Footer } from '../Footer/Footer';
-import falvarek from '../../assets/falvarek.jpeg';
 import styles from './Home.module.sass';
 import date from '../../data/cardData.json';
+import promo from '../../assets/promo.svg';
 import { Card } from '../Cards/Card';
 
 export function Home() {
@@ -16,9 +15,51 @@ export function Home() {
                     </Link>
                 </nav>
             </div>
-            {date.map((card, index) => (
-                <Card key={index} date={card.date} img={card.img} minutsForRead={card.minutsForRead} text={card.text} title={card.title} read={card.read}/>
-            ))}
+            <div className={styles.flexDiv}>
+                <div className={styles.flexContainer}>
+                    <h4>Посты</h4>
+                    {date.map((card, index) => (
+                        <Card
+                            key={index}
+                            date={card.date}
+                            img={card.img}
+                            minutsForRead={card.minutsForRead}
+                            text={card.text}
+                            title={card.title}
+                            read={card.read}
+                        />
+                    ))}
+                </div>
+                <div className={styles.news}>
+                    <h4>Новости</h4>
+                    <p>
+                        Для пользователей нашего сайте предоставляется СКИДКА в размере 15% на
+                        бронирование усадеб при использовании специального ПРОМОКОДА:
+                    </p>
+                    <img src={promo} alt="WebSite Logo" />
+                    <h4>Связаться с нами</h4>
+                    <p>Почта: polinchesta@gmail.com</p>
+                    <p>GitHub: https://github.com/polinchesta</p>
+                    <p>Telegram: @polinchesta</p>
+                    <h4>Обратная связь</h4>
+                    <form className={styles.form}>
+                        <label>
+                            Почта:
+                        </label>
+                        <input type="text" name="mail" />
+                        <label>
+                            Тема сообщения:
+                        </label>
+                        <input type="text" name="mail" />
+                        <label>
+                            Сообщение:
+                        </label>
+                        <input type="text" name="mail" />
+                        <input type="submit" value="Отправить" />
+                    </form>
+                </div>
+            </div>
+            <h4 className={styles.videoText}>Почему именно Гродненская область?</h4>
             <iframe
                 className={styles.video}
                 src="https://www.youtube-nocookie.com/embed/L7b5nAL5mFY"
@@ -26,7 +67,6 @@ export function Home() {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen></iframe>
-            <Footer />
         </div>
     );
 }
