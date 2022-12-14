@@ -46,16 +46,16 @@ export function Home() {
                         <label>
                             Почта:
                         </label>
-                        <input type="text" name="mail" />
+                        <input className={styles.mail} type="text" name="mail" />
                         <label>
                             Тема сообщения:
                         </label>
-                        <input type="text" name="mail" />
+                        <input className={styles.topic} type="text" name="mail" />
                         <label>
                             Сообщение:
                         </label>
-                        <input type="text" name="mail" />
-                        <input type="submit" value="Отправить" />
+                        <input className={styles.message}  type="text" name="mail" />
+                        <input className={styles.button} type="submit" value="Отправить" />
                     </form>
                 </div>
             </div>
