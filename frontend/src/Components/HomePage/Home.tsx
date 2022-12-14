@@ -54,7 +54,7 @@ export function Home() {
                         <label>
                             Сообщение:
                         </label>
-                        <input className={styles.message}  type="text" name="mail" />
+                        <textarea className={styles.message} name="mail" />
                         <input className={styles.button} type="submit" value="Отправить" />
                     </form>
                 </div>

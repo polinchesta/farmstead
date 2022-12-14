@@ -19,14 +19,14 @@ export function Header() {
                             <Link className={styles.block} to="/">
                                 Главная
                             </Link>
-                            <Link className={styles.block} to="/farmstead">
-                                Усадьбы
-                            </Link>
                             <Link className={styles.block} to="/product">
                                 Продукция
                             </Link>
                             <Link className={styles.block} to="/about">
                                 О нас
+                            </Link>
+                            <Link className={styles.block} to="/input">
+                                Вход
                             </Link>
                         </nav>
                     </div>
