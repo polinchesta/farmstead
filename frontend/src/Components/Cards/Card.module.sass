@@ -1,0 +1,36 @@
+.farmstead
+    border: 2px solid black
+    display: flex
+    width: 687px
+    margin: 25px 0px
+    height: 254px
+
+    .date, .title, .minutsForRead, .information, .readMore
+        font-family: 'PT Mono', monospace   
+        color: black
+        text-align: justify
+        padding: 0px 15px
+
+    .date, .minutsForRead, .information
+        font-size: 14px
+        margin: 10px 0px
+
+    .title 
+        font-size: 19px
+
+    img
+        width: 340px
+        margin-bottom: -5px
+        height: 100%
+        filter: grayscale(100%)
+        &:hover 
+            filter: none
+
+    .readMore
+        font-size: 17px
+        margin: 10px 15px
+        padding: 10px 20px
+        background: none
+        &:hover
+            color: white
+            background: #343434
