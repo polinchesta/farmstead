@@ -1,4 +1,3 @@
-import { style } from '@mui/system';
 import styles from './CardProduct.module.sass';
 
 interface CardProps {

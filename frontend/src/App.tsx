@@ -7,6 +7,7 @@ import { Home } from './Components/HomePage/Home';
 import { About } from './Components/About/About';
 import { Grodno } from './Components/Grodno/Grodno'
 import { Products } from './Products/Products';
+import { Farmstead } from './Components/Farmstead/Farmstead';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path='/about' element={<About />} />
                         <Route path='/product' element={<Products />} />
+                        <Route path="/farmstead/:id" element={<Farmstead     />} />
                         <Route path="/grodno" element={<Grodno />} />
                     </Routes>
                 </div>
