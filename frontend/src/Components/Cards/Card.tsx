@@ -25,7 +25,7 @@ export function Card({ img, date, minutsForRead, title, text, read, id }: CardPr
                     </p>
                     <h2 className={styles.title}>{title}</h2>
                     <p className={styles.information}>{text}</p>
-                    <Link to={`\farmsteAad\:${id}`} className={styles.readMore}>{read}</Link>
+                    <Link to={`farmstead/${id}`} className={styles.readMore}>{read}</Link>
                 </div>
             </section>
         </div>

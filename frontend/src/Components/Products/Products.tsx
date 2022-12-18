@@ -1,6 +1,6 @@
 import React from 'react';
-import { CardProducts } from '../Components/CardProducts/CardProduct';
-import date from "../data/productData.json";
+import { CardProducts } from '../CardProducts/CardProduct';
+import date from "../../data/productData.json";
 import styles from './Products.module.sass'
 
 export function Products() {
