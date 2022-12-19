@@ -13,7 +13,6 @@ export const Form: FC<FormProps> = ({title, handleClick}) => {
     return (
         <div>
             <div className={styles.userRegistration}>
-                <h2>Регистрация</h2>
                 <form className={styles.form}>
                     <label>Почта:</label>
                     <input className={styles.mail} 

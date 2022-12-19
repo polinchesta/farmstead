@@ -26,7 +26,7 @@ export function Header() {
                             <Link className={styles.block} to="/about">
                                 О нас
                             </Link>
-                            <Link className={styles.block} to="/input" >
+                            <Link className={styles.block} to="/signup" >
                                 Вход
                             </Link>
                         </nav>

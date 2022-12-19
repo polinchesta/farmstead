@@ -24,7 +24,7 @@ export function Farmstead() {
     }
 
     if (redirect) {
-        return <Navigate to="/error"></Navigate>;
+        return <Navigate to="/error" replace={true} />;
     }
 
 

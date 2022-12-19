@@ -11,11 +11,10 @@ import { useAppDispatch } from '../../hooks/redux-hooks';
 export function Home() {
     const dispatch = useAppDispatch();
     const {isAuth, email} = useAuth();
-    return  (
+    return (
         <div>
             <h1>welcome</h1>
-            <button
-                onClick={() => dispatch(removeUser())}
+            <button onClick={() => dispatch(removeUser())}
             >Выйти из {email}</button>
             <div className={styles.location}>
                 <nav>
