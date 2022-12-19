@@ -27,6 +27,7 @@ export function Home() {
                             text={card.text}
                             title={card.title}
                             read={card.read}
+                            id={index}
                         />
                     ))}
                 </div>
@@ -50,11 +51,11 @@ export function Home() {
                         <label>
                             Тема сообщения:
                         </label>
-                        <input className={styles.topic} type="text" name="mail" />
+                        <input className={styles.topic} type="text" name="topic" />
                         <label>
                             Сообщение:
                         </label>
-                        <textarea className={styles.message} name="mail" />
+                        <textarea className={styles.message} name="message" />
                         <input className={styles.button} type="submit" value="Отправить" />
                     </form>
                 </div>
