@@ -4,10 +4,19 @@ import styles from './Home.module.sass';
 import date from '../../data/cardData.json';
 import promo from '../../assets/promo.svg';
 import { Card } from '../Cards/Card';
+import { removeUser } from '../../store/slices/userSlice';
+import { useAuth } from '../../hooks/use-auth';
+import { useAppDispatch } from '../../hooks/redux-hooks';
 
 export function Home() {
-    return (
+    const dispatch = useAppDispatch();
+    const {isAuth, email} = useAuth();
+    return  (
         <div>
+            <h1>welcome</h1>
+            <button
+                onClick={() => dispatch(removeUser())}
+            >Выйти из {email}</button>
             <div className={styles.location}>
                 <nav>
                     <Link className={styles.block} to="/grodno">
@@ -69,5 +78,5 @@ export function Home() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen></iframe>
         </div>
-    );
+    )
 }

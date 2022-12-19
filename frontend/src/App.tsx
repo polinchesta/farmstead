@@ -9,6 +9,7 @@ import { Grodno } from './Components/Grodno/Grodno'
 import { Products } from './Components/Products/Products';
 import { Farmstead } from './Components/Farmstead/Farmstead';
 import { Page404 } from './Components/Page404/Page404';
+import { Registration } from './Components/Registration/Registration';
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path="/farmstead/:id" element={<Farmstead />} />
                         <Route path="/grodno" element={<Grodno />} />
                         <Route path="/error" element={<Page404 />} />
+                        <Route path="input" element={<Registration />} />
                     </Routes>
                 </div>
             </Router>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Data from '../../data/farmsteadData.json';
 import ReactMarkdown from 'react-markdown';
 import styles from './Farmstead.module.sass';
@@ -12,31 +12,35 @@ interface FarmsteadType {
     text: string;
 }
 
-const defaultFarmset: FarmsteadType = {
-    id: '10',
-    img: 'undefined',
-    title: 'Cтраница не найдена',
-    text: '',
-};
-
 export function Farmstead() {
     const [markdown, setMarkdown] = useState('');
     const params = useParams();
     const prodId = params.id;
-    const ElementData: FarmsteadType =
-        Data.find((element) => element.id === prodId) || defaultFarmset;
+    const [redirect, setRedirect] = useState(false);
+    const ElementData: FarmsteadType | undefined = Data.find((element) => element.id === prodId);
+
+    if (!ElementData) {
+        setRedirect(true);
+    }
+
+    if (redirect) {
+        return <Navigate to="/error"></Navigate>;
+    }
+
 
     useEffect(() => {
-        fetch(`../src/data/FarmSteadInfo/${ElementData.text}`)
-            .then((res) => res.text())
-            .then((text) => setMarkdown(text));
+        if (ElementData) {
+            fetch(`../src/data/FarmSteadInfo/${ElementData.text}`)
+                .then((res) => res.text())
+                .then((text) => setMarkdown(text));
+        }
     }, []);
 
     return (
         <section className={styles.farmstead}>
-              <div className={styles.farmsteadText}>
+            <div className={styles.farmsteadText}>
                 <ReactMarkdown children={markdown} />
-              </div>
+            </div>
         </section>
     );
 }
