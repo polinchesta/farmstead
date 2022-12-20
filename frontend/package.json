@@ -22,9 +22,11 @@
         "react-dom": "^18.2.0",
         "react-markdown": "^8.0.4",
         "react-redux": "^8.0.5",
+        "react-responsive-carousel": "^3.2.23",
         "react-router": "^6.4.5",
         "react-router-dom": "^6.4.4",
-        "styled-components": "^5.3.6"
+        "styled-components": "^5.3.6",
+        "typescript-react-carousel": "^0.1.2"
     },
     "devDependencies": {
         "@types/react": "^18.0.24",

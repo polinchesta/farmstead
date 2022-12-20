@@ -13,7 +13,7 @@ export const Form: FC<FormProps> = ({title, handleClick}) => {
     return (
         <div>
             <div className={styles.userRegistration}>
-                <form className={styles.form}>
+                <div className={styles.form}>
                     <label>Почта:</label>
                     <input className={styles.mail} 
                     type="email" 
@@ -27,7 +27,7 @@ export const Form: FC<FormProps> = ({title, handleClick}) => {
                     value={pass}
                     onChange={(e) => setPass(e.target.value)} />
                     <button className={styles.button} onClick={() => handleClick(email, pass)}>{title}</button>
-                </form>
+                </div>
             </div>
         </div>
     );

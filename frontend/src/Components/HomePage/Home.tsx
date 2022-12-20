@@ -4,18 +4,25 @@ import styles from './Home.module.sass';
 import date from '../../data/cardData.json';
 import promo from '../../assets/promo.svg';
 import { Card } from '../Cards/Card';
-import { removeUser } from '../../store/slices/userSlice';
-import { useAuth } from '../../hooks/use-auth';
-import { useAppDispatch } from '../../hooks/redux-hooks';
+import { Carousel } from 'react-responsive-carousel';
+import bybliki1 from '../../assets/bybliki1.jpg';
+import dybrava1 from '../../assets/dybrava1.jpg';
+import edem2 from '../../assets/edem2.jpg';
 
 export function Home() {
-    const dispatch = useAppDispatch();
-    const {isAuth, email} = useAuth();
     return (
         <div>
-            <h1>welcome</h1>
-            <button onClick={() => dispatch(removeUser())}
-            >Выйти из {email}</button>
+            <Carousel className={styles.slider}>
+                <div className={styles.slide}>
+                    <img src={bybliki1} alt="bybliki" />
+                </div>
+                <div className={styles.slide}>
+                    <img src={dybrava1} alt="dybrava" />
+                </div>
+                <div className={styles.slide}>
+                    <img src={edem2} alt="edem" />
+                </div>
+            </Carousel>
             <div className={styles.location}>
                 <nav>
                     <Link className={styles.block} to="/grodno">
@@ -25,7 +32,7 @@ export function Home() {
             </div>
             <div className={styles.flexDiv}>
                 <div className={styles.flexContainer}>
-                    <h4>Посты</h4>
+                    <h4>Последние посты</h4>
                     {date.map((card, index) => (
                         <Card
                             key={index}

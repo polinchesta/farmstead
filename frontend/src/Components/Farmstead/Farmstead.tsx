@@ -16,15 +16,11 @@ export function Farmstead() {
     const [markdown, setMarkdown] = useState('');
     const params = useParams();
     const prodId = params.id;
-    const [redirect, setRedirect] = useState(false);
     const ElementData: FarmsteadType | undefined = Data.find((element) => element.id === prodId);
 
-    if (!ElementData) {
-        setRedirect(true);
-    }
-
-    if (redirect) {
-        return <Navigate to="/error" replace={true} />;
+    if (typeof ElementData === "undefined") {
+ 
+        return <Navigate to="*" />;
     }
 
 

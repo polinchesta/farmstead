@@ -9,9 +9,7 @@ export function Registration() {
         <div className={styles.registration}>
             <h2>Регистрация</h2>
             <SignUp />
-            <h2>
-                <Link to="/login">Есть аккаунт?</Link>
-            </h2>
+            <Link to="/login">Есть аккаунт?</Link>
         </div>
     );
 }

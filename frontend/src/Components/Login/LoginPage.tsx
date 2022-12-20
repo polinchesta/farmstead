@@ -8,9 +8,7 @@ export function LoginPage() {
         <div className={styles.login}>
             <h2>Вход</h2>
             <Login />
-            <h2 className={styles.link}>
-                <Link to="/signup">Нет аккаунта?</Link>
-            </h2>
+            <Link to="/signup">Нет аккаунта?</Link>
         </div>
     )
 }

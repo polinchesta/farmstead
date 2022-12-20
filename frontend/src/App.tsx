@@ -24,9 +24,9 @@ function App() {
                         <Route path='/product' element={<Products />} />
                         <Route path="/farmstead/:id" element={<Farmstead />} />
                         <Route path="/grodno" element={<Grodno />} />
-                        <Route path="/error" element={<Page404 />} />
                         <Route path="/signup" element={<Registration />} />
                         <Route path="/login" element={<LoginPage />} />
+                        <Route path="*" element={<Page404 />} />
                     </Routes>
                 </div>
             </Router>

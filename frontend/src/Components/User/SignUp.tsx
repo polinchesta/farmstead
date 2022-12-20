@@ -3,11 +3,14 @@ import {setUser} from '../../store/slices/userSlice';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Form } from './Form';
 import { useAppDispatch } from '../../hooks/redux-hooks';
+import { app } from '../firebase';
 
 export default function SignUp() {
     const dispatch = useAppDispatch();
+    console.log(app);
+    
     const handleRegister = (email: string, password: string) => {
-        const auth = getAuth();  
+        const auth = getAuth(app);  
         createUserWithEmailAndPassword(auth, email, password)
             .then(({user}) => 
             {
@@ -19,7 +22,7 @@ export default function SignUp() {
                 }
                 ))
             })
-            .catch(console.error)
+            .catch((e) => alert(e))
     }
   return (
     <Form 
