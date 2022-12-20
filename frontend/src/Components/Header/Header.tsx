@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Header.module.sass';
 import logo from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 
 export function Header() {
+    
     return (
         <>
             <header>
@@ -25,7 +26,7 @@ export function Header() {
                             <Link className={styles.block} to="/about">
                                 О нас
                             </Link>
-                            <Link className={styles.block} to="/input">
+                            <Link className={styles.block} to="/signup" >
                                 Вход
                             </Link>
                         </nav>
