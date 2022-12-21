@@ -5,6 +5,7 @@ export function About() {
     return (
         <div className={styles.about}>
             <div className={styles.aboutLeft}>
+                
                 <h3>Для чего?</h3>
                 <p>
                     Сайт агроусадьбы предназначен для человека, который самостоятельно выбирает, где

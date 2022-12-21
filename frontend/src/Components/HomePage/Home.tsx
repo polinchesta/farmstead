@@ -4,7 +4,7 @@ import styles from './Home.module.sass';
 import date from '../../data/cardData.json';
 import promo from '../../assets/promo.svg';
 import { Card } from '../Cards/Card';
-import { Carousel } from 'react-responsive-carousel';
+import {MyImageSlider} from '../Carousel/Carousel';
 import bybliki1 from '../../assets/bybliki1.jpg';
 import dybrava1 from '../../assets/dybrava1.jpg';
 import edem2 from '../../assets/edem2.jpg';
@@ -12,17 +12,7 @@ import edem2 from '../../assets/edem2.jpg';
 export function Home() {
     return (
         <div>
-            <Carousel className={styles.slider}>
-                <div className={styles.slide}>
-                    <img src={bybliki1} alt="bybliki" />
-                </div>
-                <div className={styles.slide}>
-                    <img src={dybrava1} alt="dybrava" />
-                </div>
-                <div className={styles.slide}>
-                    <img src={edem2} alt="edem" />
-                </div>
-            </Carousel>
+            <MyImageSlider />
             <div className={styles.location}>
                 <nav>
                     <Link className={styles.block} to="/grodno">
