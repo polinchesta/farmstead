@@ -11,7 +11,6 @@ export default function Login() {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
             .then(({ user }) => {
-                alert(user);
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,

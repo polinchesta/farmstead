@@ -13,6 +13,7 @@ import gr6 from '../../assets/grSlide6.jpg';
 export const MyImageSlider: React.FC = () => {
   const settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 700,
     slidesToShow: 2,
