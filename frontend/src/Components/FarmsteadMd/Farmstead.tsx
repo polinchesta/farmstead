@@ -10,7 +10,7 @@ interface Farmstead {
     text: string;
 }
 
-export function Farmstead() {
+export function FarmsteadMd() {
     const [markdown, setMarkdown] = useState('');
     const params = useParams();
     const prodId = params.id;

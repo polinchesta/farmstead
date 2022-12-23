@@ -12,7 +12,6 @@ export function Header() {
     //TRANSLATE 
     const dispatch = useAppDispatch();
     const { isAuth, email } = useAuth();
-
     const [locale, setLocale] = useState(LOCALES.ENGLISH)
     const [showTip, setShowTip] = useState(false);
     return (
@@ -39,6 +38,9 @@ export function Header() {
                         <button
                             onClick={() => dispatch(removeUser())}
                         >Log out from {email}</button>
+                        <Link className={styles.login} to="/signup" >
+                            Вход
+                        </Link>
                         <div className={styles.menu}>
                             <nav className={styles.blocks}>
                                 <Link className={styles.block} to="/">
@@ -50,8 +52,8 @@ export function Header() {
                                 <Link className={styles.block} to="/about">
                                     О нас
                                 </Link>
-                                <Link className={styles.block} to="/signup" >
-                                    Вход
+                                <Link className={styles.block} to="/farmsteadall" >
+                                    Агроусадьбы
                                 </Link>
                             </nav>
                         </div>

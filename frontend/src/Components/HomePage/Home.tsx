@@ -1,15 +1,12 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.sass';
-import date from '../../data/cardData.json';
+import farmstead from '../../data/cardData.json';
 import promo from '../../assets/promo.svg';
 import { Card } from '../Cards/Card';
 import {MyImageSlider} from '../Carousel/Carousel';
-import bybliki1 from '../../assets/bybliki1.jpg';
-import dybrava1 from '../../assets/dybrava1.jpg';
-import edem2 from '../../assets/edem2.jpg';
 
 export function Home() {
+    const filterDate = farmstead.filter((element, index) => index < 3)
     return (
         <div>
             <MyImageSlider />
@@ -23,7 +20,7 @@ export function Home() {
             <div className={styles.flexDiv}>
                 <div className={styles.flexContainer}>
                     <h4>Последние посты</h4>
-                    {date.map((card, index) => (
+                    {filterDate.map((card, index) => (
                         <Card
                             key={index}
                             date={card.date}

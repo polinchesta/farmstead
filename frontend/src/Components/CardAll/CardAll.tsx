@@ -1,4 +1,4 @@
-import styles from './Card.module.sass';
+import styles from './CardAll.module.sass';
 import { Link } from 'react-router-dom'
 
 
@@ -12,7 +12,7 @@ interface CardProps {
     id: number;
 }
 
-export function Card({ img, date, minutsForRead, title, text, read, id }: CardProps) {
+export function CardAll({ img, date, minutsForRead, title, text, read, id }: CardProps) {
     const imagePath = '../src/assets/' + img;
     return (
         <div>
@@ -26,7 +26,7 @@ export function Card({ img, date, minutsForRead, title, text, read, id }: CardPr
                     </p>
                     <h2 className={styles.title}>{title}</h2>
                     <p className={styles.information}>{text}</p>
-                    <Link to={`farmstead/${id}`} className={styles.readMore}>{read}</Link>
+                    <Link to={`farmsteadall/${id}`} className={styles.readMore}>{read}</Link>
                 </div>
             </section>
         </div>
