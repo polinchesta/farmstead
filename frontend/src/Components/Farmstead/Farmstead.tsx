@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import Data from '../../data/farmsteadData.json';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import styles from './Farmstead.module.sass';
 interface Farmstead {
     id: string;
-    img: string;
-    title: string;
     text: string;
 }
 
@@ -33,7 +32,7 @@ export function Farmstead() {
     return (
         <section className={styles.farmstead}>
             <div className={styles.farmsteadText}>
-                <ReactMarkdown children={markdown} />
+                <ReactMarkdown rehypePlugins={[rehypeRaw]} children={markdown} />
             </div>
         </section>
     );

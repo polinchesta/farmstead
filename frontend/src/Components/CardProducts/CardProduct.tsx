@@ -10,7 +10,7 @@ interface CardProps {
 }
 
 export function CardProducts({ img, price, adress, title, number, count }: CardProps) {
-    const imagePath = '../src/assets/' + img;
+    const imagePath = '../public/' + img;
     return (
         <div className={styles.container}>
             <section className={styles.product}>

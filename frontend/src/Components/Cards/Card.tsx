@@ -13,7 +13,7 @@ interface CardProps {
 }
 
 export function Card({ img, date, minutsForRead, title, text, read, id }: CardProps) {
-    const imagePath = '../src/assets/' + img;
+    const imagePath = '../public/' + img;
     return (
         <div>
             <section className={styles.farmstead}>
@@ -26,7 +26,7 @@ export function Card({ img, date, minutsForRead, title, text, read, id }: CardPr
                     </p>
                     <h2 className={styles.title}>{title}</h2>
                     <p className={styles.information}>{text}</p>
-                    <Link to={`farmstead/${id}`} className={styles.readMore}>{read}</Link>
+                    <Link to={`/farmstead/${id}`} className={styles.readMore}>{read}</Link>
                 </div>
             </section>
         </div>

@@ -1,8 +1,11 @@
 [
     {
         "id": "0",
-        "img": "falvarek.png",
-        "title": "Фальварак \"У РЫСЯ\"",
+        "text": "Ris.md"
+    },
+
+    {
+        "id": "1",
         "text": "Ris.md"
     }
 ]

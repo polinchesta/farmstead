@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Home.module.sass';
 import farmstead from '../../data/cardData.json';
-import promo from '../../assets/promo.svg';
 import { Card } from '../Cards/Card';
 import {MyImageSlider} from '../Carousel/Carousel';
 
@@ -39,7 +38,7 @@ export function Home() {
                         Для пользователей нашего сайте предоставляется СКИДКА в размере 15% на
                         бронирование усадеб при использовании специального ПРОМОКОДА:
                     </p>
-                    <img src={promo} alt="WebSite Logo" />
+                    <img src={'promo.svg'} alt="WebSite Logo" />
                     <h4>Связаться с нами</h4>
                     <p>Почта: polinchesta@gmail.com</p>
                     <p>GitHub: https://github.com/polinchesta</p>

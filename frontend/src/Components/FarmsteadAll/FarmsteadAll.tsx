@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import styles from './FarmsteadAll.module.sass';
-import { CardAll } from '../CardAll/CardAll';
+import { Card} from '../Cards/Card';
 import date from '../../data/cardData.json';
 
 export function FarmsteadAll() {
@@ -10,7 +10,7 @@ export function FarmsteadAll() {
         <div className={styles.flexContainer}>
             <h4>Агроусадьбы</h4>
             {date.map((card, index) => (
-                <CardAll
+                <Card
                     key={index}
                     date={card.date}
                     img={card.img}
