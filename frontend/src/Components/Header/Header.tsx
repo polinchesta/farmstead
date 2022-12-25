@@ -18,6 +18,50 @@ export function Header() {
         <I18nProvider locale={locale}>
             <>
                 <header>
+                    <ul className={styles.lightrope}>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <div className={styles.headerContainer}>
                         <h1>Зелёный микрофон</h1>
                         <div className={styles.logo}>
@@ -49,11 +93,11 @@ export function Header() {
                                 <Link className={styles.block} to="/product">
                                     Продукция
                                 </Link>
-                                <Link className={styles.block} to="/about">
-                                    О нас
-                                </Link>
                                 <Link className={styles.block} to="/farmsteadall" >
                                     Агроусадьбы
+                                </Link>
+                                <Link className={styles.block} to="/about">
+                                    О нас
                                 </Link>
                             </nav>
                         </div>
