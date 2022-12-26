@@ -16,6 +16,7 @@ export function Card({ img, date, minutsForRead, title, text, read, id }: CardPr
     const imagePath = '../public/' + img;
     return (
         <div>
+            
             <section className={styles.farmstead}>
                 <div className={styles.farmsteadImg}>
                     <img className={styles.falvarek} src={imagePath} alt="falvarek" />

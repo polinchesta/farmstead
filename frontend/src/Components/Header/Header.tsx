@@ -10,6 +10,7 @@ import translate from '../i18n/translate';
 
 export function Header() {
     //TRANSLATE 
+    const Token = localStorage.getItem('token')
     const dispatch = useAppDispatch();
     const { isAuth, email } = useAuth();
     const [locale, setLocale] = useState(LOCALES.ENGLISH)
@@ -79,12 +80,12 @@ export function Header() {
                         </div>
                         {/* TRANSLATE 
                         <button onChange={() => setLocale(LOCALES.ENGLISH)}>English</button> */}
-                        <button
-                            onClick={() => dispatch(removeUser())}
-                        >Log out from {email}</button>
                         <Link className={styles.login} to="/signup" >
-                            Вход
+                            Вход/регистрация
                         </Link>
+                        <button className={styles.login} style={{display: `${Token? "block" : "none"}`}}
+                            onClick={() => {dispatch(removeUser()), localStorage.removeItem("token")}}
+                        >Выйти из аккаунта {email}</button>
                         <div className={styles.menu}>
                             <nav className={styles.blocks}>
                                 <Link className={styles.block} to="/">

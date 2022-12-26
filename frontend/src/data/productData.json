@@ -1,6 +1,6 @@
 [
     {
-        "img": "meat.jpg",
+        "img": "/meat.jpg",
         "title": "Мясо",
         "price": "8$ ≈ 21 б.р.",
         "count": "1 килограмм",
@@ -9,7 +9,7 @@
     },
 
     {
-        "img": "cheese.jpg",
+        "img": "/cheese.jpg",
         "title": "Сыр",
         "price": "15$ ≈ 39 б.р",
         "count": "1 килограмм",
@@ -18,7 +18,7 @@
     },
 
     {
-        "img": "med.jpg",
+        "img": "/med.jpg",
         "title": "Мёд",
         "price": "28$ ≈ 73 б.р",
         "count": "1 килограмм",
@@ -27,7 +27,7 @@
     },
 
     {
-        "img": "perga.jpg",
+        "img": "/perga.jpg",
         "title": "Перга",
         "price": "5$ ≈ 13 б.р.",
         "count": "150 грамм",
@@ -36,7 +36,7 @@
     },
 
     {
-        "img": "potate.jpg",
+        "img": "/potate.jpg",
         "title": "Картошка",
         "price": "3$ ≈ 8 б.р.",
         "count": "1 килограмм",
@@ -45,7 +45,7 @@
     },
 
     {
-        "img": "propolis.jpg",
+        "img": "/propolis.jpg",
         "title": "Прополис",
         "price": "10$ ≈ 26 б.р.",
         "count": "10 грамм",
@@ -54,7 +54,7 @@
     },
 
     {
-        "img": "pshenica.jpg",
+        "img": "/pshenica.jpg",
         "title": "Пшеница",
         "price": "28$ ≈ 73 б.р.",
         "count": "1 тюк",
@@ -63,7 +63,7 @@
     },
 
     {
-        "img": "roz.jpg",
+        "img": "/roz.jpg",
         "title": "Рожь",
         "price": "7$ ≈ 18 б.р.",
         "count": "1 тюк",
@@ -72,7 +72,7 @@
     },
 
     {
-        "img": "vosk.jpg",
+        "img": "/vosk.jpg",
         "title": "Воск",
         "price": "28$≈ 73 б.р",
         "count": "1 kg",

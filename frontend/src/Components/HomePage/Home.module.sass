@@ -9,7 +9,7 @@
         max-width: 340px
         font-size: 22px
     &:hover
-        background: #343434
+        background: #6b6565
         a
             color: white
 
@@ -43,15 +43,22 @@ h4
         padding: 20px 0px
 
     .flexContainer
-        width: 60%
+        width: 62%
         border-right: 3px solid black
         padding-right: 80px
         height: 880px
         overflow: scroll
 
+        @media (max-width: 1200px)
+            padding-right: 40px
+
+        @media (max-width: 800px)
+            padding-right: 30px
+
+
     .news
         padding: 5px 40px
-        width: 40%
+        width: 35%
         p
             font-family: 'PT Mono', monospace   
             color: black
@@ -104,7 +111,7 @@ h4
                 margin: 0 auto
                 padding: 11px 50px
                 &:hover
-                    background: #343434
+                    background: #6b6565
                     color: white
             
 .videoText

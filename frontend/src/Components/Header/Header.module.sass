@@ -2,7 +2,7 @@
     text-align: center
     white-space: nowrap
     overflow: hidden
-    position: absolute
+    position:  fixed
     z-index: 1
     margin: -45px 0px 0px 0px
     padding: 0
@@ -75,7 +75,7 @@
             width: 40px
             height: 18.66667px
             border-bottom: solid #222 2px
-            border-radius: 50%
+            border-radius: 60%
         
 
         &:last-child:after 
@@ -154,7 +154,7 @@
     height: 100%
     width: 100%
     h1 
-        padding: 30px 0px 10px 0px
+        padding: 35px 0px 10px 0px
         font-family: 'PT Mono', monospace
         font-size: 25px
         letter-spacing: 10px
@@ -181,12 +181,24 @@
         font-family: 'PT Mono', monospace
         font-size: 15px
         background: #6b6565
+        border: 2px solid black
+
+    .login
+        font-family: 'PT Mono', monospace
+        color: black
+        font-size: 18px
+        border-radius: 5px
+        padding: 5px 20px 
+        margin: 10px auto
+        border: none
+        background: none
+        text-decoration: underline 
 
     
     .menu
         max-width: 1225px
         border-block: 3px solid black
-        margin: 0 auto
+        margin: 20px auto
         display: flex
         flex-direction: column
         align-items: center
@@ -259,5 +271,5 @@
                 &:last-child
                     border: none
                 &:hover 
-                    background-color: #343434
+                    background-color: #6b6565
                     color: white

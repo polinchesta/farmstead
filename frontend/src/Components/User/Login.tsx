@@ -15,8 +15,9 @@ export default function Login() {
                     email: user.email,
                     id: user.uid,
                     token: user.refreshToken,
-                }
-                ))
+                }))
+                    localStorage.setItem("token", user.refreshToken)
+                
             })
             .catch(() => {
                 setError({ isError: true, message: "Что-то пошло не так! Проверьте введённые данные" })
