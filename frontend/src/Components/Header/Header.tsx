@@ -80,7 +80,7 @@ export function Header() {
                         </div>
                         {/* TRANSLATE 
                         <button onChange={() => setLocale(LOCALES.ENGLISH)}>English</button> */}
-                        <Link className={styles.login} to="/signup" >
+                        <Link className={styles.login} to="/login" >
                             Вход/регистрация
                         </Link>
                         <button className={styles.login} style={{display: `${Token? "block" : "none"}`}}
