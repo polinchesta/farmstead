@@ -1,7 +1,4 @@
 import React from 'react';
-import grodno from '../../assets/grodno.png';
-import volkovysk from '../../assets/volkovysk.jpg';
-import novogrudok from '../../assets/novogrudok.jpg';
 import styles from './Grodno.module.sass';
 
 export function Grodno() {
@@ -19,7 +16,7 @@ export function Grodno() {
                 </p>
                 <div className={styles.columnImage}>
                     <div className={styles.image}>
-                        <img className={styles.grodno} src={grodno} alt="Grodno" />
+                        <img className={styles.grodno} src={'grodno.png'} alt="Grodno" />
                         <h3>Гродно в 19 веке</h3>
                     </div>
                     <div className={styles.columnArticle}>
@@ -48,7 +45,7 @@ export function Grodno() {
                 </p>
                 <div className={styles.columnImage}>
                     <div className={styles.image}>
-                        <img className={styles.volkovysk} src={volkovysk} alt="Volkovysk" />
+                        <img className={styles.volkovysk} src={'volkovysk.jpg'} alt="Volkovysk" />
                         <h3>Волковыск в 19 веке</h3>
                     </div>
                     <div className={styles.columnArticle}>
@@ -77,7 +74,7 @@ export function Grodno() {
                 </p>
                 <div className={styles.columnImage}>
                     <div className={styles.image}>
-                        <img className={styles.novogrudok} src={novogrudok} alt="Novogrudok" />
+                        <img className={styles.novogrudok} src={'novogrudok.jpg'} alt="Novogrudok" />
                         <h3>Новогрудок в 19 веке</h3>
                     </div>
                     <div className={styles.columnArticle}>

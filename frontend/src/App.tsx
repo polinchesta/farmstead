@@ -11,6 +11,7 @@ import { Farmstead } from './Components/Farmstead/Farmstead';
 import { Page404 } from './Components/Page404/Page404';
 import { Registration } from './Components/Registration/Registration';
 import { LoginPage } from './Components/Login/LoginPage';
+import { FarmsteadAll } from './Components/FarmsteadAll/FarmsteadAll';
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                         <Route path="/grodno" element={<Grodno />} />
                         <Route path="/signup" element={<Registration />} />
                         <Route path="/login" element={<LoginPage />} />
+                        <Route path="/farmsteadall" element={<FarmsteadAll />} />
                         <Route path="*" element={<Page404 />} />
                     </Routes>
                 </div>

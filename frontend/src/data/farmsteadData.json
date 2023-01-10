@@ -1,8 +1,46 @@
 [
     {
         "id": "0",
-        "img": "falvarek.png",
-        "title": "Фальварак \"У РЫСЯ\"",
         "text": "Ris.md"
+    },
+
+    {
+        "id": "1",
+        "text": "Neman.md"
+    },
+
+    {
+        "id": "2",
+        "text": "Dybrava.md"
+    },
+
+    {
+        "id": "3",
+        "text": "Bybliki.md"
+    },
+
+    {
+        "id": "4",
+        "text": "Edem.md"
+    },
+
+    {
+        "id": "5",
+        "text": "Zirovichi.md"
+    },
+
+    {
+        "id": "6",
+        "text": "Sonichi.md"
+    },
+
+    {
+        "id": "7",
+        "text": "Lida.md"
+    },
+
+    {
+        "id": "8",
+        "text": "Baltica.md"
     }
 ]

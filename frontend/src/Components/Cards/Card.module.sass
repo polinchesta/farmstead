@@ -1,8 +1,13 @@
 .farmstead
     border: 2px solid black
     display: flex
-    width: 687px
+    width: 100%
     margin: 25px 0px
+    @media (max-width: 1200px)
+        width: 100%
+
+    @media (max-width: 800px)
+        width: 100%
 
     .date, .title, .minutsForRead, .information, .readMore
         font-family: 'PT Mono', monospace   
@@ -14,13 +19,34 @@
         font-size: 14px
         margin: 10px 0px
 
+        @media (max-width: 1200px)
+            font-size: 13px
+
+        @media (max-width: 800px)
+           font-size: 12px
+
+
     .information
         font-size: 14px 
         margin: 15px 0px
 
+        @media (max-width: 1200px)
+            font-size: 13px
+
+        @media (max-width: 800px)
+           font-size: 12px
+
+
     .title 
         font-size: 19px
         text-align: left
+
+        @media (max-width: 1200px)
+            font-size: 17px
+
+        @media (max-width: 800px)
+           font-size: 15px
+
 
     img
         width: 340px
@@ -29,6 +55,9 @@
         filter: grayscale(100%)
         &:hover 
             filter: none
+        
+        @media (max-width: 1200px)
+            width: 270px
 
     .readMore
         font-size: 17px
@@ -43,4 +72,7 @@
         border: 3px solid black
         &:hover
             color: white
-            background: #343434
+            background: #6b6565
+
+        @media (max-width: 1200px)
+            width: 270px

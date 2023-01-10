@@ -9,6 +9,7 @@ interface FormProps {
 export const Form: FC<FormProps> = ({title, handleClick}) => {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
+    const Token = localStorage.getItem('Token');
 
     return (
         <div>
@@ -26,7 +27,7 @@ export const Form: FC<FormProps> = ({title, handleClick}) => {
                     name="password" 
                     value={pass}
                     onChange={(e) => setPass(e.target.value)} />
-                    <button className={styles.button} onClick={() => handleClick(email, pass)}>{title}</button>
+                    <button  className={styles.button} onClick={() => handleClick(email, pass)}>{title}</button>
                 </div>
             </div>
         </div>

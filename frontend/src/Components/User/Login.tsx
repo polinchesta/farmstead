@@ -11,13 +11,13 @@ export default function Login() {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
             .then(({ user }) => {
-                alert(user);
                 dispatch(setUser({
                     email: user.email,
                     id: user.uid,
                     token: user.refreshToken,
-                }
-                ))
+                }))
+                    localStorage.setItem("token", user.refreshToken)
+                
             })
             .catch(() => {
                 setError({ isError: true, message: "Что-то пошло не так! Проверьте введённые данные" })

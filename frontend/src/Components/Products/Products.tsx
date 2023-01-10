@@ -13,7 +13,7 @@ export function Products() {
                     img={card.img}
                     adress={card.adress}
                     number={card.number}
-                    count = {card.count}
+                    count={card.count}
                     title={card.title}
                 />
             ))}

@@ -1,28 +1,14 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.sass';
-import date from '../../data/cardData.json';
-import promo from '../../assets/promo.svg';
+import farmstead from '../../data/cardData.json';
 import { Card } from '../Cards/Card';
-import { Carousel } from 'react-responsive-carousel';
-import bybliki1 from '../../assets/bybliki1.jpg';
-import dybrava1 from '../../assets/dybrava1.jpg';
-import edem2 from '../../assets/edem2.jpg';
+import {MyImageSlider} from '../Carousel/Carousel';
 
 export function Home() {
+    const filterDate = farmstead.filter((element, index) => index < 3)
     return (
         <div>
-            <Carousel className={styles.slider}>
-                <div className={styles.slide}>
-                    <img src={bybliki1} alt="bybliki" />
-                </div>
-                <div className={styles.slide}>
-                    <img src={dybrava1} alt="dybrava" />
-                </div>
-                <div className={styles.slide}>
-                    <img src={edem2} alt="edem" />
-                </div>
-            </Carousel>
+            <MyImageSlider />
             <div className={styles.location}>
                 <nav>
                     <Link className={styles.block} to="/grodno">
@@ -33,7 +19,7 @@ export function Home() {
             <div className={styles.flexDiv}>
                 <div className={styles.flexContainer}>
                     <h4>Последние посты</h4>
-                    {date.map((card, index) => (
+                    {filterDate.map((card, index) => (
                         <Card
                             key={index}
                             date={card.date}
@@ -52,7 +38,7 @@ export function Home() {
                         Для пользователей нашего сайте предоставляется СКИДКА в размере 15% на
                         бронирование усадеб при использовании специального ПРОМОКОДА:
                     </p>
-                    <img src={promo} alt="WebSite Logo" />
+                    <img src={'promo.svg'} alt="WebSite Logo" />
                     <h4>Связаться с нами</h4>
                     <p>Почта: polinchesta@gmail.com</p>
                     <p>GitHub: https://github.com/polinchesta</p>

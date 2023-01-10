@@ -7,8 +7,12 @@
         font-size: 24px
         text-align: center
 
-    img
-        width: 660px
+    img 
+        display: flex
+        margin: 0px auto
+        filter: grayscale(100%)
+        &:hover 
+            filter: none
 
     h3
         font-size: 19px
@@ -17,7 +21,7 @@
         color: black
         text-align: justify
 
-    p
+    p, ul, li
         font-size: 18px
         text-align: justify  
         margin: 20px 0px
@@ -26,3 +30,13 @@
 
     .farmsteadText
         justify-content: left
+
+    iframe
+        margin: 0px auto
+        display: flex
+
+    ul,li
+        margin: 5px 0px 
+    
+    .heart, svg 
+        margin: -10px 7px 
