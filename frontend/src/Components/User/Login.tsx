@@ -17,6 +17,7 @@ export default function Login() {
                     token: user.refreshToken,
                 }))
                     localStorage.setItem("token", user.refreshToken)
+                    alert("Вход выполнен успешно")
                 
             })
             .catch(() => {

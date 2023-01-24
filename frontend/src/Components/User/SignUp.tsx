@@ -20,6 +20,7 @@ export default function SignUp() {
                     token: user.refreshToken,
                 }
                 ))
+                alert("Регистрация выполнена успешно")
             })
             .catch(() => {
                 setError({ isError: true, message: "Что-то пошло не так! Проверьте введённые данные" })

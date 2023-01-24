@@ -5,7 +5,7 @@ import { Card } from '../Cards/Card';
 import {MyImageSlider} from '../Carousel/Carousel';
 
 export function Home() {
-    const filterDate = farmstead.filter((element, index) => index < 3)
+    const filterDate = farmstead.filter((element, index) => index < 4)
     return (
         <div>
             <MyImageSlider />
@@ -48,7 +48,7 @@ export function Home() {
                         <label>
                             Почта:
                         </label>
-                        <input className={styles.mail} type="text" name="mail" />
+                        <input className={styles.mail} type="email" name="mail" />
                         <label>
                             Тема сообщения:
                         </label>
