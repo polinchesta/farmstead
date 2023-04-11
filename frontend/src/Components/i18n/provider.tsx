@@ -1,4 +1,13 @@
-import React, { Fragment } from "react";
+import React from 'react'
+
+export default function provider() {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+/* import React, { Fragment } from "react";
 import { IntlProvider, } from "react-intl";
 import { LOCALES } from "./locales";
 import messages from "./messages";
@@ -18,4 +27,4 @@ const Provider = ({children, locale = LOCALES.RUSSIAN}: ReactElement) => (
     </IntlProvider>
 )
 
-export default Provider
+export default Provider */

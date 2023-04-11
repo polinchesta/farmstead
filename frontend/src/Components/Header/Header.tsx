@@ -16,51 +16,51 @@ export function Header() {
     const [locale, setLocale] = useState(LOCALES.ENGLISH)
     const [showTip, setShowTip] = useState(false);
     return (
-        <I18nProvider locale={locale}>
-            <>
-                <header>
-                    <div className={styles.headerContainer}>
-                        <h1>Зелёный микрофон</h1>
-                        <div className={styles.logo}>
-                            <Link className={styles.link} to="/">
-                                <div
-                                    onMouseEnter={() => setShowTip(true)}
-                                    onMouseLeave={() => setShowTip(false)}
-                                ><img src={logo} alt="WebSite Logo" />
-                                    {/* TRANSLATE 
+        /*         <I18nProvider locale={locale}> */
+        <>
+            <header>
+                <div className={styles.headerContainer}>
+                    <h1>Зелёный микрофон</h1>
+                    <div className={styles.logo}>
+                        <Link className={styles.link} to="/">
+                            <div
+                                onMouseEnter={() => setShowTip(true)}
+                                onMouseLeave={() => setShowTip(false)}
+                            ><img src={logo} alt="WebSite Logo" />
+                                {/* TRANSLATE 
                                     {translate('maik')} */}
-                                    {showTip && <div className={styles.info}>*Maik-агробизнес глазами автора</div>}
-                                </div>
+                                {showTip && <div className={styles.info}>*Maik-агробизнес глазами автора</div>}
+                            </div>
 
-                            </Link>
-                        </div>
-                        {/* TRANSLATE 
-                        <button onChange={() => setLocale(LOCALES.ENGLISH)}>English</button> */}
-                        <Link className={styles.login} to="/login" >
-                            Вход/регистрация
                         </Link>
-                        <button className={styles.login} style={{display: `${Token? "block" : "none"}`}}
-                            onClick={() => {dispatch(removeUser()), localStorage.removeItem("token")}}
-                        >Выйти из аккаунта {email}</button>
-                        <div className={styles.menu}>
-                            <nav className={styles.blocks}>
-                                <Link className={styles.block} to="/">
-                                    Главная
-                                </Link>
-                                <Link className={styles.block} to="/product">
-                                    Продукция
-                                </Link>
-                                <Link className={styles.block} to="/farmsteadall" >
-                                    Агроусадьбы
-                                </Link>
-                                <Link className={styles.block} to="/about">
-                                    О нас
-                                </Link>
-                            </nav>
-                        </div>
                     </div>
-                </header>
-            </>
-        </I18nProvider>
+                    {/* TRANSLATE 
+                        <button onChange={() => setLocale(LOCALES.ENGLISH)}>English</button> */}
+                    <Link className={styles.login} to="/login" >
+                        Вход/регистрация
+                    </Link>
+                    <button className={styles.login} style={{ display: `${Token ? "block" : "none"}` }}
+                        onClick={() => { dispatch(removeUser()), localStorage.removeItem("token") }}
+                    >Выйти из аккаунта {email}</button>
+                    <div className={styles.menu}>
+                        <nav className={styles.blocks}>
+                            <Link className={styles.block} to="/">
+                                Главная
+                            </Link>
+                            <Link className={styles.block} to="/product">
+                                Продукция
+                            </Link>
+                            <Link className={styles.block} to="/farmsteadall" >
+                                Агроусадьбы
+                            </Link>
+                            <Link className={styles.block} to="/about">
+                                О нас
+                            </Link>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        </>
     );
 }
+{/*         </I18nProvider> */ }
