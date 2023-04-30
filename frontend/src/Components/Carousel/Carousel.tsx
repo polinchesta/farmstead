@@ -17,22 +17,22 @@ export const MyImageSlider: React.FC = () => {
     <div className={styles.slide}>
       <Slider {...settings}>
         <div>
-          <img src={'grSlide2.jpg'} alt="WebSite slide" />
+          <img src={'/grSlide2.jpg'} alt="WebSite slide" />
         </div>
         <div>
-          <img src={'grSlide1.jpg'} alt="WebSite slide" />
+          <img src={'/grSlide1.jpg'} alt="WebSite slide" />
         </div>
         <div>
-          <img src={'grSlide.jpg'} alt="WebSite slide" />
+          <img src={'/grSlide.jpg'} alt="WebSite slide" />
         </div>
         <div>
-          <img src={'grSlide6.jpg'} alt="WebSite slide" />
+          <img src={'/grSlide6.jpg'} alt="WebSite slide" />
         </div>
         <div>
-          <img src={'grSlide3.jpg'} alt="WebSite slide" />
+          <img src={'/grSlide3.jpg'} alt="WebSite slide" />
         </div>
         <div>
-          <img src={'grSlide4.jpg'} alt="WebSite slide" />
+          <img src={'/grSlide4.jpg'} alt="WebSite slide" />
         </div>
       </Slider>
     </div>

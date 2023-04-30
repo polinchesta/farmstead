@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Header.module.sass';
-import logo from '../../../public/logo.svg';
+import logo from '/logo.svg';
 import { Link } from 'react-router-dom';
 import { I18nProvider, LOCALES } from '../i18n';
 import { removeUser } from '../../store/slices/userSlice'
