@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Carousel.module.sass'
+import styles from './carousel.module.sass'
 import Slider from 'react-slick';
 
 

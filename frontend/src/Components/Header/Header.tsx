@@ -1,60 +1,55 @@
-import React, { useState } from 'react';
-import styles from './Header.module.sass';
+import React, { useState, useTransition } from 'react';
+import styles from './header.module.sass';
 import logo from '/logo.svg';
 import { Link } from 'react-router-dom';
-import { I18nProvider, LOCALES } from '../i18n';
-import { removeUser } from '../../store/slices/userSlice'
-import { useAuth } from '../../hooks/use-auth';
+import { removeUser } from '../../store/auth/authSlice'
+import { useAuth } from '../../hooks/useAuth';
 import { useAppDispatch } from '../../hooks/redux-hooks';
-import translate from '../i18n/translate';
+import useTranslation from '../../hooks/useTranslations';
 
 export function Header() {
-    //TRANSLATE 
+    const { t, toggleLanguage } = useTranslation();
     const Token = localStorage.getItem('token')
     const dispatch = useAppDispatch();
     const { isAuth, email } = useAuth();
-    const [locale, setLocale] = useState(LOCALES.ENGLISH)
     const [showTip, setShowTip] = useState(false);
     return (
-        /*         <I18nProvider locale={locale}> */
         <>
             <header>
                 <div className={styles.headerContainer}>
-                    <h1>Зелёный микрофон</h1>
+                    <h1>{t.header.logo.name}</h1>
                     <div className={styles.logo}>
                         <Link className={styles.link} to="/">
                             <div
                                 onMouseEnter={() => setShowTip(true)}
                                 onMouseLeave={() => setShowTip(false)}
                             ><img src={logo} alt="WebSite Logo" />
-                                {/* TRANSLATE 
-                                    {translate('maik')} */}
-                                {showTip && <div className={styles.info}>*Maik-агробизнес глазами автора</div>}
+                                {showTip && <div className={styles.info}>{t.header.aboutMaik}</div>}
                             </div>
 
                         </Link>
                     </div>
                     {/* TRANSLATE 
                         <button onChange={() => setLocale(LOCALES.ENGLISH)}>English</button> */}
-                    <Link className={styles.login} to="/login" >
-                        Вход/регистрация
-                    </Link>
+                    <button className={styles.language} onClick={toggleLanguage} >
+                        Смена Языка
+                    </button>
                     <button className={styles.login} style={{ display: `${Token ? "block" : "none"}` }}
                         onClick={() => { dispatch(removeUser()), localStorage.removeItem("token") }}
                     >Выйти из аккаунта {email}</button>
                     <div className={styles.menu}>
                         <nav className={styles.blocks}>
                             <Link className={styles.block} to="/">
-                                Главная
+                                {t.header.links.main}
                             </Link>
                             <Link className={styles.block} to="/product">
-                                Продукция
+                                {t.header.links.products}
                             </Link>
                             <Link className={styles.block} to="/farmsteadall" >
-                                Агроусадьбы
+                                {t.header.links.farmstead}
                             </Link>
-                            <Link className={styles.block} to="/about">
-                                О нас
+                            <Link className={styles.block} to="/login">
+                                {t.header.links.sign}
                             </Link>
                         </nav>
                     </div>
@@ -63,4 +58,3 @@ export function Header() {
         </>
     );
 }
-{/*         </I18nProvider> */ }

@@ -1,0 +1,46 @@
+{
+    "header": {
+        "logo": {
+            "name": "GREEN MICROPHONE"
+        },
+        "links": {
+            "main": "Main",
+            "products": "Products",
+            "farmstead": "Farmstead",
+            "sign": "Sign up/Sign in"
+        },
+        "aboutMaik": "*Maik-agribusiness through the eyes of the author"
+    },
+
+    "main": {
+        "button": {
+            "grodnoRegion": "📍 Grodno region"
+        },
+        "leftInformation": {
+            "latestPosts": "LATEST POSTS",
+            "minutes":"minutes",
+            "rus": "FALVARAK 'U RYSA'",
+            "aboutRus":"Twelve years ago, a family of doctors decided to build a homestead in a village 10 kilometers from Volkovysk, where only nine people live. Today, the 'U Rysya' farmstead is a complex consisting of five houses.",
+            "more":"Read more",
+            "neoman":"FARMSTEAD 'NEAR NEOMAN'",
+            "aboutNeoman":"134 km along the highway Minsk-Grodno. wooden house with a Russian stove, steam room, terrace, swimming pool, barbecue. Organization of excursions around the Golden Ring of Ivye region. Fishing (pike, crucian carp, tench, roach).",
+            "dybrava":"FARSTEAD 'DYBRAVA",
+            "aboutDybrava":"Grodno region, Novogrudok district, Olkhovka village. Cozy living room with fireplace and access to the terrace, TV, kitchen, four bedrooms.",
+            "bybliki":"FARMSTEAD 'BYBLIKI'",
+            "aboutBybliki":"Grodno region, Ivye district, village Sheluti. You will be pleasantly surprised by the fast-flowing Gavya River, one of the cleanest rivers in Belarus, which flows a couple of meters from the estate." 
+        },
+        "rightInformation":{
+            "news":"NEWS",
+            "aboutNews":"For users of our website, a DISCOUNT of 15% is provided for booking estates when using a special PROMO CODE:",
+            "connect":"CONNECT WITH US",
+            "email":"Email",
+            "feedback":"FEEDBACK",
+            "aboutMessage":"Message subject:",
+            "message":"Message",
+            "send":"Send"
+        },
+        "information":{
+            "why":"WHY GRODNO REGION?"
+        }
+    }
+}

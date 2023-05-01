@@ -1,0 +1,11 @@
+{
+    "build": {
+      "src": "next.config.js",
+      "use": "@vercel/next",
+      "config": {
+        "maxLambdaSize": "2048",
+        "adapters": ["@vercel/adapter-static", "@vercel/adapter-markdown"]
+      }
+    }
+  }
+  

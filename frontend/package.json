@@ -24,7 +24,7 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-intl": "^6.2.5",
-        "react-ya": "^8.0.4",
+        "react-markdown": "^8.0.7",
         "react-redux": "^8.0.5",
         "react-responsive-carousel": "^3.2.23",
         "react-router": "^6.4.5",
@@ -33,7 +33,8 @@
         "rehype-raw": "^6.1.1",
         "slick-carousel": "^1.8.1",
         "styled-components": "^5.3.6",
-        "typescript-react-carousel": "^0.1.2"
+        "typescript-react-carousel": "^0.1.2",
+        "vercel": "^29.0.2"
     },
     "devDependencies": {
         "@types/node": "^18.11.17",

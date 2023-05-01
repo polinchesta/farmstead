@@ -1,24 +1,27 @@
 import { Link } from 'react-router-dom';
-import styles from './Home.module.sass';
+import styles from './home.module.sass';
 import farmstead from '../../data/cardData.json';
-import { Card } from '../Cards/Card';
-import {MyImageSlider} from '../../Components/Carousel/Carousel';
+import { Card } from '../cardFarmstead/cardFarmstead';
+import useTranslation from '../../hooks/useTranslations';
+import { MyImageSlider } from '../../Components/carousel/carousel';
 
 export function Home() {
+    const { t } = useTranslation();
     const filterDate = farmstead.filter((element, index) => index < 4)
+
     return (
         <div>
             <MyImageSlider />
             <div className={styles.location}>
                 <nav>
                     <Link className={styles.block} to="/grodno">
-                        📍 Гродненская область
+                        {t.main.button.grodnoRegion}
                     </Link>
                 </nav>
             </div>
             <div className={styles.flexDiv}>
                 <div className={styles.flexContainer}>
-                    <h4>Последние посты</h4>
+                    <h4>{t.main.leftInformation.latestPosts}</h4>
                     {filterDate.map((card, index) => (
                         <Card
                             key={index}
@@ -33,35 +36,34 @@ export function Home() {
                     ))}
                 </div>
                 <div className={styles.news}>
-                    <h4>Новости</h4>
+                    <h4>{t.main.rightInformation.news}</h4>
                     <p>
-                        Для пользователей нашего сайте предоставляется СКИДКА в размере 15% на
-                        бронирование усадеб при использовании специального ПРОМОКОДА:
+                        {t.main.rightInformation.aboutNews}
                     </p>
                     <img src={'/promo.svg'} alt="WebSite Logo" />
-                    <h4>Связаться с нами</h4>
-                    <p>Почта: polinchesta@gmail.com</p>
+                    <h4>{t.main.rightInformation.connect}</h4>
+                    <p>{t.main.rightInformation.email}: polinchesta@gmail.com</p>
                     <p>GitHub: https://github.com/polinchesta</p>
                     <p>Telegram: @polinchesta</p>
-                    <h4>Обратная связь</h4>
+                    <h4>{t.main.rightInformation.connect}</h4>
                     <form className={styles.form}>
                         <label>
-                            Почта:
+                            {t.main.rightInformation.email}
                         </label>
                         <input className={styles.mail} type="email" name="mail" />
                         <label>
-                            Тема сообщения:
+                            {t.main.rightInformation.aboutMessage}
                         </label>
                         <input className={styles.topic} type="text" name="topic" />
                         <label>
-                            Сообщение:
+                            {t.main.rightInformation.message}
                         </label>
                         <textarea className={styles.message} name="message" />
-                        <input className={styles.button} type="submit" value="Отправить" />
+                        <input className={styles.button} type="submit" value={t.main.rightInformation.send} />
                     </form>
                 </div>
             </div>
-            <h4 className={styles.videoText}>Почему именно Гродненская область?</h4>
+            <h4 className={styles.videoText}>{t.main.information.why}</h4>
             <iframe
                 className={styles.video}
                 src="https://www.youtube-nocookie.com/embed/L7b5nAL5mFY"

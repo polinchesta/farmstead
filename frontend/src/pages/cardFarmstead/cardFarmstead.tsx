@@ -1,6 +1,6 @@
-import styles from './Card.module.sass';
+import styles from './cardFarmstead.module.sass';
 import { Link } from 'react-router-dom'
-
+import useTranslation from '../../hooks/useTranslations';
 
 interface CardProps {
     img: string;
@@ -14,6 +14,7 @@ interface CardProps {
 
 export function Card({ img, date, minutsForRead, title, text, read, id }: CardProps) {
     const imagePath = '/' + img;
+    const translations = useTranslation();
     return (
         <div>
             

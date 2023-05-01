@@ -2,16 +2,15 @@ import React from 'react';
 import './App.sass';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-import { Header } from './Components/Header/Header';
-import { Home } from './pages/HomePage/Home';
-import { About } from './pages/About/About';
-import { Grodno } from './pages/Grodno/Grodno'
-import { Products } from './pages/Products/Products';
-import { Farmstead } from './pages/Farmstead/Farmstead';
-import { Page404 } from './pages/Page404/Page404';
-import { Registration } from './pages/Registration/Registration';
-import { LoginPage } from './pages/Login/LoginPage';
-import { FarmsteadAll } from './pages/FarmsteadAll/FarmsteadAll';
+import { Header } from './Components/header/header';
+import { Home } from './pages/homePage/home';
+import { Grodno } from './pages/grodnoPage/grodno'
+import { Products } from './pages/products/products';
+import { Farmstead } from './pages/farmstead/farmstead';
+import { Page404 } from './pages/page404/page404';
+import { Registration } from './pages/registration/registration';
+import { LoginPage } from './pages/loginPage/login';
+import { FarmsteadAll } from './pages/farmsteadAll/farmsteadAll';
 
 function App() {
     return (
@@ -21,7 +20,6 @@ function App() {
                 <div>
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path='/about' element={<About />} />
                         <Route path='/product' element={<Products />} />
                         <Route path="/farmstead/:id" element={<Farmstead />} />
                         <Route path="/grodno" element={<Grodno />} />

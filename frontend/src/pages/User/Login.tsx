@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { setUser } from '../../store/slices/userSlice';
+import { setUser } from '../../store/auth/authSlice';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Form } from './Form';
 import { useAppDispatch } from '../../hooks/redux-hooks';

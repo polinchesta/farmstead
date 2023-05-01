@@ -1,4 +1,4 @@
-import styles from './CardProduct.module.sass';
+import styles from './cardProduct.module.sass';
 
 interface CardProps {
     img: string;

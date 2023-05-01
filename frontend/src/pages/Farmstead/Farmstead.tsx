@@ -3,14 +3,14 @@ import { Navigate, useParams } from 'react-router-dom';
 import Data from '../../data/farmsteadData.json';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import styles from './Farmstead.module.sass';
+import styles from './farmstead.module.sass';
+
 interface Farmstead {
     id: string;
     text: string;
 }
 
-export function Farmstead() {
-      
+export function Farmstead() {  
     const Token = localStorage.getItem('token');
     const [markdown, setMarkdown] = useState('');
     const params = useParams();

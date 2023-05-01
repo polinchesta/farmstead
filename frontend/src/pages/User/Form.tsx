@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import styles from './Form.module.sass';
+import styles from './form.module.sass';
 
 interface FormProps {
     title: string;

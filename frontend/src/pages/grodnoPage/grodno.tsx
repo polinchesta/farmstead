@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Grodno.module.sass';
+import styles from './grodno.module.sass';
 
 export function Grodno() {
     return (

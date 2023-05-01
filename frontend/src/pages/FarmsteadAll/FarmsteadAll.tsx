@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
-import styles from './FarmsteadAll.module.sass';
-import { Card} from '../Cards/Card';
+import styles from './farmsteadAll.module.sass';
+import { Card} from '../cardFarmstead/cardFarmstead';
 import date from '../../data/cardData.json';
 
 export function FarmsteadAll() {

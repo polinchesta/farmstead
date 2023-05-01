@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Login from '../User/Login';
-import styles from './LoginPage.module.sass';
+import Login from '../user/Login';
+import styles from './login.module.sass';
 
 export function LoginPage() {
     return (

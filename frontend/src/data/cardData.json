@@ -2,10 +2,10 @@
     {
         "img": "falvarek.png",
         "date": "28.12.2022",
-        "minutsForRead": "12 минут",
-        "title": "Фальварак \"У РЫСЯ\"",
-        "text": "В 10 километрах от Волковыска в деревне, где проживает всего девять человек, двенадцать лет назад семья медиков решила построить усадьбу. Сегодня фольварк «У Рыся» — комплекс, состоящий из пяти домиков.",
-        "read": "Подробнее"
+        "minutsForRead": "12 {translations.leftInformation.minutes}",
+        "title":  "{translations.leftInformation.rus}",
+        "text": "{translations.leftInformation.aboutRus}",
+        "read": "{translations.leftInformation.more}"
     },
 
     {
