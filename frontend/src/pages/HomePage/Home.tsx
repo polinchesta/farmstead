@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import styles from './home.module.sass';
 import farmstead from '../../data/cardData.json';
 import { Card } from '../cardFarmstead/cardFarmstead';
-import useTranslation from '../../hooks/useTranslations';
-import { MyImageSlider } from '../../Components/carousel/carousel';
+import useTranslation from '../../hooks/useTranslation';
+import { MyImageSlider } from '../../components/carousel/carousel';
 
 export function Home() {
     const { t } = useTranslation();

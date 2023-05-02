@@ -2,10 +2,10 @@
     {
         "img": "falvarek.png",
         "date": "28.12.2022",
-        "minutsForRead": "12 {translations.leftInformation.minutes}",
-        "title":  "{translations.leftInformation.rus}",
-        "text": "{translations.leftInformation.aboutRus}",
-        "read": "{translations.leftInformation.more}"
+        "minutsForRead": "12 t.leftInformation.minutes",
+        "title":  "t.leftInformation.rus",
+        "text": "t.leftInformation.aboutRus",
+        "read": "t.leftInformation.more"
     },
 
     {

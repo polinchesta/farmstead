@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {setUser} from '../../store/auth/authSlice';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { Form } from './Form';
+import { Form } from './form';
 import { useAppDispatch } from '../../hooks/redux-hooks';
 import { app } from './firebase';
 
@@ -23,7 +23,7 @@ export default function SignUp() {
                 alert("Регистрация выполнена успешно")
             })
             .catch(() => {
-                setError({ isError: true, message: "Что-то пошло не так! Проверьте введённые данные" })
+                setError({ isError: true, message: "ERROR" })
             })
     }
   return (

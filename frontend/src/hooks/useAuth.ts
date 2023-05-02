@@ -1,4 +1,4 @@
-import { RootState } from '../store/index';
+import { RootState } from '../store/store';
 import { useAppSelector } from "./redux-hooks";
 
 

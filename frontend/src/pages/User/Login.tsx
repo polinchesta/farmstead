@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { setUser } from '../../store/auth/authSlice';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { Form } from './Form';
+import { Form } from './form';
 import { useAppDispatch } from '../../hooks/redux-hooks';
 
 export default function Login() {
@@ -21,7 +21,7 @@ export default function Login() {
                 
             })
             .catch(() => {
-                setError({ isError: true, message: "Что-то пошло не так! Проверьте введённые данные" })
+                setError({ isError: true, message: "ERROR" })
             })
     }
     return (

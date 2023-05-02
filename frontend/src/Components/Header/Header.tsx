@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { removeUser } from '../../store/auth/authSlice'
 import { useAuth } from '../../hooks/useAuth';
 import { useAppDispatch } from '../../hooks/redux-hooks';
-import useTranslation from '../../hooks/useTranslations';
+import useTranslation from '../../hooks/useTranslation';
 
 export function Header() {
     const { t, toggleLanguage } = useTranslation();
@@ -26,11 +26,8 @@ export function Header() {
                             ><img src={logo} alt="WebSite Logo" />
                                 {showTip && <div className={styles.info}>{t.header.aboutMaik}</div>}
                             </div>
-
                         </Link>
                     </div>
-                    {/* TRANSLATE 
-                        <button onChange={() => setLocale(LOCALES.ENGLISH)}>English</button> */}
                     <button className={styles.language} onClick={toggleLanguage} >
                         Смена Языка
                     </button>

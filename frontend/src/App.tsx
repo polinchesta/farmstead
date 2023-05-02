@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.sass';
+import '../src/ui/fonts/fonts.module.sass';
+import '../src/ui/image/image.module.sass';
+import '../src/ui/adaptive/adaptive.module.sass';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-import { Header } from './Components/header/header';
+import { Header } from './components/header/header';
 import { Home } from './pages/homePage/home';
 import { Grodno } from './pages/grodnoPage/grodno'
 import { Products } from './pages/products/products';
