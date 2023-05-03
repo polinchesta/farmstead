@@ -1,13 +1,18 @@
 .location
-    width: 400px
+    width: 40%
     border: 3px solid black
     margin: 0px auto 50px auto
     display: flex
     flex-direction: column
     align-items: center
+    font-size: 24px
     @media (max-width: 768px)
-        max-width: 340px
-        font-size: 22px
+        width: 45%
+        font-size: 21px
+
+    @media (max-width: 480px)
+        font-size: 18px
+
     &:hover
         background: #6b6565
         a
@@ -25,25 +30,22 @@
 h4
     margin: 20px 0px
     text-align: left
-    font-family: 'PT Mono', monospace
-    font-size: 25px
     letter-spacing: 10px
     text-transform: uppercase
 
 .flexDiv
     display: flex
     margin: 0 auto
-    width: 1225px
+    width: 95%
     border-top: 3px solid black
     border-bottom: 3px solid black
     border-radius: 2px
     padding: 20px 0px
-    @media (max-width: 1200px)
-        width: 1000px
-        padding: 20px 0px
+
+
 
     .flexContainer
-        width: 62%
+        width: 60%
         border-right: 3px solid black
         padding-right: 80px
         height: 980px
@@ -55,12 +57,11 @@ h4
         @media (max-width: 800px)
             padding-right: 30px
 
-
     .news
         padding: 5px 40px
-        width: 35%
+        width: 30%
         p
-            font-family: 'PT Mono', monospace   
+            font-family: 'PT Mono', monospace
             color: black
             text-align: justify
             font-size: 16px
@@ -69,23 +70,20 @@ h4
 
         img
             margin-left: -35px
-            width: 200px
+            width: 60%
 
         .form
             display: flex
             flex-direction: column
             margin: 0 auto !important
-            
+
             label
-                font-family: 'PT Mono', monospace   
                 color: black
                 text-align: left
-                font-size: 16px
                 line-height: 20px
-                
-                 
+
             input
-                font-family: 'PT Mono', monospace   
+                font-family: 'PT Mono', monospace
                 margin: 20px auto 20px auto
                 border: 3px solid black
                 background: none
@@ -93,19 +91,19 @@ h4
 
             textarea
                 resize: none
-                font-family: 'PT Mono', monospace   
+                font-family: 'PT Mono', monospace
                 margin: 20px auto 20px auto
                 border: 3px solid black
                 background: none
                 font-size: 16px
-                
+
             .mail, .topic
                 height: 35px
-                width: 400px
+                width: 100%
 
             .message
                 height: 100px
-                width: 400px
+                width: 100%
 
             .button
                 margin: 0 auto
@@ -113,7 +111,13 @@ h4
                 &:hover
                     background: #6b6565
                     color: white
-            
+
+                @media (max-width: 768px)
+                    padding: 9px 40px
+
+                @media (max-width: 480px)
+                    padding: 7px 30px
+
 .videoText
     text-align: center
     font-family: 'PT Mono', monospace
@@ -127,4 +131,3 @@ h4
     height: 420px
     margin: 0 auto
     padding: 20px 0px
-    

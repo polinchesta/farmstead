@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { ProductType } from '../../types/productsTypes';
+import { ProductType, ProductsFilterType } from '../../types/productsTypes';
 import productsApi from '../../api/products/productsApi';
 import { AxiosResponse } from 'axios';
 
@@ -15,11 +15,11 @@ const initialState: ProductsStateType = {
     loading: false,
 };
 
-const getProductsList = createAsyncThunk<Array<ProductType>, void, { rejectValue: string }>(
+const getProductsList = createAsyncThunk<Array<ProductType>, ProductsFilterType, { rejectValue: string }>(
     'products/getProductsList',
     async (data, thunksApi) => {
         try {
-            const response = await productsApi.getProductsList();
+            const response = await productsApi.getProductsList(data);
             return response.data;
         } catch {
             return thunksApi.rejectWithValue('Server error');

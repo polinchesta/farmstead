@@ -1,35 +1,34 @@
-import React, { useEffect } from 'react';
-import { CardProducts } from './cardProducts/cardProduct';
-/* import date from "../../data/productData.json"; */
+import ProductsCard from './cardProducts/cardProduct';
 import styles from './products.module.sass'
-import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
-import { productsActions } from '../../store/products/productsSlice';
+import { useAppSelector } from '../../hooks/redux-hooks';
+import ProductsFilter from './filter/productsFilter';
+import Loader from '../../ui/loader/loader';
 
 export function Products() {
-    const dispatch = useAppDispatch();
     const products = useAppSelector((state) => state.products.products);
-
-    useEffect(()=>{
-        dispatch(productsActions.getProductsList());
-    }, [])
-
-    console.log(products)
+    const loading = useAppSelector((state) => state.products.loading);
 
     return (
-        <h2>Products</h2>
-        /* <div className={styles.gridContainer}>
-            {date.map((card, index) => (
-                <CardProducts
-                    key={index}
-                    price={card.price}
+        <>
+            {loading && (
+                <Loader />
+            )}
+            <ProductsFilter />
+            <div className={styles.gridContainer}>
+                {products.map((product) => (
+                    <ProductsCard
+                        key={product.id}
+                        dataItem={product}
+                    /* price={card.price}
                     img={card.img}
                     adress={card.adress}
                     number={card.number}
                     count={card.count}
-                    title={card.title}
-                />
-            ))}
-        </div> */
+                    title={card.title} */
+                    />
+                ))}
+            </div>
+        </>
     );
 }
 

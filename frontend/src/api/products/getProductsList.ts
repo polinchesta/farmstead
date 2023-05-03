@@ -1,10 +1,18 @@
 import axios from "axios";
-import { ProductType } from "../../types/productsTypes";
+import { ProductsFilterType,ProductType } from "../../types/productsTypes";
 
-const getProductsList = () => 
-    axios<Array<ProductType>>({
+const getProductsList = async (filter: ProductsFilterType) => {
+   await new Promise((resolve) => setTimeout(resolve, 1000));
+    return axios<ProductType[]>({
         method: "GET",
-        url: 'http://localhost:3001/products'
+        url: "http://localhost:3001/products",
+        params: {
+            _sort: filter.sortField,
+            q: filter.query,
+            _page: filter.page,
+            _limit: filter.limit,
+        },
     });
+};
 
 export default getProductsList;
