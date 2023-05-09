@@ -33,7 +33,7 @@ export function Farmstead() {
 
     useEffect(() => {
         if (ElementData) {
-            fetch(`../src/data/FarmSteadInfo/${ElementData.text}`)
+            fetch(`../../../public/farmSteadInfo/${ElementData.text}`)
                 .then((res) => res.text())
                 .then((text) => setMarkdown(text));
         }

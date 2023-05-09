@@ -4,19 +4,20 @@ import { useAppDispatch } from "../../../hooks/redux-hooks";
 import { productsActions } from "../../../store/products/productsSlice";
 import TextField from "@mui/material/TextField/TextField";
 import styles from "./productsFilter.module.sass";
+import useDebounceValue from "../../../hooks/useDebounceValue";
 
 const ProductsFilter: React.FC = () => {
     const dispatch = useAppDispatch();
     const [sortField, setSortField] = useState("id");
-    const [query, setQuery] = useState("");
     const [page, setPage] = useState(1);
     const [isLastPage, setIsLastPage] = useState(false);
+    const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
 
     const fetchData = () => {
         dispatch(
             productsActions.getProductsList({
                 sortField,
-                query,
+                query: debounceQuery,
                 limit: 6,
                 page,
             })
@@ -45,7 +46,7 @@ const ProductsFilter: React.FC = () => {
 
     useEffect(() => {
         fetchData();
-    }, [page]);
+    }, [debounceQuery,page]);
 
     useEffect(() => {
         setIsLastPage(false);

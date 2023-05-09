@@ -19,12 +19,6 @@ export function Products() {
                     <ProductsCard
                         key={product.id}
                         dataItem={product}
-                    /* price={card.price}
-                    img={card.img}
-                    adress={card.adress}
-                    number={card.number}
-                    count={card.count}
-                    title={card.title} */
                     />
                 ))}
             </div>
