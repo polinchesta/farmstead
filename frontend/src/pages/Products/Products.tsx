@@ -1,7 +1,7 @@
 import ProductsCard from './cardProducts/cardProduct';
 import styles from './products.module.sass'
 import { useAppSelector } from '../../hooks/redux-hooks';
-import ProductsFilter from './filter/productsFilter';
+import ProductsFilter from "./filter/productsFilter"
 import Loader from '../../ui/loader/loader';
 
 export function Products() {

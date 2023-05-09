@@ -8,6 +8,8 @@ export interface ProductType {
     count: string;
 }
 
+/* export interface CreatePostType extends Omit<ProductType, "id"> {} */
+
 export interface ProductsFilterType {
     sortField: string;
     query: string;

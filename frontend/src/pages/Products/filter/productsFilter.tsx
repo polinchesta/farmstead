@@ -2,51 +2,58 @@ import { useEffect, useState } from "react";
 import Select from "../../../ui/select/select";
 import { useAppDispatch } from "../../../hooks/redux-hooks";
 import { productsActions } from "../../../store/products/productsSlice";
-import TextField from "@mui/material/TextField/TextField";
+import TextField from "../../../ui/textField/textField";
 import styles from "./productsFilter.module.sass";
 import useDebounceValue from "../../../hooks/useDebounceValue";
+import { ProductsFilterType } from "../../../types/productsTypes";
 
-const ProductsFilter: React.FC = () => {
+const ProductsFilter: React.FC = (filter: Partial<ProductsFilterType> = {}) => {
     const dispatch = useAppDispatch();
     const [sortField, setSortField] = useState("id");
     const [page, setPage] = useState(1);
     const [isLastPage, setIsLastPage] = useState(false);
     const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
 
-    const fetchData = () => {
+    const fetchData = (filter: Partial<ProductsFilterType> = {}) => {
         dispatch(
             productsActions.getProductsList({
                 sortField,
                 query: debounceQuery,
                 limit: 6,
                 page,
+                ...filter,
             })
         );
     };
 
+    const updatePageAndFetchData = (newPage: number) => {
+        setPage(newPage);
+        fetchData({ page: newPage });
+    };
+
+
+    const resetPageAndFetchData = () => {
+        updatePageAndFetchData(1);
+    };
+
     const handlePrevPage = () => {
         if (page > 1) {
-            setPage(page - 1);
-            setIsLastPage(false);
+            updatePageAndFetchData(page - 1);
         }
     };
 
     const handleNextPage = () => {
-        setPage(page + 1);
+        updatePageAndFetchData(page + 1);
     };
 
-    const onSubmit = (event: React.FormEvent) => {
+    const onSortSubmit = (event: React.FormEvent) => {
         event.preventDefault();
-        fetchData();
-    };
-
-    const onQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setQuery(event.target.value);
+        resetPageAndFetchData();
     };
 
     useEffect(() => {
-        fetchData();
-    }, [debounceQuery,page]);
+        resetPageAndFetchData();
+    }, [debounceQuery]);
 
     useEffect(() => {
         setIsLastPage(false);
@@ -60,8 +67,9 @@ const ProductsFilter: React.FC = () => {
         }
     }, [page]);
 
+
     return (
-        <form onSubmit={onSubmit}>
+        <form onSubmit={onSortSubmit}>
             <Select
                 label="Sort field"
                 value={sortField}
@@ -72,8 +80,7 @@ const ProductsFilter: React.FC = () => {
             <TextField
                 label="🔎 В поиске чего?"
                 value={query}
-                onChange={onQueryChange}
-                style={{ margin: "10px" }}
+                setValue={setQuery}
             />
             <button className={styles.button} type="submit">
                 Поиск
