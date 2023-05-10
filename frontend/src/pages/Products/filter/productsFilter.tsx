@@ -7,7 +7,7 @@ import styles from "./productsFilter.module.sass";
 import useDebounceValue from "../../../hooks/useDebounceValue";
 import { ProductsFilterType } from "../../../types/productsTypes";
 
-const ProductsFilter: React.FC = (filter: Partial<ProductsFilterType> = {}) => {
+const ProductsFilter: React.FC = ()=> {
     const dispatch = useAppDispatch();
     const [sortField, setSortField] = useState("id");
     const [page, setPage] = useState(1);

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ProductsFilterType,ProductType } from "../../types/productsTypes";
+import { ProductsFilterType, ProductType } from "../../types/productsTypes";
 
 const getProductsList = async (filter: ProductsFilterType) => {
    await new Promise((resolve) => setTimeout(resolve, 1000));
