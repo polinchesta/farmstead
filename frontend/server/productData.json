@@ -2,7 +2,7 @@
     "products": [
         {
             "id":0,   
-            "img": "meat.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/meat_eoc6li.jpg",
             "title": "Мясо",
             "price": "21 byn ≈ 8$",
             "count": "1 килограмм",
@@ -12,7 +12,7 @@
 
         {
             "id":1,   
-            "img": "cheese.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/cheese_beslk8.jpg",
             "title": "Сыр",
             "price": "39 byn ≈ 15$",
             "count": "1 килограмм",
@@ -22,7 +22,7 @@
 
         {
             "id":2,   
-            "img": "med.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/med_o1juud.jpg",
             "title": "Мёд",
             "price": "73 byn ≈ 28$",
             "count": "1 килограмм",
@@ -32,7 +32,7 @@
 
         {
             "id":3,   
-            "img": "perga.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/perga_pg59l3.jpg",
             "title": "Перга",
             "price": "13 byn ≈ 5$",
             "count": "150 грамм",
@@ -42,7 +42,7 @@
 
         {
             "id":4,   
-            "img": "potate.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Картошка",
             "price": "8 byn ≈ 3$",
             "count": "1 килограмм",
@@ -52,7 +52,7 @@
 
         {
             "id":5,   
-            "img": "propolis.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/propolis_sukeae.jpg",
             "title": "Прополис",
             "price": "26 byn ≈ 10$",
             "count": "10 грамм",
@@ -62,7 +62,7 @@
 
         {
             "id":6,   
-            "img": "pshenica.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/pshenica_latvnz.jpg",
             "title": "Пшеница",
             "price": "73 byn ≈ 28$",
             "count": "1 тюк",
@@ -72,7 +72,7 @@
 
         {
             "id":7,   
-            "img": "roz.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/roz_h7pacv.jpg",
             "title": "Рожь",
             "price": " 18 byn ≈ 7$",
             "count": "1 тюк",
@@ -82,7 +82,7 @@
 
         {
             "id":8,   
-            "img": "vosk.jpg",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/vosk_jxbter.jpg",
             "title": "Воск",
             "price": "73 byn ≈ 28$",
             "count": "1 kg",

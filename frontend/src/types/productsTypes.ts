@@ -6,6 +6,7 @@ export interface ProductType {
     title: string;
     number: string;
     count: string;
+    t: any;
 }
 
 /* export interface CreatePostType extends Omit<ProductType, "id"> {} */

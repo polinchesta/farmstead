@@ -1,69 +1,79 @@
 {
-    "products": {
-        "0": {
+    "products":[
+        {
+            "id":0,
             "title": "Meat",
             "price": "21 BYN ≈ $8",
             "count": "1 kilogram",
             "address": "Bolshaya Berestovitsa, Ratushnaya Square, 15",
             "number": "+375(29)758-41-80"
         },
-        "1": {
+        {
+            "id":1,
             "title": "Cheese",
             "price": "39 BYN ≈ $15",
             "count": "1 kilogram",
             "address": "Olhovtsy",
             "number": "+375(29)975-52-86"
         },
-        "2": {
+        {
+            "id":2,
             "title": "Honey",
             "price": "73 BYN ≈ $28",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
-        "3": {
+        {
+            "id":3,
             "title": "Pollen",
             "price": "13 BYN ≈ $5",
             "count": "150 grams",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
-        "4": {
+        {
+            "id":4,
             "title": "Potatoes",
             "price": "8 BYN ≈ $3",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
-        "5": {
+        {
+            "id":5,
             "title": "Propolis",
             "price": "26 BYN ≈ $10",
             "count": "10 grams",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
-        "6": {
+        {
+            "id":6,
             "title": "Wheat",
             "price": "73 BYN ≈ $28",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
-        "7": {
+        {
+            "id":7,
             "title": "Rye",
             "price": "18 BYN ≈ $7",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
-        "8": {
+        {
+            "id":8,
             "title": "Beeswax",
             "price": "73 BYN ≈ $28",
             "count": "1 kg",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         }
-    },
+        
+    ],
     "header": {
         "logo": {
             "name": "GREEN MICROPHONE"

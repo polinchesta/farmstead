@@ -3,11 +3,11 @@ import Select from "../../../ui/select/select";
 import { useAppDispatch } from "../../../hooks/redux-hooks";
 import { productsActions } from "../../../store/products/productsSlice";
 import TextField from "../../../ui/textField/textField";
-import styles from "./productsFilter.module.sass";
 import useDebounceValue from "../../../hooks/useDebounceValue";
 import { ProductsFilterType } from "../../../types/productsTypes";
+import styles from "./productsFilter.module.sass";
 
-const ProductsFilter: React.FC = ()=> {
+const ProductsFilter: React.FC = () => {
     const dispatch = useAppDispatch();
     const [sortField, setSortField] = useState("id");
     const [page, setPage] = useState(1);
@@ -69,41 +69,46 @@ const ProductsFilter: React.FC = ()=> {
 
 
     return (
-        <form onSubmit={onSortSubmit}>
-            <Select
-                label="Sort field"
-                value={sortField}
-                setValue={setSortField}
-                options={[{ value: "id", text: "Популярные" }]}
-                style={{ margin: "10px" }}
-            />
+        <form className={styles.container} onSubmit={onSortSubmit}>
+            <div className="sort">
+                <Select
+                    label="Sort field"
+                    value={sortField}
+                    setValue={setSortField}
+                    options={[{ value: "id", text: "Популярные" }]}
+                    style={{ margin: "10px" }}
+                />
+                <button className={styles.buttonSort} type="submit">
+                    Sort
+                </button>
+            </div>
             <TextField
+                className={styles.field}
                 label="🔎 В поиске чего?"
                 value={query}
                 setValue={setQuery}
             />
-            <button className={styles.button} type="submit">
-                Поиск
-            </button>
-            <button
-                className={styles.buttonPagination}
-                type="button"
-                onClick={handlePrevPage}
-            >
-                -
-            </button>
-            <div className={styles.pageText}>
-                <p className="page">{page}</p>
+            <div className={styles.pagination}>
+                <button
+                    className={styles.buttonPagination}
+                    type="button"
+                    onClick={handlePrevPage}
+                >
+                    -
+                </button>
+                <div className={styles.pageText}>
+                    <p className="page">{page}</p>
+                </div>
+                <button
+                    className={`${styles.buttonPagination} ${isLastPage ? styles.disabled : ""
+                        }`}
+                    type="button"
+                    onClick={handleNextPage}
+                    disabled={isLastPage}
+                >
+                    +
+                </button>
             </div>
-            <button
-                className={`${styles.buttonPagination} ${isLastPage ? styles.disabled : ""
-                    }`}
-                type="button"
-                onClick={handleNextPage}
-                disabled={isLastPage}
-            >
-                +
-            </button>
         </form>
     );
 };

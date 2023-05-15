@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "./textField.module.sass";
 
 interface PropsType extends Omit<React.HTMLProps<HTMLInputElement>, "ref" | "as"> {
     label: string;
     error?: string;
     value: string;
-	setValue?: (value: string) => void;
+    setValue?: (value: string) => void;
     inputRef?: React.RefObject<HTMLInputElement>;
 }
 
@@ -17,24 +17,35 @@ const TextField: React.FC<PropsType> = ({
     inputRef,
     ...props
 }) => {
+    const [isFocused, setIsFocused] = useState(false);
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newValue = event.target.value;
         setValue?.(newValue);
     };
 
+    const onFocus = () => {
+        setIsFocused(true);
+    };
+
+    const onBlur = () => {
+        setIsFocused(false);
+    };
+
     return (
-        <div className={styled.container}>
-            <div className={styled.legend}>
-                {label}
-            </div>
+        <div className={`${styled.container} ${isFocused ? styled.containerFocused : ''}`}>
             <label>
-                {/* <div className={styled.hiddenLabel}>{label}</div> */}
-                <input className={styled.input}
+                <div className={`${styled.hiddenLabel} ${isFocused || value ? styled.hiddenLabelActive : ''}`}>
+                    {label}
+                </div>
+                <input
+                    className={styled.input}
                     ref={inputRef}
                     type="text"
                     value={value}
                     onChange={onChange}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
                     {...props}
                 />
             </label>
