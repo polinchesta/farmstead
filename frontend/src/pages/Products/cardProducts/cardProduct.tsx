@@ -13,7 +13,6 @@ const ProductsCard: React.FC<CardProps> = ({
     img,
     t,
 }) => {
-    /*     console.log(img) */
 
     return (
         <div className={styles.container}>
