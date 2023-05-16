@@ -1,7 +1,7 @@
 {
-    "products":[
+    "products": [
         {
-            "id":0,
+            "id": 0,
             "title": "Meat",
             "price": "21 BYN ≈ $8",
             "count": "1 kilogram",
@@ -9,7 +9,7 @@
             "number": "+375(29)758-41-80"
         },
         {
-            "id":1,
+            "id": 1,
             "title": "Cheese",
             "price": "39 BYN ≈ $15",
             "count": "1 kilogram",
@@ -17,7 +17,7 @@
             "number": "+375(29)975-52-86"
         },
         {
-            "id":2,
+            "id": 2,
             "title": "Honey",
             "price": "73 BYN ≈ $28",
             "count": "1 kilogram",
@@ -25,7 +25,7 @@
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
         {
-            "id":3,
+            "id": 3,
             "title": "Pollen",
             "price": "13 BYN ≈ $5",
             "count": "150 grams",
@@ -33,7 +33,7 @@
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
         {
-            "id":4,
+            "id": 4,
             "title": "Potatoes",
             "price": "8 BYN ≈ $3",
             "count": "1 kilogram",
@@ -41,7 +41,7 @@
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
         {
-            "id":5,
+            "id": 5,
             "title": "Propolis",
             "price": "26 BYN ≈ $10",
             "count": "10 grams",
@@ -49,7 +49,7 @@
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
         {
-            "id":6,
+            "id": 6,
             "title": "Wheat",
             "price": "73 BYN ≈ $28",
             "count": "1 bale",
@@ -57,7 +57,7 @@
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
         {
-            "id":7,
+            "id": 7,
             "title": "Rye",
             "price": "18 BYN ≈ $7",
             "count": "1 bale",
@@ -65,14 +65,13 @@
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         },
         {
-            "id":8,
+            "id": 8,
             "title": "Beeswax",
             "price": "73 BYN ≈ $28",
             "count": "1 kg",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
         }
-        
     ],
     "header": {
         "logo": {
@@ -117,5 +116,18 @@
         "information": {
             "why": "WHY GRODNO REGION?"
         }
+    },
+    "grodno": {
+        "history": "History Grodno region",
+        "textAll": "The territory of Grodno was inhabited by people from the Late Paleolithic period. The oldest settlements were located near Lake Svityazh, near the village of Cheresha in Novogrudok, Nesilovichi in Dyatlovo, Zblyany in Lida districts, and near the mouth of the Kotra River. Eastern Slavic tribes (Dregovichs, Krivichs, Volhynians, Drevlyans), Western Slavic (Mozovshans), Eastern Baltic (Lithuanians), and Western Baltic (Yatvingians) lived here. The Slavic colonization began in the second half of the 1st millennium.",
+        "textAll1":"The principalities, like other Western Russian lands, were under constant threat of Mongol-Tatar conquest for a long time. For over two centuries, they served as a frontline in the struggle against the aggression of the Crusaders. In the midst of the fight against the Crusaders' aggression, the famous Union of Krewo was concluded in the Kreva Castle, located in the Smorgon district, in 1385. This union marked the beginning of the unification of the Grand Duchy of Lithuania and Poland. A significant milestone in the joint struggle for independence against external aggression was the Battle of Grunwald in 1410. The Grodno, Volkovysk, Lida, and other regiments fought alongside Belarusian, Russian, and Polish forces, achieving a brilliant victory over the conquerors.",
+        "grodnoin19":"Grodno in the 19th century",
+        "textAll2":"In the 12th to 16th centuries, the largest cities and towns in the Grodno region began to play a significant role in the economic and cultural life of the country. Some of them, such as Grodno, Novogrudok, Slonim, and others, gained self-governance in accordance with the Magdeburg Law. The economy of Grodno, as an administrative and territorial unit, was one of the most developed and prosperous in the country at that time. After the Second and Third Partitions of the Polish-Lithuanian Commonwealth in 1793 and 1795, the territory of the modern Grodno region became part of the Russian Empire.",
+        "textAll3":"As the Slavs settled in the territories of Grodno, they gradually assimilated the ancient Baltic-speaking population that lived there. The assimilation of the Balts continued until the 12th-13th centuries. In the 12th to the first half of the 14th century, there existed the principalities of Grodno, Novogrudok, and Volkovysk. These independent state formations bore the imprint of the unified political and socio-economic development of the East Slavic lands within the framework of Kievan Rus - the cradle of the fraternal Belarusian, Russian, and Ukrainian peoples.",
+        "textAll4":"A significant event in its history was the formation of the Grodno Governorate in 1801, which soon became one of the most economically developed governorates of Russia. By 1890, Grodno alone had over 70 factories and plants employing more than 2,000 workers. The tobacco factory in Grodno was one of the largest industrial enterprises in Belarus. The woodworking industry flourished in Slonim, while Dyatlovo specialized in hosiery production, and Smorgon and Oshmyany had a thriving leather industry. According to the conditions of the Riga Peace Treaty in 1921, the lands of Grodno were ceded to Poland. In September 1939, Grodno became part of the Belarusian Soviet Socialist Republic (BSSR).",
+        "volkovyskin19":"Volkovysk in the 19th century",
+        "textAll5":"During the years 1939-1941, Grodno saw the opening of shoe, sewing, and furniture factories, a bread plant, a teacher training institute, a Polish theater, as well as the establishment of historical and regional archives. During the Great Patriotic War (1941-1945), the partisan movement experienced significant development in the region. Thousands of people from Grodno bravely fought on the front lines of the war. The fascist invaders destroyed over 120 industrial enterprises, almost all collective farms, state farms, and machine-tractor stations (MTS) in the area. On September 20, 1944, the Grodno Oblast was established with its center in Grodno.",
+        "novogrudokin19":"Novogrudok in the 19th century"
+
     }
 }

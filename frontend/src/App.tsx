@@ -5,15 +5,15 @@ import '../src/ui/fonts/fonts.module.sass';
 import '../src/ui/adaptive/adaptive.module.sass';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
-import { Header } from './components/header/header';
-import { Home } from './pages/homePage/home';
-import { Grodno } from './pages/grodnoPage/grodno'
-import { Products } from './pages/products/products';
-import { Farmstead } from './pages/farmstead/farmstead';
-import { Page404 } from './pages/page404/page404';
-import { Registration } from './pages/registration/registration';
+import { Home } from './pages/HomePage/Home';
+import { Header } from './ui/header/header';
+import { Products } from './pages/Products/Products';
+import { Farmstead } from './pages/Farmstead/Farmstead';
+import { Grodno } from './pages/grodnoPage/grodno';
+import { Registration } from './pages/Registration/Registration';
 import { LoginPage } from './pages/loginPage/login';
-import { FarmsteadAll } from './pages/farmsteadAll/farmsteadAll';
+import { FarmsteadAll } from './pages/FarmsteadAll/FarmsteadAll';
+import { Page404 } from './pages/Page404/Page404';
 
 function App() {
     return (
