@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SignUp from '../user/signUp';
+import SignUp from '../User/signUp';
 import styles from './registration.module.sass';
 
 export function Registration() {

@@ -3,7 +3,7 @@
         {
             "id": 0,
             "title": "Meat",
-            "price": "21 BYN ≈ $8",
+            "price": "21 BYN",
             "count": "1 kilogram",
             "address": "Bolshaya Berestovitsa, Ratushnaya Square, 15",
             "number": "+375(29)758-41-80"
@@ -11,7 +11,7 @@
         {
             "id": 1,
             "title": "Cheese",
-            "price": "39 BYN ≈ $15",
+            "price": "39 BYN",
             "count": "1 kilogram",
             "address": "Olhovtsy",
             "number": "+375(29)975-52-86"
@@ -19,7 +19,7 @@
         {
             "id": 2,
             "title": "Honey",
-            "price": "73 BYN ≈ $28",
+            "price": "73 BYN",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
@@ -27,7 +27,7 @@
         {
             "id": 3,
             "title": "Pollen",
-            "price": "13 BYN ≈ $5",
+            "price": "13 BYN",
             "count": "150 grams",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
@@ -35,7 +35,7 @@
         {
             "id": 4,
             "title": "Potatoes",
-            "price": "8 BYN ≈ $3",
+            "price": "8 BYN",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
@@ -43,7 +43,7 @@
         {
             "id": 5,
             "title": "Propolis",
-            "price": "26 BYN ≈ $10",
+            "price": "26 BYN",
             "count": "10 grams",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
@@ -51,7 +51,7 @@
         {
             "id": 6,
             "title": "Wheat",
-            "price": "73 BYN ≈ $28",
+            "price": "73 BYN",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
@@ -59,7 +59,7 @@
         {
             "id": 7,
             "title": "Rye",
-            "price": "18 BYN ≈ $7",
+            "price": "18 BYN",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
@@ -67,7 +67,7 @@
         {
             "id": 8,
             "title": "Beeswax",
-            "price": "73 BYN ≈ $28",
+            "price": "73 BYN",
             "count": "1 kg",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69, +375 25 739 02 14"
@@ -128,6 +128,12 @@
         "volkovyskin19":"Volkovysk in the 19th century",
         "textAll5":"During the years 1939-1941, Grodno saw the opening of shoe, sewing, and furniture factories, a bread plant, a teacher training institute, a Polish theater, as well as the establishment of historical and regional archives. During the Great Patriotic War (1941-1945), the partisan movement experienced significant development in the region. Thousands of people from Grodno bravely fought on the front lines of the war. The fascist invaders destroyed over 120 industrial enterprises, almost all collective farms, state farms, and machine-tractor stations (MTS) in the area. On September 20, 1944, the Grodno Oblast was established with its center in Grodno.",
         "novogrudokin19":"Novogrudok in the 19th century"
-
+    },
+    "sign":{
+        "input":"Sign in",
+        "email":"Email",
+        "password":"Password",
+        "signIn":"Sign in"
     }
+
 }

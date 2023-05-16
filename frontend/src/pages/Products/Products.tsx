@@ -8,45 +8,74 @@ import useTranslation from '../../hooks/useTranslation';
 import { CurrencyConverter } from '../../ui/currency/currency';
 import axios from 'axios';
 
+export interface ConversionRates {
+  usdToBynRate: number;
+  eurToBynRate: number;
+  plnToBynRate: number;
+}
+
 export function Products() {
-    const products = useAppSelector((state) => state.products.products);
-    const loading = useAppSelector((state) => state.products.loading);
-    const { t } = useTranslation();
-    const [conversionRate, setConversionRate] = useState(0);
+  const products = useAppSelector((state) => state.products.products);
+  const loading = useAppSelector((state) => state.products.loading);
+  const { t } = useTranslation();
+  const [conversionRate, setConversionRate] = useState<ConversionRates | null>(null);
 
-    useEffect(() => {
-        const fetchConversionRate = async () => {
-            try {
-                const response = await axios.get('https://belarusbank.by/api/kursExchange');
-                const usdToBynRate = response.data.USD_in;
-                setConversionRate(usdToBynRate);
-            } catch (error) {
-                console.error('Failed to fetch conversion rate:', error);
-            }
-        };
-
-        fetchConversionRate();
-    }, []);
-
-    const convertToUSD = (amount: number) => {
-        return (amount / conversionRate).toFixed(2);
+  useEffect(() => {
+    const fetchConversionRate = async () => {
+      try {
+        const response = await axios.get('https://v6.exchangerate-api.com/v6/9e01f749e605de6a06421c20/latest/BYN');
+        const usdToBynRate = response.data.conversion_rates.USD;
+        const eurToBynRate = response.data.conversion_rates.EUR;
+        const plnToBynRate = response.data.conversion_rates.PLN;
+        setConversionRate({usdToBynRate, eurToBynRate, plnToBynRate});
+      } 
+      catch (error) {
+        console.error('Failed to fetch conversion rate:', error);
+      }
     };
 
-    return (
-        <>
-            {loading && <Loader />}
-            <ProductsFilter />
-            <CurrencyConverter convertToUSD={convertToUSD} conversionRate={conversionRate} />
-            <div className={styles.gridContainer}>
-                {products.map((product) => (
-                    <ProductsCard
-                        key={product.id}
-                        img={product.img}
-                        dataItem={product}
-                        t={t}
-                    />
-                ))}
-            </div>
-        </>
-    );
+    fetchConversionRate();
+  }, []);
+
+ 
+  const convertToUSD = (amount: number) => {
+    if (conversionRate) {
+      return (amount * conversionRate.usdToBynRate).toFixed(2);
+    }
+    return '';
+  };
+
+  const convertToPLN = (amount: number) => {
+    if (conversionRate) {
+      return (amount * conversionRate.plnToBynRate).toFixed(2);
+    }
+    return '';
+  };
+
+  const convertToEUR = (amount: number) => {
+    if (conversionRate) {
+      return (amount * conversionRate.eurToBynRate).toFixed(2);
+    }
+    return '';
+  };
+
+  return (
+    <>
+      {loading && <Loader />}
+      <ProductsFilter />
+      {conversionRate !== null  && (
+        <CurrencyConverter
+          convertToUSD={convertToUSD}
+          convertToPLN={convertToPLN}
+          convertToEUR={convertToEUR}
+          conversionRate={conversionRate}
+        />
+      )}
+      <div className={styles.gridContainer}>
+        {products.map((product) => (
+          <ProductsCard key={product.id} img={product.img} dataItem={product} t={t} />
+        ))}
+      </div>
+    </>
+  );
 }

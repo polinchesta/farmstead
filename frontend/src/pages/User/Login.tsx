@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { setUser } from '../../store/auth/authSlice';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { Form } from './form';
+import { Form } from './Form';
 import { useAppDispatch } from '../../hooks/redux-hooks';
+import useTranslation from '../../hooks/useTranslation';
 
 export default function Login() {
     const [error, setError] = useState({ isError: false, message: "" });
     const dispatch = useAppDispatch();
+    const { t } = useTranslation();
     const handleLogin = (email: string, password: string) => {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password)
@@ -27,7 +29,7 @@ export default function Login() {
     return (
         <>
             <Form
-                title="Войти"
+                title={t.sign.signIn}
                 handleClick={handleLogin} />
             {error.isError && <p>{error.message}</p>}
         </>
