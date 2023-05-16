@@ -1,5 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import { ConversionRates } from "../../pages/Products/Products";
+import styles from "./currency.module.sass"
 
 interface CurrencyConverterProps {
   convertToUSD: (amount: number) => string;
@@ -72,22 +73,22 @@ export function CurrencyConverter({
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
         <label>BYN:</label>
-        <input type="text" value={amountBYN} onChange={handleBYNChange} />
+        <input className={styles.input} type="text" value={amountBYN} onChange={handleBYNChange} />
       </div>
       <div>
         <label>USD:</label>
-        <input type="text" value={amountUSD} readOnly={true} onChange={handleUSDChange} />
+        <input className={styles.input} type="text" value={amountUSD} readOnly={true} onChange={handleUSDChange} />
       </div>
       <div>
         <label>PLN:</label>
-        <input type="text" value={amountPLN} readOnly={true} onChange={handlePLNChange} />
+        <input className={styles.input} type="text" value={amountPLN} readOnly={true} onChange={handlePLNChange} />
       </div>
       <div>
         <label>EUR:</label>
-        <input type="text" value={amountEUR} readOnly={true} onChange={handleEURChange} />
+        <input className={styles.input} type="text" value={amountEUR} readOnly={true} onChange={handleEURChange} />
       </div>
     </div>
   );
