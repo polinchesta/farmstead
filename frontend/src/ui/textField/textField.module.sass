@@ -13,27 +13,28 @@
         transform: translateY(-50%)
         transition: transform 0.2s ease-out, opacity 0.2s ease-out
         pointer-events: none
-        color: rgba(0, 0, 0, 0.54)
+        color: rgba(17, 0, 0, 0.54)
         font-size: 16px
         line-height: 1
         padding: 4px
+        text-align: center
         opacity: 0.6
-        z-index: 1
+        z-index: 3
+        font-family: "PT Mono", monospace
 
         &Active
             transform: translateY(-120%)
             opacity: 0
 
-    .inputContainer
-        position: relative
-        display: inline-block
+    input
+        font-family: "PT Mono", monospace
+        border: 3px solid black
+        height: 40px
         width: 100%
-
-    .input
-        width: 100%
-        padding: 12px
+        padding: 20px
+        text-align: center
         font-size: 16px
-        border: 1px solid rgba(0, 0, 0, 0.23)
+        border: 2px solid rgba(0, 0, 0, 0.23)
         border-radius: 4px
         outline: none
         background: transparent
@@ -41,8 +42,13 @@
         z-index: 2
         transition: border-color 0.2s ease-out
 
+        &:hover
+            color: #6b6565
+            background: transparent
+
+
         &:focus
-            border-color: #2196f3
+            border-color: #0b1721
 
     .error
         color: red

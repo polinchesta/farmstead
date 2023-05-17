@@ -134,6 +134,12 @@
         "email":"Email",
         "password":"Password",
         "signIn":"Sign in"
+    },
+    "sort":{
+        "popular":"Popular",
+        "sort":"Sort"
+    },
+    "field":{
+        "search":"🔎 Looking for what?"
     }
-
 }

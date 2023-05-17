@@ -3,7 +3,7 @@ import styles from './home.module.sass';
 import farmstead from '../../data/cardData.json';
 import { Card } from '../cardFarmstead/cardFarmstead';
 import useTranslation from '../../hooks/useTranslation';
-import { MyImageSlider } from '../../components/carousel/carousel';
+import { MyImageSlider } from '../../Components/Carousel/Carousel';
 
 export function Home() {
     const { t } = useTranslation();
@@ -45,7 +45,7 @@ export function Home() {
                     <p>{t.main.rightInformation.email}: polinchesta@gmail.com</p>
                     <p>GitHub: https://github.com/polinchesta</p>
                     <p>Telegram: @polinchesta</p>
-                    <h4>{t.main.rightInformation.connect}</h4>
+                    <h4>{t.main.rightInformation.aboutMessage}</h4>
                     <form className={styles.form}>
                         <label>
                             {t.main.rightInformation.email}

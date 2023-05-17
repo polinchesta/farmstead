@@ -6,6 +6,7 @@ import TextField from "../../../ui/textField/textField";
 import useDebounceValue from "../../../hooks/useDebounceValue";
 import { ProductsFilterType } from "../../../types/productsTypes";
 import styles from "./productsFilter.module.sass";
+import useTranslation from "../../../hooks/useTranslation";
 
 const ProductsFilter: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -13,6 +14,7 @@ const ProductsFilter: React.FC = () => {
     const [page, setPage] = useState(1);
     const [isLastPage, setIsLastPage] = useState(false);
     const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
+    const {t}=useTranslation();
 
     const fetchData = (filter: Partial<ProductsFilterType> = {}) => {
         dispatch(
@@ -75,19 +77,21 @@ const ProductsFilter: React.FC = () => {
                     label="Sort field"
                     value={sortField}
                     setValue={setSortField}
-                    options={[{ value: "id", text: "Популярные" }]}
+                    options={[{ value: "id", text: t.sort.popular }]}
                     style={{ margin: "10px" }}
                 />
                 <button className={styles.buttonSort} type="submit">
-                    Sort
+                    {t.sort.sort}
                 </button>
             </div>
-            <TextField
-                className={styles.field}
-                label="🔎 В поиске чего?"
-                value={query}
-                setValue={setQuery}
-            />
+            <div className="field">
+                <TextField
+                    className={styles.field}
+                    label={t.field.search}
+                    value={query}
+                    setValue={setQuery}
+                />
+            </div>
             <div className={styles.pagination}>
                 <button
                     className={styles.buttonPagination}

@@ -35,11 +35,8 @@ const TextField: React.FC<PropsType> = ({
     return (
         <div className={`${styled.container} ${isFocused ? styled.containerFocused : ''}`}>
             <label>
-                <div className={`${styled.hiddenLabel} ${isFocused || value ? styled.hiddenLabelActive : ''}`}>
-                    {label}
-                </div>
                 <input
-                    className={styled.input}
+                    className={styled.inputStyle}
                     ref={inputRef}
                     type="text"
                     value={value}
@@ -48,6 +45,9 @@ const TextField: React.FC<PropsType> = ({
                     onBlur={onBlur}
                     {...props}
                 />
+                <div className={`${styled.hiddenLabel} ${isFocused || value ? styled.hiddenLabelActive : ''}`}>
+                    {label}
+                </div>
             </label>
             {error && (
                 <div className={styled.error}>

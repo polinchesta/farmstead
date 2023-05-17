@@ -27,8 +27,8 @@ export function Products() {
         const usdToBynRate = response.data.conversion_rates.USD;
         const eurToBynRate = response.data.conversion_rates.EUR;
         const plnToBynRate = response.data.conversion_rates.PLN;
-        setConversionRate({usdToBynRate, eurToBynRate, plnToBynRate});
-      } 
+        setConversionRate({ usdToBynRate, eurToBynRate, plnToBynRate });
+      }
       catch (error) {
         console.error('Failed to fetch conversion rate:', error);
       }
@@ -37,7 +37,7 @@ export function Products() {
     fetchConversionRate();
   }, []);
 
- 
+
   const convertToUSD = (amount: number) => {
     if (conversionRate) {
       return (amount * conversionRate.usdToBynRate).toFixed(2);
@@ -62,8 +62,7 @@ export function Products() {
   return (
     <>
       {loading && <Loader />}
-      <ProductsFilter />
-      {conversionRate !== null  && (
+      {conversionRate !== null && (
         <CurrencyConverter
           convertToUSD={convertToUSD}
           convertToPLN={convertToPLN}
@@ -71,6 +70,7 @@ export function Products() {
           conversionRate={conversionRate}
         />
       )}
+      <ProductsFilter />
       <div className={styles.gridContainer}>
         {products.map((product) => (
           <ProductsCard key={product.id} img={product.img} dataItem={product} t={t} />
