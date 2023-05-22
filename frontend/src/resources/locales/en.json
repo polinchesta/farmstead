@@ -13,7 +13,7 @@
             "title": "Cheese",
             "price": "39 BYN",
             "count": "1 kilogram",
-            "address": "Olhovtsy",
+            "address": "Village Olhovtsy, Lida district",
             "number": "+375(29)975-52-86"
         },
         {
@@ -22,7 +22,7 @@
             "price": "73 BYN",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
-            "number": "+375 29 672 25 69, +375 25 739 02 14"
+            "number": "+375 29 672 25 69"
         },
         {
             "id": 3,
@@ -30,7 +30,7 @@
             "price": "13 BYN",
             "count": "150 grams",
             "address": "Shchuchin district, Lyadsky village council",
-            "number": "+375 29 672 25 69, +375 25 739 02 14"
+            "number": "+375 29 672 25 69"
         },
         {
             "id": 4,
@@ -38,7 +38,7 @@
             "price": "8 BYN",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
-            "number": "+375 29 672 25 69, +375 25 739 02 14"
+            "number": "+375 29 672 25 69"
         },
         {
             "id": 5,
@@ -46,7 +46,7 @@
             "price": "26 BYN",
             "count": "10 grams",
             "address": "Shchuchin district, Lyadsky village council",
-            "number": "+375 29 672 25 69, +375 25 739 02 14"
+            "number": "+375 29 672 25 69"
         },
         {
             "id": 6,
@@ -54,7 +54,7 @@
             "price": "73 BYN",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
-            "number": "+375 29 672 25 69, +375 25 739 02 14"
+            "number": "+375 29 672 25 69"
         },
         {
             "id": 7,
@@ -62,7 +62,7 @@
             "price": "18 BYN",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
-            "number": "+375 29 672 25 69, +375 25 739 02 14"
+            "number": "+375 29 672 25 69"
         },
         {
             "id": 8,
@@ -70,7 +70,7 @@
             "price": "73 BYN",
             "count": "1 kg",
             "address": "Shchuchin district, Lyadsky village council",
-            "number": "+375 29 672 25 69, +375 25 739 02 14"
+            "number": "+375 29 672 25 69"
         }
     ],
     "header": {
@@ -145,6 +145,15 @@
     },
     "field": {
         "search": "🔎 Looking for what?"
+    },
+    "order":{
+        "button":"Order in 1 click"
+    },
+    "modal":{
+        "phone":"Your phone number:",
+        "email":"Your email:",
+        "name":"How can you be contacted:",
+        "call":"Request a call"
     },
     "farmstead": [
         {

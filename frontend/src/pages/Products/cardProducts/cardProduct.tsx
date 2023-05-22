@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useTranslation from '../../../hooks/useTranslation';
 import { ProductType } from '../../../types/productsTypes';
 import styles from './cardProduct.module.sass';
+import Modal from '../../../ui/modal/modal';
 
 interface CardProps {
     dataItem: ProductType;
@@ -18,6 +19,9 @@ const ProductsCard: React.FC<CardProps> = ({
     const openModal = () => {
         setModalOpen(true);
     };
+    const closeModal = () => {
+        setModalOpen(false);
+    };  
     return (
         <div className={styles.container}>
             <section className={styles.product}>
@@ -31,7 +35,10 @@ const ProductsCard: React.FC<CardProps> = ({
                 <div className={styles.number}>
                     <a href={"tel:" + t.products[dataItem.id].number}>{t.products[dataItem.id].number}</a>
                 </div>
-                <button onClick={openModal}>Открыть модальное окно</button>
+                <button className={styles.button} onClick={openModal}>{t.order.button}</button>
+                {modalOpen && (
+                    <Modal title={t.products[dataItem.id].title} onClose={closeModal} />
+                )}
             </section>
         </div>
     );
