@@ -120,26 +120,286 @@
     "grodno": {
         "history": "History Grodno region",
         "textAll": "The territory of Grodno was inhabited by people from the Late Paleolithic period. The oldest settlements were located near Lake Svityazh, near the village of Cheresha in Novogrudok, Nesilovichi in Dyatlovo, Zblyany in Lida districts, and near the mouth of the Kotra River. Eastern Slavic tribes (Dregovichs, Krivichs, Volhynians, Drevlyans), Western Slavic (Mozovshans), Eastern Baltic (Lithuanians), and Western Baltic (Yatvingians) lived here. The Slavic colonization began in the second half of the 1st millennium.",
-        "textAll1":"The principalities, like other Western Russian lands, were under constant threat of Mongol-Tatar conquest for a long time. For over two centuries, they served as a frontline in the struggle against the aggression of the Crusaders. In the midst of the fight against the Crusaders' aggression, the famous Union of Krewo was concluded in the Kreva Castle, located in the Smorgon district, in 1385. This union marked the beginning of the unification of the Grand Duchy of Lithuania and Poland. A significant milestone in the joint struggle for independence against external aggression was the Battle of Grunwald in 1410. The Grodno, Volkovysk, Lida, and other regiments fought alongside Belarusian, Russian, and Polish forces, achieving a brilliant victory over the conquerors.",
-        "grodnoin19":"Grodno in the 19th century",
-        "textAll2":"In the 12th to 16th centuries, the largest cities and towns in the Grodno region began to play a significant role in the economic and cultural life of the country. Some of them, such as Grodno, Novogrudok, Slonim, and others, gained self-governance in accordance with the Magdeburg Law. The economy of Grodno, as an administrative and territorial unit, was one of the most developed and prosperous in the country at that time. After the Second and Third Partitions of the Polish-Lithuanian Commonwealth in 1793 and 1795, the territory of the modern Grodno region became part of the Russian Empire.",
-        "textAll3":"As the Slavs settled in the territories of Grodno, they gradually assimilated the ancient Baltic-speaking population that lived there. The assimilation of the Balts continued until the 12th-13th centuries. In the 12th to the first half of the 14th century, there existed the principalities of Grodno, Novogrudok, and Volkovysk. These independent state formations bore the imprint of the unified political and socio-economic development of the East Slavic lands within the framework of Kievan Rus - the cradle of the fraternal Belarusian, Russian, and Ukrainian peoples.",
-        "textAll4":"A significant event in its history was the formation of the Grodno Governorate in 1801, which soon became one of the most economically developed governorates of Russia. By 1890, Grodno alone had over 70 factories and plants employing more than 2,000 workers. The tobacco factory in Grodno was one of the largest industrial enterprises in Belarus. The woodworking industry flourished in Slonim, while Dyatlovo specialized in hosiery production, and Smorgon and Oshmyany had a thriving leather industry. According to the conditions of the Riga Peace Treaty in 1921, the lands of Grodno were ceded to Poland. In September 1939, Grodno became part of the Belarusian Soviet Socialist Republic (BSSR).",
-        "volkovyskin19":"Volkovysk in the 19th century",
-        "textAll5":"During the years 1939-1941, Grodno saw the opening of shoe, sewing, and furniture factories, a bread plant, a teacher training institute, a Polish theater, as well as the establishment of historical and regional archives. During the Great Patriotic War (1941-1945), the partisan movement experienced significant development in the region. Thousands of people from Grodno bravely fought on the front lines of the war. The fascist invaders destroyed over 120 industrial enterprises, almost all collective farms, state farms, and machine-tractor stations (MTS) in the area. On September 20, 1944, the Grodno Oblast was established with its center in Grodno.",
-        "novogrudokin19":"Novogrudok in the 19th century"
+        "textAll1": "The principalities, like other Western Russian lands, were under constant threat of Mongol-Tatar conquest for a long time. For over two centuries, they served as a frontline in the struggle against the aggression of the Crusaders. In the midst of the fight against the Crusaders' aggression, the famous Union of Krewo was concluded in the Kreva Castle, located in the Smorgon district, in 1385. This union marked the beginning of the unification of the Grand Duchy of Lithuania and Poland. A significant milestone in the joint struggle for independence against external aggression was the Battle of Grunwald in 1410. The Grodno, Volkovysk, Lida, and other regiments fought alongside Belarusian, Russian, and Polish forces, achieving a brilliant victory over the conquerors.",
+        "grodnoin19": "Grodno in the 19th century",
+        "textAll2": "In the 12th to 16th centuries, the largest cities and towns in the Grodno region began to play a significant role in the economic and cultural life of the country. Some of them, such as Grodno, Novogrudok, Slonim, and others, gained self-governance in accordance with the Magdeburg Law. The economy of Grodno, as an administrative and territorial unit, was one of the most developed and prosperous in the country at that time. After the Second and Third Partitions of the Polish-Lithuanian Commonwealth in 1793 and 1795, the territory of the modern Grodno region became part of the Russian Empire.",
+        "textAll3": "As the Slavs settled in the territories of Grodno, they gradually assimilated the ancient Baltic-speaking population that lived there. The assimilation of the Balts continued until the 12th-13th centuries. In the 12th to the first half of the 14th century, there existed the principalities of Grodno, Novogrudok, and Volkovysk. These independent state formations bore the imprint of the unified political and socio-economic development of the East Slavic lands within the framework of Kievan Rus - the cradle of the fraternal Belarusian, Russian, and Ukrainian peoples.",
+        "textAll4": "A significant event in its history was the formation of the Grodno Governorate in 1801, which soon became one of the most economically developed governorates of Russia. By 1890, Grodno alone had over 70 factories and plants employing more than 2,000 workers. The tobacco factory in Grodno was one of the largest industrial enterprises in Belarus. The woodworking industry flourished in Slonim, while Dyatlovo specialized in hosiery production, and Smorgon and Oshmyany had a thriving leather industry. According to the conditions of the Riga Peace Treaty in 1921, the lands of Grodno were ceded to Poland. In September 1939, Grodno became part of the Belarusian Soviet Socialist Republic (BSSR).",
+        "volkovyskin19": "Volkovysk in the 19th century",
+        "textAll5": "During the years 1939-1941, Grodno saw the opening of shoe, sewing, and furniture factories, a bread plant, a teacher training institute, a Polish theater, as well as the establishment of historical and regional archives. During the Great Patriotic War (1941-1945), the partisan movement experienced significant development in the region. Thousands of people from Grodno bravely fought on the front lines of the war. The fascist invaders destroyed over 120 industrial enterprises, almost all collective farms, state farms, and machine-tractor stations (MTS) in the area. On September 20, 1944, the Grodno Oblast was established with its center in Grodno.",
+        "novogrudokin19": "Novogrudok in the 19th century"
     },
-    "sign":{
-        "input":"Sign in",
-        "email":"Email",
-        "password":"Password",
-        "signIn":"Sign in"
+    "sign": {
+        "input": "Sign in",
+        "email": "Email",
+        "password": "Password",
+        "signIn": "Sign in",
+        "signUp":"Sign up",
+        "acc":"Don't have an account?",
+        "reg":"Sign up",
+        "acc1":"Do you have an account?"
     },
-    "sort":{
-        "popular":"Popular",
-        "sort":"Sort"
+    "sort": {
+        "popular": "Popular",
+        "sort": "Sort"
     },
-    "field":{
-        "search":"🔎 Looking for what?"
-    }
+    "field": {
+        "search": "🔎 Looking for what?"
+    },
+    "farmstead": [
+        {
+            "id": 1,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/falvarek_nhypuq.jpg",
+            "minutsForRead": "12 minutes",
+            "title": "Falvarek \"U Rysya\"",
+            "text": "In a village located 10 kilometers away from Volkovysk, where only nine people reside, a family of medical professionals decided to build a farmstead five years ago.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "In a village located 10 kilometers away from Volkovysk, where only nine people reside, a family of medical professionals decided to build a farmstead five years ago. Today, the farmstead 'U Rysya' is a complex consisting of five cottages and six hectares of water area. The place is remarkable because everything, from the carvings on the chairs to the potter's cottage, was created by the efforts of a single family.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/falvarek_nhypuq.jpg"
+                },
+                {
+                    "textAll": "Yanina, after finding the necessary equipment, discovered the recipe for bankuha pie, which local brides used to bake for weddings in the old days. Not everyone can master the preparation process: first, the Russian stove needs to be heated for two hours, then 60 egg whites and 60 egg yolks are manually whipped in separate pots, followed by the addition of butter, flour, and sour cream. After that, the dough is rolled onto a spit and baked for two hours. The carver's cottage is notable because you can sleep on straw-filled mattresses here.",
+                    "url": "https://www.youtube.com/embed/XLrZOfytIaY",
+                    "titleVideo": "Where to Rest in Belarus - 'Falvarek 'U Rysya'"
+                },
+                {
+                    "textAll": "The farmstead 'U Rysya' had room to expand. There was plenty of space near the village of Korevichi. The farmstead is designed for active tourists. The owners set themselves the goal of surprising and entertaining the tourists. That is why each cottage has a unique feature. Yanina participated in the European Union project 'Sustainable Development at the Local Level' and won a grant. After a year and a half, the cottages of the carver, weaver, and potter were built from real Pushcha wood. The carver's cottage features a Russian stove, where they also cook the traditional dish of Belarusians, Poles, and Lithuanians - wood-fired pie.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/pech_harauw.jpg"
+                },
+                {
+                    "textAll": "Yanina, after finding the necessary equipment, discovered the recipe for bankuha pie, which local brides used to bake for weddings in the old days. Not everyone can master the preparation process: first, the Russian stove needs to be heated for two hours, then 60 egg whites and 60 egg yolks are manually whipped in separate pots, followed by the addition of butter, flour, and sour cream. After that, the dough is rolled onto a spit and baked for two hours. The carver's cottage is notable because you can sleep on straw-filled mattresses here.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/rezchik_izulf6.jpg"
+                },
+                {
+                    "textAll": "Upon entering the healer's house, we sense an unusual scent from the doorstep. The source of the aroma is a collection of herbs hanging on the walls. The family gathers plants that can be used for aromatherapy and herbal therapy. On the top shelf in the bedroom, there are colorful dolls, each of which carries the scent of herbs. They are called \"herb dolls\" or \"herb sachets,\" and they are placed at the head of the bed of a newborn or sick person before sleep. They help induce sleep.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/znahorka_g7jkb6.jpg"
+                },
+                {
+                    "textAll": "The hosts hoped that tourists would come to them to relax from city life and modern technologies. That's why the houses in the \"Craft Village\" have only 3-4 electrical outlets and no internet. Establishing internet connection in Korevich is currently not feasible. The houses also don't have bathrooms. The shower is located in the main house and guest house. In the guest accommodation, there is a bathhouse with a steam room, a shower called Sharco, a billiard room with a fireplace, and a terrace. The estate encompasses six hectares of land. \"U Rysya\" is situated near the banks of the Ross River at the entrance to the forest. A pier has been built next to the river, where wedding ceremonies can be held. Nearby, there is an \"Angel Zone\" for children, featuring three stones weighing 12-14 tons each. Janina wants to engrave an angel on them and place benches so that children can gather and reminisce about our years of hard work.",
+                    "img":"https://res.cloudinary.com/drnebuzob/image/upload/v1684679757/rys5_ohibkq.jpg"
+                }
+            ]
+        },
+
+        {
+            "id": 2,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg",
+            "minutsForRead": "9 minutes",
+            "title": "Agrohomestead \"Kalya Nyomana\"",
+            "text": "134 km along the Minsk-Grodno highway. Wooden house with a Russian stove, sauna, terrace, swimming pool, barbecue. Organization of excursions around the Golden Ring of Ivetia. Fishing (pike, carp, tench, roach).",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "The 'Kalya Nyomana' rental estate is located 10 kilometers from the Belarusian town of Ivye in the 'Razdory' reserve of the Grodno region. It is a true Belarusian village with traditional houses and a way of life!",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg"
+                },
+                {
+                    "textAll": "Near the village, there are coniferous forests and wide meadows. The picturesque landscapes and nearby churches have a calming effect. The beautiful village houses evoke a desire to visit them. And despite the peaceful way of life, there is always something to do in the village - it is never boring here! Urban dwellers are sometimes interested in simply admiring the local landscapes and village houses that have stood for 60 years. All the yards in the village are well-maintained, immersed in greenery and flowers. The beauty of the village where the estate is located lies in the fact that all the pictures of a happy life are real, created with hard work and love for the environment.",
+                    "url": "https://www.youtube.com/embed/cESbsQX13Yk",
+                    "titleVideo": "'Tourism without a suitcase. Ivye' Project"
+                },
+                {
+                    "textAll": "In this wonderful place, real weddings with elements of folk rituals take place (the ritual is called 'Heavenly Arch'), and newlyweds and guests ride horses with tambourines. So if you have a desire to start family life with amazing traditional rituals that carry ideas of goodness and prosperity, be sure to visit the 'Kalya Nyomana' estate. The hosts of the estate will be happy to help you with that! In addition, the organization of other themed events is possible. The Neman River flows near the Belarusian agro-eco-homestead, where you can relax on the water and go fishing. Nearby, there is a forest where you can enjoy walks in the fresh air or go hunting.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman1_yqzzfr.jpg"
+                },
+                {
+                    "textAll": "The 'Kalya Nyomana' agrohomestead itself is a traditional Belarusian house. It has two cozy bedrooms. The house has an equipped shower room with hot water and a sauna.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman2_dtvaea.jpg"
+                },
+                {
+                    "textAll": "Excursions and transfers to the Belarusian estate 'Kalya Nyomana' can be organized. Excursions can also be arranged in the nearby town of Ivye. Here, there is the Ivye Spring, the true treasure of the whole town. People have been coming here for water since 1914. All guests of Ivye come here, and they are greeted by the 'Princess Eva,' the founder of Ivye, near the spring. Recently, a bathhouse has been built near the spring, which was consecrated by Archbishop of Novogrudok and Lida, Gurij, and the spring water is now named after Archangel Michael."
+                }
+            ]
+        },
+
+        {
+            "id": 3,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg",
+            "minutsForRead": "7 minutes",
+            "title": "Agrohomestead \"Dubrava\"",
+            "text": "Novogrudok district, Grodno region, Olkhovka village. Cozy living room with a fireplace and access to the terrace, TV, kitchen, four bedrooms.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "If you are tired of the hustle and bustle of life, the noise of the city, unresolved problems, and excessive stress, then leave it all behind for a while. The 'Dubrava' agrohomestead, located in the village of Olkhovka in the Novogrudok district, 160 km from Minsk, invites you to immerse yourself in silence, listen to the sounds of nature, become a part of this surrounding beauty, and finally, not to rush anywhere. The 'Dubrava' estate is a place where the soul rests!",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg"
+                },
+                {
+                    "textAll": "The 'Dubrava' estate is an enclosed area that houses a modern attic-style wooden house with a terrace and all amenities. The house can accommodate up to 11 people overnight. It has a cozy living room with a fireplace, a kitchen equipped with household appliances, 4 bedrooms with single and double beds, 2 bathrooms, a bathtub, a washing machine, and television.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava1_wygdfm.jpg"
+                },
+                {
+                    "textAll": "During your stay in the house, you will be provided with meals made from organic products. You will enjoy Belarusian, Polish, Lithuanian cuisine, as well as signature dishes prepared by the estate owner! The cost of accommodation for children is determined separately depending on their age.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava2_fukiaj.jpg"
+                },
+                {
+                    "textAll": "On the territory of the 'Dubrava' estate, located 20 km from Novogrudok, there is a Russian sauna (for an additional fee), a gazebo (included in the house rental price), a barbecue area, volleyball and mini-football courts, and ample parking. You can take a walk in the forest or along the banks of the Neman River, gather mushrooms and berries, and fishing enthusiasts can indulge in their favorite hobby.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava3_a2sjqo.jpg"
+                },
+                {
+                    "textAll": "Guests of the estate will not be deprived of attention, and the level of service will pleasantly surprise you. They organize evenings of classical and medieval music, master classes on straw weaving, firewood chopping, manual scything, and sports games. The hosts of the estate will be happy to help you choose excursions and can organize them for you (Novogrudok, Mir, Nesvizh, Lida, Grodno, Ivye, etc.). Transfer services can be arranged upon agreement."
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg",
+            "minutsForRead": "6 minutes",
+            "title": "Agrohomestead \"Bubliki\"",
+            "text": "Grodno Region, Ivye District, Sheluti Village. You will be pleasantly surprised by the fast-flowing Gavia River, one of the cleanest rivers in Belarus, which flows just a few meters from the estate.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "Bubliki Agro Homestead is located in the Ivye District of Grodno Region. The estate features a spacious banquet hall for 50 people, where you can host festive events. Additionally, there is a covered gazebo with a capacity of up to 40 people for outdoor celebrations.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg"
+                },
+                {
+                    "textAll": "The Bubliki Homestead house can accommodate groups of up to 10 people. It is equipped with all necessary amenities, furniture, and appliances. The estate grounds have a brick barbecue stove where you can prepare kebabs and fish soup. There is also parking available on the premises.",
+                    "url": "https://www.youtube.com/embed/kAzF1KaTceA",
+                    "titleVideo": "Bubliki Agro Homestead"
+                },
+                {
+                    "textAll": "The homestead is situated on the Gavia River in the village of Sheluti, 10 km from Ivye and 25 km from Lida. It is an excellent place to spend quality time with your family, meet friends and colleagues, organize events, and simply escape the hustle and bustle of the city.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bybliki3_r9vkbj.jpg"
+                },
+                {
+                    "textAll": "There is a brick barbecue stove with a cooking pot and cauldron for culinary experiments. The large covered gazebo, with its unique design, allows you to enjoy cooking shashlik, dishes over an open fire, and hot drinks even in winter. Swings, a hammock, and a trampoline for children can complement and diversify your stay. You will have the opportunity to swim in one of the cleanest rivers in Belarus, the Gavia River, which flows just a few meters from the estate. You can also enjoy a beautiful sunset over the river, bird songs, and simply immerse yourself in nature!"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg",
+            "minutsForRead": "8 minutes",
+            "title": "Agrohomestead \"Lesnoy Edem\"",
+            "text": "Porechye Village, Grodno Region. Located 30 km from Grodno and 1.5 km from Lithuania, in a secluded picturesque area. Near the house, there is a Russian wood-fired sauna with a sauna room, a shower, and a plunge barrel.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "Lesnoy Edem Tourist Complex is a tranquil corner surrounded by young pine forest, located 30 km from the city of Grodno. If you love outdoor recreation, tired of the city bustle, or simply passing through Grodno, this estate in a pine forest with a Russian sauna and barbecue grills will be the perfect place to recharge and relax.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg"
+                },
+                {
+                    "textAll": "The estate is suitable for a family vacation. There is a playground with a trampoline and slides on the premises, and toys, board games, and books are available for free. Additionally, you can rent air hockey, a table tennis set, bicycles, jumpers, and a boat for lake excursions.",
+                    "url": "https://www.youtube.com/embed/KcTNmFrT_l8",
+                    "titleVideo": "Lesnoy Edem"
+                },
+                {
+                    "textAll": "The accommodation offers two newly built two-story houses with all amenities. They can comfortably accommodate 10-12 people, and if needed, additional sleeping places can be arranged. The first floor features a spacious banquet hall with a fireplace and two tables. Guests will not be bored as there is satellite TV, karaoke, and a DVD player. You can prepare meals in the kitchen equipped with all necessary appliances and utensils. The bathroom is fully equipped with a shower and heated floor. The bedroom on the first floor has a double bed.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem4_eirpaj.jpg"
+                },
+                {
+                    "textAll": "The second floor offers 4 bedrooms (each with a double bed) with en-suite bathrooms and showers. Guests can enjoy the sunsets and sunrises from the open terrace accessible from each room. Those who love outdoor relaxation will appreciate the equipped barbecue area with a table and benches. Gazebos (accommodating 30 and 50 people) are located throughout the property: near the lake, on the edge of the forest, and close to the children's playground.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem2_qxwykn.jpg"
+                },
+                {
+                    "textAll": "Feel free to bring your children as there is a separate entertainment area for them."
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/zirov_kmdsvk.png",
+            "minutsForRead": "5 minutes",
+            "title": "Agrohomestead \"Zhirovichi\"",
+            "text": "a.g. Zhirovichi, Slonimskaya Street. The guest house features terraces, a fireplace, barbecue grills, a sauna, a gazebo, sports grounds, a children's playground, board games, free Wi-Fi, a pond, and excursions to Zhirovichi Monastery.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "Zhirovichi is a unique place in Belarus, and the main attraction that draws people here is the Miraculous Icon of Zhirovichi Mother of God. It is also known for its beautiful architecture of the Zhirovichi Monastery churches, holy springs with healing water, and natural and historical landmarks.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/zirov_kmdsvk.png"
+                },
+                {
+                    "textAll": "The staff can communicate freely in English, Polish, Russian, and Ukrainian. The accommodation offers one category for guests - a vacation home.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/zirov1_thdbel.png"
+                },
+                {
+                    "textAll": "The property provides the following amenities for guest convenience: a microwave, an electric kettle, outdoor furniture, a hairdryer, a terrace, a dining area, and ironing facilities. The guest house is equipped with soundproofing. The window offers a magnificent panoramic view of the lake. Guests can enjoy a cozy fireplace for a pleasant time.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/zirov2_pfx2ih.png"
+                }
+            ]
+        },
+
+        {
+            "id": 7,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici_popzaw.jpg",
+            "minutsForRead": "12 minutes",
+            "title": "Agrohomestead \"Soniche\"",
+            "text": "Grodno district, village of Sonichi 6a. The homestead offers a log table for celebrations with seating for 30 people, a Russian sauna, a swimming pool, bicycles, boats, catamarans, kayaks, a Russian stove, a barbecue grill, and a smokehouse.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "Located on the bank of the Augustow Canal, 25 kilometers from Grodno, is the Soniche Homestead. The guest house is made of natural wood combined with hand-forged elements. The house provides a living room, two bedrooms, a kitchen, a bathroom, a sauna with a swimming pool, and a shower for your use.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici_popzaw.jpg"
+                },
+                {
+                    "textAll": "The ground floor of the guest house features a living room with a fireplace, a large banquet table, and wrought-iron benches. The kitchen is fully equipped with a refrigerator, microwave, electric stove, and all necessary utensils. If you want to enjoy a barbecue, skewers are available. The living room offers a TV, DVD player with karaoke, and a home theater. There are also toilet facilities, a shower, a sauna, and a swimming pool.",
+                    "url": "https://www.youtube.com/embed/9QxlmuwdGD0",
+                    "titleVideo": "Soniche Homestead"
+                },
+                {
+                    "textAll": "The second floor consists of two cozy rooms that can comfortably accommodate up to 6 people. The Soniche Homestead captivates with its beauty, combining natural surroundings with elements of modern design. Guests can enjoy fishing, bike rides, boating in boats, kayaks, and catamarans. The homestead also offers a sports ground, a playground for children, hammocks, and swings.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici1_c7ummp.jpg"
+                },
+                {
+                    "textAll": "The territory of the homestead is well-maintained and includes an artificial pond, a fountain, a picturesque bridge, and a gazebo equipped with a barbecue grill, a smokehouse, and an oven. The gazebo is designed for 30 people and is suitable for hosting various festive events. Guests can also enjoy a traditional Russian sauna heated with wood and a swimming pool.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici2_mryy4z.jpg"
+                },
+                {
+                    "textAll": "The homestead is located just seventy meters away from a forest. Guests can take leisurely walks, gather mushrooms and berries, and explore the surrounding area. Not far from the homestead, there are eight bunkers dating back to the Great Patriotic War. Upon request, excursions can be organized along the Augustow Canal, as well as various concerts, fire shows, performances by folk ensembles, dancers, instrumentalists, and clowns. A fireworks display can even be arranged in your honor! The homestead also offers the services of a chef. The hosts of the homestead are always happy to welcome you."
+                }
+            ]
+        },
+
+        {
+            "id": 8,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg",
+            "minutsForRead": "7 minutes",
+            "title": "Agrohomestead \"Lida\"",
+            "text": "Grodno region, Lida city. A two-story bathhouse with a veranda featuring a fireplace stove for barbecue and shashlik. The house has everything necessary for a quality rest.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "The Lida Homestead is located in the city, but it is hidden from the hustle and bustle by the crowns of tall oak, linden, and birch trees. It is more than five hundred meters away from the nearest buildings, making it a unique countryside retreat. The house is a modern construction made of white brick. Every detail has been carefully considered, including heated floors and an interior that combines elements of antiquity and modernity.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg"
+                },
+                {
+                    "textAll": "The homestead offers two bedrooms for guests. One bedroom has a double bed, while the other has two single beds, a sofa bed, and a traditional Russian stove-bed. The house also features a banquet hall with a Russian stove, capable of accommodating 30 people. This space can be used for celebrations, weddings, as well as a conference room for seminars. There is a home theater with a large TV and a good sound system. The hall has access to a terrace and a kitchen where the hosts will prepare meals for you. Guests have a separate bathroom with a toilet, bidet, shower, and sink.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpg"
+                },
+                {
+                    "textAll": "Guests of the homestead can enjoy a sauna, which includes a steam room, shower, plunge pool, toilet, and a relaxation room. The sauna is designed in the style of a hunting lodge and also provides facilities for making shashlik, uha (fish soup), pancakes, and more. The courtyard of the homestead is beautifully landscaped and includes a pond, swings, a sports ground, and hammocks.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida1_ge5jms.jpg"
+                },
+                {
+                    "textAll": "If desired, the homestead can organize excursions to nearby estates, the Zhirovichi Monastery, the Neman Glassworks, Lida Castle, and the Lida Brewery. You can also go hunting, fishing, witness real knightly duels, fire shows, and enjoy live music."
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/bal2_xexar1.jpg",
+            "minutsForRead": "6 minutes",
+            "title": "Agrohomestead \"Baltic coast\"",
+            "text": "Beregovoy village. The Baltic Coast Homestead is a bath complex where you can improve your health and have a great rest.",
+            "read": "Read more",
+            "farmstead": [
+                {
+                    "textAll": "The homestead offers a sauna with spa treatments for your relaxation. You can rent a cottage with 3 rooms (2 bedrooms and 1 living room), and you will also have access to a traditional village sauna.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/bal2_xexar1.jpg"
+                },
+                {
+                    "textAll": "The main house features a spa center, which includes an infrared sauna, a 4-person spa pool, a massage chair, a billiard table, a plasma TV, and a grill. The cabin area is equipped with a kitchen block with all modern amenities, and the room impresses with its spaciousness, comfortably accommodating a leather-covered sofa and a huge table made of natural alder wood that can comfortably seat up to 10 people. You can conveniently store your belongings in a wardrobe with sliding doors by Komandor. And, of course, there is a large widescreen TV with numerous channels. In cooler weather, a fireplace will provide warmth and create a cozy atmosphere, and you can sit at the bar counter with your friends.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bal1_rrvnzp.png"
+                },
+                {
+                    "textAll": "The Baltic Coast Homestead has a parking area. The centerpiece of relaxation is the sauna, which is lined with lime and alder wood and built according to all the rules of sauna construction. The sauna is equipped with a genuine Siberian stove, allowing you to experience the effects of both a Russian sauna and a Finnish sauna. To create a beneficial 'soft' steam, a modern steam generator and heated raspberry quartzite stones are used, and a special ventilation system ensures fresh air intake.",
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bal_bkczgy.png",
+                    "coordinate": "53.993095, 25.649057"
+                }
+            ]
+        }
+    ]
 }

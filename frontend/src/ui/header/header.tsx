@@ -1,4 +1,4 @@
-import React, { useState, useTransition } from 'react';
+import React, { useState } from 'react';
 import styles from './header.module.sass';
 import logo from '/logo.svg';
 import { Link } from 'react-router-dom';
@@ -6,13 +6,19 @@ import { removeUser } from '../../store/auth/authSlice';
 import { useAuth } from '../../hooks/useAuth';
 import { useAppDispatch } from '../../hooks/redux-hooks';
 import useTranslation from '../../hooks/useTranslation';
+import { LanguageType } from '../../types/languageTypes';
 
 export function Header() {
-    const { t, toggleLanguage } = useTranslation();
-    const Token = localStorage.getItem('token')
+    const { t, setLanguage } = useTranslation();
+    const Token = localStorage.getItem('token');
     const dispatch = useAppDispatch();
     const { isAuth, email } = useAuth();
     const [showTip, setShowTip] = useState(false);
+
+    const handleLanguageChange = (language: LanguageType) => {
+        setLanguage(language);
+    };
+
     return (
         <>
             <header>
@@ -23,17 +29,36 @@ export function Header() {
                             <div
                                 onMouseEnter={() => setShowTip(true)}
                                 onMouseLeave={() => setShowTip(false)}
-                            ><img src={logo} alt="WebSite Logo" />
+                            >
+                                <img src={logo} alt="WebSite Logo" />
                                 {showTip && <div className={styles.info}>{t.header.aboutMaik}</div>}
                             </div>
                         </Link>
                     </div>
-                    <button className={styles.language} onClick={toggleLanguage} >
-                        Смена Языка
+                    <div className={styles.language}>
+                        <button
+                            className={styles.language}
+                            onClick={() => handleLanguageChange('ru')}
+                        >
+                            RU
+                        </button>
+                        <button
+                            className={styles.language}
+                            onClick={() => handleLanguageChange('en')}
+                        >
+                            ENG
+                        </button>
+                    </div>
+                    <button
+                        className={styles.login}
+                        style={{ display: `${Token ? 'block' : 'none'}` }}
+                        onClick={() => {
+                            dispatch(removeUser());
+                            localStorage.removeItem('token');
+                        }}
+                    >
+                        Выйти из аккаунта {email}
                     </button>
-                    <button className={styles.login} style={{ display: `${Token ? "block" : "none"}` }}
-                        onClick={() => { dispatch(removeUser()), localStorage.removeItem("token") }}
-                    >Выйти из аккаунта {email}</button>
                     <div className={styles.menu}>
                         <nav className={styles.blocks}>
                             <Link className={styles.block} to="/">
@@ -42,7 +67,7 @@ export function Header() {
                             <Link className={styles.block} to="/product">
                                 {t.header.links.products}
                             </Link>
-                            <Link className={styles.block} to="/farmsteadall" >
+                            <Link className={styles.block} to="/farmstead">
                                 {t.header.links.farmstead}
                             </Link>
                             <Link className={styles.block} to="/login">

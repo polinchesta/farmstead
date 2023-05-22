@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import styles from './home.module.sass';
 import farmstead from '../../data/cardData.json';
-import { Card } from '../cardFarmstead/cardFarmstead';
 import useTranslation from '../../hooks/useTranslation';
-import { MyImageSlider } from '../../Components/Carousel/Carousel';
+import { MyImageSlider } from '../../ui/carousel/carousel';
+import CardFarmstead from '../Farmstead/cardFarmstead/cardFarmstead';
+import { Farmsteads } from '../Farmstead/Farmsteads';
 
 export function Home() {
     const { t } = useTranslation();
@@ -22,18 +23,7 @@ export function Home() {
             <div className={styles.flexDiv}>
                 <div className={styles.flexContainer}>
                     <h4>{t.main.leftInformation.latestPosts}</h4>
-                    {filterDate.map((card, index) => (
-                        <Card
-                            key={index}
-                            date={card.date}
-                            img={card.img}
-                            minutsForRead={card.minutsForRead}
-                            text={card.text}
-                            title={card.title}
-                            read={card.read}
-                            id={index}
-                        />
-                    ))}
+                    <Farmsteads />
                 </div>
                 <div className={styles.news}>
                     <h4>{t.main.rightInformation.news}</h4>

@@ -23,13 +23,19 @@ export function Products() {
   useEffect(() => {
     const fetchConversionRate = async () => {
       try {
-        const response = await axios.get('https://v6.exchangerate-api.com/v6/9e01f749e605de6a06421c20/latest/BYN');
-        const usdToBynRate = response.data.conversion_rates.USD;
-        const eurToBynRate = response.data.conversion_rates.EUR;
-        const plnToBynRate = response.data.conversion_rates.PLN;
-        setConversionRate({ usdToBynRate, eurToBynRate, plnToBynRate });
-      }
-      catch (error) {
+        const cachedConversionRate = localStorage.getItem('conversionRate');
+        if (cachedConversionRate) {
+          setConversionRate(JSON.parse(cachedConversionRate));
+        } else {
+          const response = await axios.get('https://v6.exchangerate-api.com/v6/9e01f749e605de6a06421c20/latest/BYN');
+          const usdToBynRate = response.data.conversion_rates.USD;
+          const eurToBynRate = response.data.conversion_rates.EUR;
+          const plnToBynRate = response.data.conversion_rates.PLN;
+          const conversionRate = { usdToBynRate, eurToBynRate, plnToBynRate };
+          setConversionRate(conversionRate);
+          localStorage.setItem('conversionRate', JSON.stringify(conversionRate));
+        }
+      } catch (error) {
         console.error('Failed to fetch conversion rate:', error);
       }
     };

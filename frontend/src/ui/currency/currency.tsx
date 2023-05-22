@@ -57,6 +57,7 @@ export function CurrencyConverter({
       );
     }
   };
+  
 
   const handleEURChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -71,6 +72,7 @@ export function CurrencyConverter({
       );
     }
   };
+  
 
   return (
     <div className={styles.container}>
