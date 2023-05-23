@@ -23,7 +23,6 @@ export function Header() {
         <>
             <header>
                 <div className={styles.headerContainer}>
-                    <h1>{t.header.logo.name}</h1>
                     <div className={styles.logo}>
                         <Link className={styles.link} to="/">
                             <div

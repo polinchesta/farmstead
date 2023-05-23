@@ -14,14 +14,14 @@ const FarmsteadsFilter: React.FC = () => {
     const [page, setPage] = useState(1);
     const [isLastPage, setIsLastPage] = useState(false);
     const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
-    const {t}=useTranslation();
+    const { t } = useTranslation();
 
     const fetchData = (filter: Partial<FarmsteadsFilterType> = {}) => {
         dispatch(
             farmsteadsActions.getFarmsteadsList({
                 sortField,
                 query: debounceQuery,
-                limit: 6,
+                limit: 4,
                 page,
                 ...filter,
             })
@@ -68,6 +68,7 @@ const FarmsteadsFilter: React.FC = () => {
             setIsLastPage(false);
         }
     }, [page]);
+
 
 
     return (

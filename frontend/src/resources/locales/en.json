@@ -74,9 +74,6 @@
         }
     ],
     "header": {
-        "logo": {
-            "name": "GREEN MICROPHONE"
-        },
         "links": {
             "main": "Main",
             "products": "Products",
@@ -92,7 +89,6 @@
         },
         "leftInformation": {
             "latestPosts": "LATEST POSTS",
-            "minutes": "minutes",
             "rus": "FALVARAK 'U RYSA'",
             "aboutRus": "Twelve years ago, a family of doctors decided to build a homestead in a village 10 kilometers from Volkovysk, where only nine people live. Today, the 'U Rysya' farmstead is a complex consisting of five houses.",
             "more": "Read more",
@@ -159,7 +155,6 @@
         {
             "id": 1,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/falvarek_nhypuq.jpg",
-            "minutsForRead": "12 minutes",
             "title": "Falvarek \"U Rysya\"",
             "text": "In a village located 10 kilometers away from Volkovysk, where only nine people reside, a family of medical professionals decided to build a farmstead five years ago.",
             "read": "Read more",
@@ -195,7 +190,6 @@
         {
             "id": 2,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg",
-            "minutsForRead": "9 minutes",
             "title": "Agrohomestead \"Kalya Nyomana\"",
             "text": "134 km along the Minsk-Grodno highway. Wooden house with a Russian stove, sauna, terrace, swimming pool, barbecue. Organization of excursions around the Golden Ring of Ivetia. Fishing (pike, carp, tench, roach).",
             "read": "Read more",
@@ -226,7 +220,6 @@
         {
             "id": 3,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg",
-            "minutsForRead": "7 minutes",
             "title": "Agrohomestead \"Dubrava\"",
             "text": "Novogrudok district, Grodno region, Olkhovka village. Cozy living room with a fireplace and access to the terrace, TV, kitchen, four bedrooms.",
             "read": "Read more",
@@ -255,7 +248,6 @@
         {
             "id": 4,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg",
-            "minutsForRead": "6 minutes",
             "title": "Agrohomestead \"Bubliki\"",
             "text": "Grodno Region, Ivye District, Sheluti Village. You will be pleasantly surprised by the fast-flowing Gavia River, one of the cleanest rivers in Belarus, which flows just a few meters from the estate.",
             "read": "Read more",
@@ -281,7 +273,6 @@
         {
             "id": 5,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg",
-            "minutsForRead": "8 minutes",
             "title": "Agrohomestead \"Lesnoy Edem\"",
             "text": "Porechye Village, Grodno Region. Located 30 km from Grodno and 1.5 km from Lithuania, in a secluded picturesque area. Near the house, there is a Russian wood-fired sauna with a sauna room, a shower, and a plunge barrel.",
             "read": "Read more",
@@ -311,7 +302,6 @@
         {
             "id": 6,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/zirov_kmdsvk.png",
-            "minutsForRead": "5 minutes",
             "title": "Agrohomestead \"Zhirovichi\"",
             "text": "a.g. Zhirovichi, Slonimskaya Street. The guest house features terraces, a fireplace, barbecue grills, a sauna, a gazebo, sports grounds, a children's playground, board games, free Wi-Fi, a pond, and excursions to Zhirovichi Monastery.",
             "read": "Read more",
@@ -334,7 +324,6 @@
         {
             "id": 7,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici_popzaw.jpg",
-            "minutsForRead": "12 minutes",
             "title": "Agrohomestead \"Soniche\"",
             "text": "Grodno district, village of Sonichi 6a. The homestead offers a log table for celebrations with seating for 30 people, a Russian sauna, a swimming pool, bicycles, boats, catamarans, kayaks, a Russian stove, a barbecue grill, and a smokehouse.",
             "read": "Read more",
@@ -365,7 +354,6 @@
         {
             "id": 8,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg",
-            "minutsForRead": "7 minutes",
             "title": "Agrohomestead \"Lida\"",
             "text": "Grodno region, Lida city. A two-story bathhouse with a veranda featuring a fireplace stove for barbecue and shashlik. The house has everything necessary for a quality rest.",
             "read": "Read more",
@@ -390,7 +378,6 @@
         {
             "id": 9,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/bal2_xexar1.jpg",
-            "minutsForRead": "6 minutes",
             "title": "Agrohomestead \"Baltic coast\"",
             "text": "Beregovoy village. The Baltic Coast Homestead is a bath complex where you can improve your health and have a great rest.",
             "read": "Read more",

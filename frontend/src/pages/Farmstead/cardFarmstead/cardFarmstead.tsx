@@ -17,7 +17,7 @@ const CardFarmstead: React.FC<CardProps> = ({
     t,
 }) => {
 
-
+console.log(t.farmstead[dataItem.id].minutsForRead)
     return (
         <div className={styles.container}>
             <section className={styles.farmstead}>
@@ -25,9 +25,6 @@ const CardFarmstead: React.FC<CardProps> = ({
                     <img className={styles.falvarek} src={img} alt="farmstead title" />
                 </div>
                 <div className={styles.text}>
-                    <p className={styles.minutsForRead}>
-                        {t.farmstead[dataItem.id].minutsForRead}
-                    </p>
                     <h2 className={styles.title}>{t.farmstead[dataItem.id].title}</h2>
                     <p className={styles.information}>{t.farmstead[dataItem.id].text}</p>
                     <Link to={`/farmstead/${dataItem.id}`} className={styles.readMore}>{t.farmstead[dataItem.id].read}</Link>
