@@ -82,7 +82,6 @@
         },
         "aboutMaik": "*Maik-agribusiness through the eyes of the author"
     },
-
     "main": {
         "button": {
             "grodnoRegion": "📍 Grodno region"
@@ -173,10 +172,6 @@
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/pech_harauw.jpg"
                 },
                 {
-                    "textAll": "Yanina, after finding the necessary equipment, discovered the recipe for bankuha pie, which local brides used to bake for weddings in the old days. Not everyone can master the preparation process: first, the Russian stove needs to be heated for two hours, then 60 egg whites and 60 egg yolks are manually whipped in separate pots, followed by the addition of butter, flour, and sour cream. After that, the dough is rolled onto a spit and baked for two hours. The carver's cottage is notable because you can sleep on straw-filled mattresses here.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/rezchik_izulf6.jpg"
-                },
-                {
                     "textAll": "Upon entering the healer's house, we sense an unusual scent from the doorstep. The source of the aroma is a collection of herbs hanging on the walls. The family gathers plants that can be used for aromatherapy and herbal therapy. On the top shelf in the bedroom, there are colorful dolls, each of which carries the scent of herbs. They are called \"herb dolls\" or \"herb sachets,\" and they are placed at the head of the bed of a newborn or sick person before sleep. They help induce sleep.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/znahorka_g7jkb6.jpg"
                 },
@@ -186,7 +181,6 @@
                 }
             ]
         },
-
         {
             "id": 2,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg",
@@ -216,7 +210,6 @@
                 }
             ]
         },
-
         {
             "id": 3,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg",
@@ -320,7 +313,6 @@
                 }
             ]
         },
-
         {
             "id": 7,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici_popzaw.jpg",
@@ -350,7 +342,6 @@
                 }
             ]
         },
-
         {
             "id": 8,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg",

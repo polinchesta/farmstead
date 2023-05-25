@@ -8,7 +8,6 @@ import { Farmsteads } from '../Farmstead/Farmsteads';
 
 export function Home() {
     const { t } = useTranslation();
-    const filterDate = farmstead.filter((element, index) => index < 4)
 
     return (
         <div>

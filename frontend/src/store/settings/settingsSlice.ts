@@ -1,42 +1,3 @@
-/* import { createSlice } from "@reduxjs/toolkit";
-import { LanguageType } from "../../types/languageTypes";
-
-interface SettingsStateType{
-    language: LanguageType;
-}
-
-const languages: LanguageType[] = ["en", "ru"];
-
-const getInitialState = (): SettingsStateType => {
-    let language = localStorage.getItem("language") as LanguageType;
-    if (!languages.includes(language)){
-        language = "ru"
-    }
-    return{
-        language
-    }
-}
-
-const settingsSlice = createSlice({
-    name: "settings",
-    initialState: getInitialState(),
-    reducers:{
-        toggleLanguage:(state) =>{
-            state.language = state.language === "ru" ? "en" : "ru";
-            localStorage.setItem("language", state.language)
-        }
-    }
-})
-
-export const settingsActions = {
-    ...settingsSlice.actions,
-}
-
-const settingsReducer = settingsSlice.reducer;
-export default settingsReducer; 
-
- */
-
 import { createSlice } from '@reduxjs/toolkit';
 import { LanguageType } from '../../types/languageTypes';
 
@@ -44,7 +5,7 @@ interface SettingsStateType {
     language: LanguageType;
 }
 
-const languages: LanguageType[] = ['en', 'ru'];
+const languages: LanguageType[] = ['en', 'ru', "by", "pl"];
 
 const getInitialState = (): SettingsStateType => {
     let language = localStorage.getItem('language') as LanguageType;
@@ -61,7 +22,15 @@ const settingsSlice = createSlice({
     initialState: getInitialState(),
     reducers: {
         toggleLanguage: (state) => {
-            state.language = state.language === 'ru' ? 'en' : 'ru';
+            if (state.language === 'ru') {
+                state.language = 'en';
+            } else if (state.language === 'en') {
+                state.language = 'by';
+            } else if (state.language === 'by') {
+                state.language = 'pl';
+            } else {
+                state.language = 'ru';
+            }
             localStorage.setItem('language', state.language);
         },
         setLanguage: (state, action) => {

@@ -17,7 +17,6 @@ const CardFarmstead: React.FC<CardProps> = ({
     t,
 }) => {
 
-console.log(t.farmstead[dataItem.id].minutsForRead)
     return (
         <div className={styles.container}>
             <section className={styles.farmstead}>

@@ -47,6 +47,18 @@ export function Header() {
                         >
                             ENG
                         </button>
+                        <button
+                            className={styles.language}
+                            onClick={() => handleLanguageChange('pl')}
+                        >
+                            PL
+                        </button>
+                        <button
+                            className={styles.language}
+                            onClick={() => handleLanguageChange('by')}
+                        >
+                            BY
+                        </button>
                     </div>
                     <button
                         className={styles.login}
