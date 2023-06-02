@@ -11,11 +11,11 @@ import { Products } from './pages/Products/Products';
 import { Grodno } from './pages/grodnoPage/grodno';
 import { Registration } from './pages/Registration/Registration';
 import { LoginPage } from './pages/loginPage/login';
-/* import { FarmsteadAll } from './pages/Farmstead/FarmsteadAll/FarmsteadAll'; */
 import { Page404 } from './pages/Page404/Page404';
-import CardFarmstead from './pages/Farmstead/cardFarmstead/cardFarmstead';
 import { Farmsteads } from './pages/Farmstead/Farmsteads';
-import ItemFarmstead from './pages/Farmstead/farmsteadItem/farmsteadItem';
+import ItemProduct from './pages/Products/ItemProducts/ItemProducts';
+import ItemFarmstead from './pages/Farmstead/farmsteadItem/ItemFarmstead';
+
 
 function App() {
     return (
@@ -32,6 +32,7 @@ function App() {
                         <Route path="/login" element={<LoginPage />} />
                         <Route path="/farmstead/:id" element={<ItemFarmstead />} />
                         <Route path="*" element={<Page404 />} />
+                        <Route path="/product/:id" element={<ItemProduct />} />
                     </Routes>
                 </div>
             </Router>

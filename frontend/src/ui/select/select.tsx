@@ -1,11 +1,11 @@
 import React from "react";
 import MuiSelect, { SelectChangeEvent } from "@mui/material/Select";
-import { MenuItem } from "@mui/material";
-import styles from "./select.module.sass"
+import styles from "./select.module.sass";
+import MenuItem from "@mui/material/MenuItem/MenuItem";
 
 interface OptionType {
-    value: string;
-    text: string;
+  value: string;
+  text: string;
 }
 
 interface PropsType extends Omit<React.HTMLProps<HTMLInputElement>, "ref" | "as"> {

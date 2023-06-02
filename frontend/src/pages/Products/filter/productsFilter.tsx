@@ -14,7 +14,7 @@ const ProductsFilter: React.FC = () => {
     const [page, setPage] = useState(1);
     const [isLastPage, setIsLastPage] = useState(false);
     const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
-    const {t}=useTranslation();
+    const { t } = useTranslation();
 
     const fetchData = (filter: Partial<ProductsFilterType> = {}) => {
         dispatch(
@@ -27,6 +27,14 @@ const ProductsFilter: React.FC = () => {
             })
         );
     };
+
+    const sortOptions = [
+        { value: "id", text: t.sort.popular },
+        { value: "priceAsc", text: t.sort.min },
+        { value: "priceDesc", text: t.sort.max },
+        { value: "maxPrice", text: t.sort.max },
+      ];
+      
 
     const updatePageAndFetchData = (newPage: number) => {
         setPage(newPage);
@@ -77,7 +85,7 @@ const ProductsFilter: React.FC = () => {
                     label="Sort field"
                     value={sortField}
                     setValue={setSortField}
-                    options={[{ value: "id", text: t.sort.popular }]}
+                    options={sortOptions}
                     style={{ margin: "10px" }}
                 />
                 <button className={styles.buttonSort} type="submit">
@@ -98,7 +106,7 @@ const ProductsFilter: React.FC = () => {
                     type="button"
                     onClick={handlePrevPage}
                 >
-                    -
+                    ❮
                 </button>
                 <div className={styles.pageText}>
                     <p className="page">{page}</p>
@@ -110,7 +118,7 @@ const ProductsFilter: React.FC = () => {
                     onClick={handleNextPage}
                     disabled={isLastPage}
                 >
-                    +
+                    ❯
                 </button>
             </div>
         </form>

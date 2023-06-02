@@ -7,6 +7,7 @@ import Loader from '../../ui/loader/loader';
 import useTranslation from '../../hooks/useTranslation';
 import { CurrencyConverter } from '../../ui/currency/currency';
 import axios from 'axios';
+import { ProductType } from '../../types/productsTypes';
 
 export interface ConversionRates {
   usdToBynRate: number;
@@ -19,8 +20,10 @@ export function Products() {
   const loading = useAppSelector((state) => state.products.loading);
   const { t } = useTranslation();
   const [conversionRate, setConversionRate] = useState<ConversionRates | null>(null);
+  const [selectedFarmstead, setSelectedFarmstead] = useState<ProductType | null>(null);
+  const [selectedCurrency, setSelectedCurrency] = useState('BYN');
 
-  useEffect(() => {
+/*   useEffect(() => {
     const fetchConversionRate = async () => {
       try {
         const cachedConversionRate = localStorage.getItem('conversionRate');
@@ -41,9 +44,9 @@ export function Products() {
     };
 
     fetchConversionRate();
-  }, []);
+  }, []); */
 
-
+/* 
   const convertToUSD = (amount: number) => {
     if (conversionRate) {
       return (amount * conversionRate.usdToBynRate).toFixed(2);
@@ -65,21 +68,36 @@ export function Products() {
     return '';
   };
 
+
+  const convertPrice = (price: string) => {
+    const amount = parseFloat(price);
+    switch (selectedCurrency) {
+      case 'USD':
+        return convertToUSD(amount);
+      case 'PLN':
+        return convertToPLN(amount);
+      case 'EUR':
+        return convertToEUR(amount);
+      default:
+        return price;
+    }
+  }; */
+
   return (
     <>
       {loading && <Loader />}
-      {conversionRate !== null && (
+{/*       {conversionRate !== null && (
         <CurrencyConverter
           convertToUSD={convertToUSD}
           convertToPLN={convertToPLN}
           convertToEUR={convertToEUR}
           conversionRate={conversionRate}
         />
-      )}
+      )} */}
       <ProductsFilter />
       <div className={styles.gridContainer}>
         {products.map((product) => (
-          <ProductsCard key={product.id} img={product.img} dataItem={product} t={t} />
+          <ProductsCard id={product.id} key={product.id} img={product.img} dataItem={product} t={t} />
         ))}
       </div>
     </>

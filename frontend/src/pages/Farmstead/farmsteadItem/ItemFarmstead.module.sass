@@ -1,0 +1,56 @@
+.container
+    display: flex
+    flex-direction: column
+    max-width: 90%
+    margin: 0px auto
+
+    .text
+        margin: 10px 0px
+
+    .back
+        padding: 10px 10px
+        font-size: 17px
+        margin: 10px 15px
+        display: flex
+        height: 40px
+        width: fit-content
+        justify-content: center
+        align-items: center
+        background: none
+        text-decoration: none
+        border: 3px solid black
+        &:hover
+            color: white
+            background: #6b6565
+
+        @media (max-width: 1200px)
+            width: 270px
+
+    .gallery
+        display: flex
+        align-items: center
+
+        .thumbnailContainer
+            display: flex
+            flex-direction: column
+            img
+                width: 120px
+                height: 80px
+
+        .thumbnail
+            width: 80px
+            height: 80px
+            margin-right: 10px
+            margin-bottom: 10px
+            cursor: pointer
+
+
+        .bigImageContainer
+            margin: 20px 40px
+            img
+                width: 600px
+                height: 340px
+
+        .bigImage
+            max-width: 500px
+

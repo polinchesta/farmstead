@@ -136,7 +136,9 @@
     },
     "sort": {
         "popular": "Popularne",
-        "sort": "Sortuj"
+        "sort": "Sortuj",
+        "min": "Cena minimalna",
+        "max": "Maksymalna cena"
     },
     "field": {
         "search": "🔎 Czego szukasz?"
@@ -150,241 +152,195 @@
         "name": "Jak możemy się do Ciebie zwracać:",
         "call": "Zamów rozmowę telefoniczną"
     },
-    "farmstead": [
+    "farm": {
+        "error": "Brak danych o zagrodzie"
+    },
+    "back": {
+        "button": "Z powrotem"
+    },
+    "farmsteads": [
         {
-            "id": 1,
+            "id": 0,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/falvarek_nhypuq.jpg",
-            "title": "Folvarak \"U Rysia\"",
-            "text": "W odległości 10 kilometrów od Wołkowyska, we wsi zamieszkiwanej przez tylko dziewięć osób, pięć lat temu rodzina lekarzy postanowiła wybudować folwark.",
-            "read": "Więcej",
-            "farmstead": [
+            "title": "Folwark „U Ryśka”",
+            "text": "10 kilometrów od Wołkowyska, w wiosce zamieszkałej przez tylko dziewięć osób, pięć lat temu rodzina lekarzy postanowiła zbudować folwark.",
+            "textAll": "10 kilometrów od Wołkowyska, w wiosce zamieszkałej przez tylko dziewięć osób, pięć lat temu rodzina lekarzy postanowiła zbudować folwark. Dziś folwark „U Ryśka” to kompleks składający się z pięciu domeczków i sześciu hektarów strefy wodnej. Miejsce jest niezwykłe, ponieważ wszystko, począwszy od rzeźby na krzesłach, a kończąc na domku garncarza, zostało stworzone przez jedną rodzinę. Folwark „U Ryśka” miał się rozrastać. W okolicy wsi Korowicze były odpowiednie tereny. Folwark jest przeznaczony dla aktywnych turystów. Gospodarze postawili sobie za cel zaskakiwanie i zabawę dla turystów. Dlatego w każdym domku przewidziano „atrakcję”. Projekt Unii Europejskiej „Zrównoważony rozwój na poziomie lokalnym”, w którym wzięła udział Janina i wygrała grant. Po półtora roku wzniesiono drewniane domki rzeźbiarza, tkaczki i garncarza. W domku rzeźbiarza stoi rosyjska piec. To na niej przygotowuje się narodowe danie Białorusinów, Polaków i Litwinów - drewniany placek.",
+            "url": "https://www.youtube.com/embed/XLrZOfytIaY",
+            "titleVideo": "Gdzie odpocząć na Białorusi - „Folwark „U Ryśka”",
+            "read": "Czytaj więcej",
+            "image": [
                 {
-                    "textAll": "W odległości 10 kilometrów od Wołkowyska, we wsi zamieszkiwanej przez tylko dziewięć osób, pięć lat temu rodzina lekarzy postanowiła wybudować folwark. Dziś folwark „U Rysia” to kompleks składający się z pięciu domków i sześciu hektarów strefy wodnej. Miejsce jest szczególne, ponieważ wszystko, począwszy od rzeźby na krzesłach, a kończąc na domku rzeźbiarza, zostało stworzone dzięki wysiłkom jednej rodziny.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/falvarek_nhypuq.jpg"
                 },
                 {
-                    "textAll": "Janina, odnajdując niezbędne wyposażenie, odnalazła przepis na ciasto banicze, które kiedyś piekły miejscowe panny młode na swoje wesela. Nie każdy jest w stanie opanować proces przygotowania: najpierw trzeba przez dwie godziny podgrzewać ruski piec, następnie ręcznie ubić po 60 białek i 60 żółtek w oddzielnych naczyniach, dodać masło, mąkę i śmietanę. Następnie ciasto owija się na wrzeciono i piecze przez dwie godziny. Domek rzeźbiarza jest wyjątkowy, ponieważ można tu spać na materacach wypełnionych sianem.",
-                    "url": "https://www.youtube.com/embed/XLrZOfytIaY",
-                    "titleVideo": "Gdzie odpocząć na Białorusi - \"Folvarak „U Rysia”\""
-                },
-                {
-                    "textAll": "Folwark „U Rysia” miał się rozwijać. W pobliżu wsi Korewicze było wystarczająco dużo terenu. Folwark jest skierowany do aktywnych turystów. Gospodarze postawili sobie za cel zaskakiwanie i zabawianie turystów. Dlatego w każdym domku przewidziano „atrakcję”. Projekt Unii Europejskiej „Zrównoważony rozwój na poziomie lokalnym”, w którym wzięła udział Janina i wygrała grant. I po półtora roku powstały domki rzeźbiarza, tkaczki i garncarza z prawdziwego puszaneckiego drewna. W domku rzeźbiarza stoi rosyjska piec. To na nim przygotowuje się narodowe danie Białorusinów, Polaków i Litwinów - ciasto drewniane.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/pech_harauw.jpg"
                 },
                 {
-                    "textAll": "Przy wejściu do domu zielarki od razu czuć niezwykły zapach. Źródłem aromatu są zioła, które są rozwieszone na ścianach. Rodzina zbiera rośliny, które można wykorzystać do aromaterapii i fitoterapii. Na górnej półce w sypialni ustawione są jaskrawe laleczki, z których każda pachnie ziołami. Prawidłowa nazwa to lalki-kubikashki, są one kładzione przed snem pod poduszką noworodka lub chorego człowieka. Pomagają zasnąć.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/znahorka_g7jkb6.jpg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/rezchik_izulf6.jpg"
                 },
                 {
-                    "textAll": "Gospodarze liczyli, że turyści będą przyjeżdżać do nich odpocząć od miejskiego życia i nowoczesnych technologii. Dlatego w domkach „Wioski Rzemiosł” jest tylko 3-4 gniazdka i brak internetu. Na razie nie jest możliwe zapewnienie go w Korewiczach. W domkach nie ma również łazienek. Prysznic znajduje się w domu gospodarzy i gościnnym. W miejscu zakwaterowania dla gości znajduje się sauna z łaźnią i prysznicem Szarko, sala bilardowa z kominkiem i taras. Do folwarku przylega sześć hektarów ziemi. „U Rysia” stoi praktycznie nad brzegiem rzeki Ross przy wejściu do lasu. Obok rzeki znajduje się pomost, na którym można organizować ceremonie ślubne. Obok znajduje się strefa aniołów dla dzieci: trzy kamienie o wadze 12-14 ton. Janina chce wygrawerować anioła na kamieniach i ustawić ławki, aby dzieci się spotykały i wspominały nasze lata ciężkiej pracy.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684679757/rys5_ohibkq.jpg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/znahorka_g7jkb6.jpg"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg",
+            "title": "Agrousadba \"Koło Niemana\"",
+            "text": "134 km wzdłuż trasy Mińsk-Grodno. drewniany dom z rosyjskim piecem, sauną, tarasem, basenem, miejscem do grillowania. Organizacja wycieczek po Złotym Pierścieniu okolicy Iwie. Wędkowanie (szczupak, karaś, lin, płotka).",
+            "read": "Czytaj więcej",
+            "textAll": "Agrousadba \"Koło Niemana\" znajduje się 10 kilometrów od białoruskiego miasteczka Iwje, na terenie rezerwatu \"Razdory\" w obwodzie grodzieńskim. To prawdziwa białoruska wioska z tradycyjnymi domkami i stylem życia! Obok wioski znajdują się lasy iglaste i rozległe łąki. Malownicze krajobrazy i kościoły położone w pobliżu dworku mają uspokajający wpływ. Piękne wiejskie domki zapraszają do odwiedzenia. I pomimo spokojnego stylu życia, w wiosce zawsze jest co robić - na pewno tu się nie nudzisz! Czasami mieszkańcom miasta interesujące jest po prostu podziwianie lokalnych krajobrazów i wiejskich domów, które stoją już od 60 lat. Wszystkie podwórza w wiosce są zadbane, zanurzone w zieleni i kwiatach. Piękno wioski, w której znajduje się agrousadba, polega na tym, że wszystkie obrazy szczęśliwego życia są prawdziwe, zostały stworzone przez pracę i miłość do swojego środowiska.",
+            "url": "https://www.youtube.com/embed/cESbsQX13Yk",
+            "titleVideo": "Projekt \"Turystyka bez walizki. Iwje\"",
+            "image": [
+                {
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg"
+                },
+                {
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman1_yqzzfr.jpg"
+                },
+                {
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman2_dtvaea.jpg"
                 }
             ]
         },
         {
             "id": 2,
-            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg",
-            "title": "Agroturystyka \"Kalya Nemanа\"",
-            "text": "134 km od trasy Mińsk-Hrodna. Drewniany dom z rosyjskim piecem, sauną, tarasem, basenem, grillem. Organizacja wycieczek po Złotym Pierścieniu Iwiejszczyzny. Wędkarstwo (szczupak, karaś, lin, płotka).",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg",
+            "title": "Agrousadba \"Dubrava\"",
+            "text": "Obwód Grodzieński, Rejon Nowogródzki, osiedle Olchówka. Przytulny salon z kominkiem i wyjściem na taras, telewizor, kuchnia, cztery sypialnie.",
             "read": "Więcej",
-            "farmstead": [
+            "textAll": "Jeśli jesteś zmęczony zgiełkiem codziennego życia, hałasem miasta, nierozwiązanymi problemami i nadmiernym stresem, to zostaw to na chwilę. Agrousadba \"Dubrava\", położona 160 km od Mińska w wiosce Olchówka, w rejonie Nowogródzkim, zaprasza Cię do zanurzenia się w ciszy, wysłuchania dźwięków natury, stania się częścią tego otaczającego piękna i wreszcie do nieśpiesznego wypoczynku. Agrousadba \"Dubrava\" to miejsce, w którym dusza odpoczywa! Agrousadba \"Dubrava\" to ogrodzona działka, na której znajduje się nowoczesny drewniany dom typu mansardowego z tarasem i wszelkimi udogodnieniami. Dom może pomieścić do 11 osób na noc. Znajduje się w nim przytulny salon z kominkiem, w pełni wyposażona kuchnia, 4 sypialnie z pojedynczymi i podwójnymi łóżkami, 2 łazienki, wanna, pralka, telewizja.",
+            "image": [
                 {
-                    "textAll": "Agroturystyka \"Kalya Nemanа\" do wynajęcia znajduje się 10 km od białoruskiego miasteczka Iwje na terenie rezerwatu \"Razdory\" w obwodzie grodzieńskim. To prawdziwa białoruska wieś z tradycyjnymi domkami i stylem życia!",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg"
                 },
                 {
-                    "textAll": "W pobliżu wioski znajdują się lasy iglaste i rozległe łąki. Malownicze krajobrazy i pobliskie cerkwie mają uspokajające działanie. Piękne wiejskie domki zachęcają do odwiedzenia. Pomimo spokojnego trybu życia, w wiosce zawsze jest co robić - na pewno się nie nudzisz! Mieszkańcom miasta czasem interesuje po prostu podziwianie miejscowych krajobrazów i wiejskich domów, które istnieją od 60 lat. Wszystkie gospodarstwa domowe w wiosce są zadbane, otoczone zielenią i kwiatami. Piękno wsi, w której znajduje się agroturystyka, polega na tym, że wszystkie obrazy szczęśliwego życia są autentyczne, stworzone pracą i miłością do otaczającego środowiska.",
-                    "url": "https://www.youtube.com/embed/cESbsQX13Yk",
-                    "titleVideo": "Projekt 'Turystyka bez walizki. Iwje'"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava2_fukiaj.jpg"
                 },
                 {
-                    "textAll": "W tym wspaniałym miejscu odbywają się prawdziwe wesela z elementami ludowych obrzędów (obrzęd nazywany \"Niebieskim łukiem\"), a nowożeńcy i goście jeżdżą na koniach z bębnami. Jeśli masz ochotę rozpocząć życie małżeńskie od niesamowitych tradycyjnych obrzędów, które niosą ze sobą dobro i powodzenie - koniecznie odwiedź agroturystykę \"Kalya Nemanа\". Gospodarze agroturystyki chętnie w tym pomogą! Ponadto istnieje możliwość zorganizowania innych tematycznych wydarzeń. W pobliżu białoruskiej agroekousadzby płynie rzeka Neman, gdzie można odpocząć na wodzie i złowić rybę. Nieopodal znajduje się las, gdzie można cieszyć się spacerami na świeżym powietrzu lub polować.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman1_yqzzfr.jpg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava1_wygdfm.jpg"
                 },
                 {
-                    "textAll": "Agroturystyka \"Kalya Nemanа\" to tradycyjny białoruski dom. Posiada dwie przytulne sypialnie. Dom jest wyposażony w prysznic z ciepłą wodą i saunę.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman2_dtvaea.jpg"
-                },
-                {
-                    "textAll": "Możliwe jest zorganizowanie wycieczek i transferu do białoruskiej agroturystyki \"Kalya Nemanа\". Wycieczki można zorganizować również do miasta Iwje, położonego w pobliżu. Tu znajduje się Źródło Iwiejskie - prawdziwa perła miasta. Ludzie przychodzą tutaj po wodę od 1914 roku. Wszyscy goście miasta Iwje są tutaj witani przez pramatkę Iwje, \"księżną Evę\". Niedawno w pobliżu źródła została wybudowana kapliczka, którą poświęcił arcybiskup nowogródzki i lidzki Gurii, a woda źródła nosi teraz imię Archanioła Michała."
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava3_a2sjqo.jpg"
                 }
             ]
         },
         {
             "id": 3,
-            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg",
-            "title": "Agroturystyka \"Dubrawa\"",
-            "text": "Obwód grodzieński, Rejon Nowogródzki, wioska Olchówka. Przytulny salon z kominkiem i wyjściem na taras, TV, kuchnia, cztery sypialnie.",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg",
+            "title": "Agrousadba \"Bubliki\"",
+            "text": "Obwód Grodzieński, Rejon Iwje, wsi Szeluć. Przyjemnie cię zaskoczy szybko płynąca rzeka Gavia, jedna z najczystszych rzek na Białorusi, przepływająca kilka metrów od terenu agrousadby.",
             "read": "Więcej",
-            "farmstead": [
+            "textAll": "Agrousadba \"Bubliki\" położona jest w Rejonie Iwje w Obwodzie Grodzieńskim. Na terenie agrousadby znajduje się przestronna sala bankietowa na 50 osób, w której można organizować uroczyste wydarzenia. Ponadto, na święta dostępne jest zadaszone miejsce do siedzenia, pomieszczące do 40 osób.W domu agrousadby \"Bubliki\" może się zatrzymać grupa do 10 osób. Zapewnione są wszystkie niezbędne udogodnienia: meble i sprzęt. Na terenie agrousadby znajduje się piec-grill, na którym można przygotować szaszłyki i ukę. Istnieje również parking na terenie.",
+            "url": "https://www.youtube.com/embed/kAzF1KaTceA",
+            "titleVideo": "Agrousadba Bubliki",
+            "image": [
                 {
-                    "textAll": "Jeśli jesteś zmęczony codziennym zgiełkiem, hałasem miasta, nierozwiązanymi problemami i nadmiernym stresem, pozwól sobie na chwilę wytchnienia. Agroturystyka \"Dubrawa\", położona 160 km od Mińska, we wsi Olchówka w rejonie Nowogródzkim, zaprasza Cię do zanurzenia się w ciszy, posłuchania dźwięków natury, stania się częścią otaczającego piękna i wreszcie nie spieszenia się nigdzie. \"Dubrawa\" to miejsce, gdzie dusza odpoczywa!",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/dybrava_luari6.jpg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bybliki3_r9vkbj.jpg"
                 },
                 {
-                    "textAll": "Agroturystyka \"Dubrawa\" to ogrodzony teren, na którym znajduje się nowoczesny drewniany dom dwupoziomowy z tarasem i wszelkimi udogodnieniami. Dom na dobę pomieści grupę do 11 osób na noc. Posiada przytulny salon z kominkiem, w pełni wyposażoną kuchnię, 4 sypialnie z pojedynczymi i podwójnymi łóżkami, 2 łazienki, wannę, pralkę, telewizję.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava1_wygdfm.jpg"
-                },
-                {
-                    "textAll": "Podczas pobytu w domu zapewniamy wyżywienie z ekologicznie czystych produktów. Cieszyć się będziesz białoruską, polską, litewską kuchnią, a także specjalnościami od samego gospodarza agroturystyki! Koszt pobytu dzieci jest ustalany indywidualnie, w zależności od ich wieku.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava2_fukiaj.jpg"
-                },
-                {
-                    "textAll": "Na terenie agroturystyki \"Dubrawa\", w odległości 20 km od Nowogródka, znajduje się rosyjska bania (za dodatkową opłatą), altana (wliczona w cenę wynajmu domu), miejsce na grilla, boiska do gry w siatkówkę i piłkę nożną, obszerny parking. Będziesz mógł spacerować po lesie lub wzdłuż brzegów Niemna, zbierać grzyby i jagody, a miłośnicy wędkarstwa mogą oddać się swojemu ulubionemu hobby.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava3_a2sjqo.jpg"
-                },
-                {
-                    "textAll": "Goście agroturystyki nie zostaną zaniedbani, a poziom obsługi na pewno ich ucieszy. Organizacja wieczorów muzycznych z muzyką klasyczną i średniowieczną, warsztaty plecenia z trzciny, rąbanie drewna, koszenie ręczną kosą, gry sportowe. Gospodarze agroturystyki chętnie pomogą Ci w wyborze wycieczek i mogą je dla Ciebie zorganizować (Nowogródek, Mir, Nieśwież, Lida, Grodno, Iwje itp.). Możliwość transferu po wcześniejszym uzgodnieniu."
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg"
                 }
             ]
         },
         {
             "id": 4,
-            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg",
-            "title": "Agrousadyba \"Bubliki\"",
-            "text": "Obwód Grodzieński, Rejon Iwje, wieś Szeluty. Z pewnością mile cię zaskoczy błyskawicznie płynąca rzeka Hawia, jedna z najczystszych rzek na Białorusi, która przepływa kilka metrów od terenu agrousadyby.",
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg",
+            "title": "Agrousadba \"Leśny Edem\"",
+            "text": "Obwód Grodzieński, wieś Porecze. W odległości 30 km od miasta Grodno i 1,5 km od Litwy, w malowniczym, odosobnionym miejscu. W pobliżu domu znajduje się rosyjska sauna na drewno, na parterze - sauna, prysznic, drewniana beczka do polewania.",
             "read": "Więcej",
-            "farmstead": [
+            "textAll": "Kompleks turystyczny „Leśny Edem” to spokojny kąt, otoczony młodym sosnowym lasem, położony w odległości 30 km od miasta Grodno. Jeśli lubisz wypoczynek na łonie natury, jesteś zmęczony miejskim zgiełkiem lub po prostu przejeżdżasz przez Grodno - agrousadba w sosnowym lesie z rosyjską sauną i miejscami do grillowania będzie idealnym miejscem do regeneracji sił i wyciszenia. W agrousadbie można wypocząć z całą rodziną. Na terenie obiektu znajduje się plac zabaw z trampoliną i zjeżdżalniami, w wolnym dostępie są zabawki, gry planszowe i książki. Dodatkowo można wynająć: hokej na powietrzu, stół do tenisa, rowery, skoczki i łódkę na wycieczki po jeziorze.",
+            "url": "https://www.youtube.com/embed/KcTNmFrT_l8",
+            "titleVideo": "Leśny Edem",
+            "image": [
                 {
-                    "textAll": "Agrousadyba \"Bubliki\" położona jest w Rejonie Iwje obwodu grodzieńskiego. Na terenie sadyby znajduje się przestronna sala bankietowa na 50 osób, w której można organizować uroczyste wydarzenia. Dostępne jest również zadaszone miejsce do spotkań o pojemności do 40 osób.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg"
                 },
                 {
-                    "textAll": "W domu agrousadyby \"Bubliki\" może pomieścić się grupa do 10 osób. Znajdują się tutaj wszystkie niezbędne udogodnienia: meble i sprzęt. Na terenie sadyby znajduje się także grill, na którym można przygotować szaszłyki i zupę rybną. Istnieje również parking.",
-                    "url": "https://www.youtube.com/embed/kAzF1KaTceA",
-                    "titleVideo": "Agrousadyba Bubliki"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem4_eirpaj.jpg"
                 },
                 {
-                    "textAll": "Agrousadyba położona jest nad rzeką Hawia, we wsi Szeluty, 10 km od Iwja i 25 km od Lidy. To doskonałe miejsce, aby miło spędzić czas. Odpoczynek na wsi dla całej rodziny, spotkania z przyjaciółmi, kolegami, organizacja imprez i po prostu wypoczynek od miejskiego zgiełku.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bybliki3_r9vkbj.jpg"
-                },
-                {
-                    "textAll": "Grill wyposażony w miejsce na kocioł i ruszt do kulinarnej eksploracji. Duża zadaszona altana o nietypowym designie umożliwia przygotowanie szaszłyków, dań na otwartym ogniu i gorących napojów nawet zimą. Huśtawki, hamak i trampolina dla dzieci mogą urozmaicić twój pobyt. Będziesz mieć możliwość kąpieli w jednej z najczystszych rzek na Białorusi, rzece Hawia, która przepływa kilka metrów od agrousadyby. Będziesz mógł cieszyć się pięknym zachodem słońca nad rzeką, śpiewem ptaków i po prostu naturą!"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem2_qxwykn.jpg"
                 }
             ]
         },
         {
             "id": 5,
-            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg",
-            "title": "Agrousadyba \"Leśny Edem\"",
-            "text": "Obwód Grodzieński, wieś Poriecze. Położone w odległości 30 km od Grodna i 1,5 km od Litwy, w urokliwym, odosobnionym miejscu. W pobliżu domu znajduje się rosyjska bania na drewno, na parterze - sauna, prysznic, drewniana beczka do polewania wodą.",
-            "read": "Więcej",
-            "farmstead": [
-                {
-                    "textAll": "Kompleks turystyczny \"Leśny Edem\" to spokojny zakątek otoczony młodym sosnowym lasem, położony w odległości 30 km od miasta Grodno. Jeśli lubisz wypoczynek na łonie natury, jesteś zmęczony miejskim zgiełkiem lub po prostu przejeżdżasz przez Grodno - agrousadyba w lesie sosnowym z rosyjską baną i miejscami do grillowania będzie idealnym miejscem do odzyskania sił i relaksu.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg"
-                },
-                {
-                    "textAll": "W agrousadybie można wypocząć z rodziną. Na terenie znajduje się plac zabaw z trampoliną i zjeżdżalniami, dostępne są zabawki, gry planszowe i książki. Dodatkowo można wynająć: air hockey, stół do tenisa, rowery, skoczki i łódź na wycieczki po jeziorze.",
-                    "url": "https://www.youtube.com/embed/KcTNmFrT_l8",
-                    "titleVideo": "Leśny Edem"
-                },
-                {
-                    "textAll": "Dla gości dostępne są dwa dwupiętrowe nowo wybudowane domy ze wszystkimi udogodnieniami. Z pewnością wygodnie pomieszczą 10-12 osób, a w razie potrzeby gospodarze mogą dostawić dodatkowe miejsca do spania. Na parterze znajduje się przestronna sala bankietowa z kominkiem i dwoma stołami. Goście nie będą się nudzić - dostępna jest telewizja satelitarna, karaoke i odtwarzacz DVD. Można przygotować obiad w kuchni z pełnym wyposażeniem i naczyniami. Łazienka jest w pełni wyposażona: znajduje się tam prysznic i podgrzewana podłoga. Na nocleg goście zostaną zakwaterowani w sypialni z podwójnym łóżkiem.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem4_eirpaj.jpg"
-                },
-                {
-                    "textAll": "Na drugim piętrze znajdują się 4 sypialnie (w każdej podwójne łóżko) z łazienkami i prysznicami. Wygodnie podziwiać zachody i wschody słońca - z każdego pokoju można wyjść na otwartą taras. Miłośnikom relaksu na świeżym powietrzu spodoba się wyposażona strefa grillowa z stołem i ławkami. Altany (mieszczące 30 i 50 osób) znajdują się na terenie całego kompleksu: nad jeziorem, na skraju lasu, obok placu zabaw.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem2_qxwykn.jpg"
-                },
-                {
-                    "textAll": "Bez obaw zabierz ze sobą dzieci - dla nich jest osobna strefa rozrywki."
-                }
-            ]
-        },
-        {
-            "id": 6,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/zirov_kmdsvk.png",
             "title": "Agrousadba w Żyrowiczach",
-            "text": "Żyrowicze, ul. Słonimska. Dom gościnny, tarasy, kominek, grille, sauna, altana, boiska sportowe, plac zabaw, gry planszowe, bezpłatne Wi-Fi, staw, wycieczki do Monasteru Żyrowickiego.",
-            "read": "Więcej informacji",
-            "farmstead": [
+            "text": "ul. Słonimska, wsi Żyrowicze. Dom gościnny, tarasy, kominek, grille, sauna, altana, boiska sportowe, plac zabaw dla dzieci, gry planszowe, bezpłatne Wi-Fi, staw, wycieczki do monasteru Żyrowickiego.",
+            "read": "Dowiedz się więcej",
+            "textAll": "Żyrowicze to unikalne miejsce na białoruskiej ziemi, a głównym powodem przyciągającym tu ludzi jest Cudowny Ikona Matki Bożej Żyrowickiej, piękna architektura cerkwi monasteru Żyrowickiego, święte źródła z uzdrawiającą wodą oraz przyrodnicze i historyczne zabytki. Personel może swobodnie porozumiewać się w języku angielskim, polskim, rosyjskim i ukraińskim. Dla gości dostępna jest jedna kategoria zakwaterowania - dom wakacyjny.",
+            "image": [
                 {
-                    "textAll": "Żyrowicze to wyjątkowe miejsce na Białorusi i główną atrakcją przyciągającą tutaj ludzi jest cudowny Ikona Matki Boskiej Żyrowickiej, piękna architektura cerkwi Monasteru Żyrowickiego, święte źródła z uzdrowicielską wodą oraz przyrodnicze i historyczne zabytki.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/zirov_kmdsvk.png"
                 },
                 {
-                    "textAll": "Personel może swobodnie porozumiewać się w języku angielskim, polskim, rosyjskim i ukraińskim. Dla gości dostępna jest jedna kategoria zakwaterowania - domek wakacyjny.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/zirov1_thdbel.png"
                 },
                 {
-                    "textAll": "W obiekcie zakwaterowania dla wygody gości zapewniono: kuchenkę mikrofalową, czajnik elektryczny, meble na zewnątrz, suszarkę do włosów, taras, jadalnię, przybory do prasowania. W domu gościnnym zapewniona jest izolacja dźwiękowa. Z okna roztacza się wspaniały panoramiczny widok na jezioro. Dla przyjemnego spędzania czasu dostępny jest kominek.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/zirov2_pfx2ih.png"
                 }
             ]
         },
         {
-            "id": 7,
+            "id": 6,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici_popzaw.jpg",
-            "title": "Agrousadba Sonichi",
-            "text": "Rejon Grodna, w. Sonichi 6a. Dla gości dostępne są drewniane stoły do przyjęć dla 30 osób, rosyjska bania, basen, rowery, łodzie, katamarany, kajaki, rosyjski piec, grill, wędzarnia.",
-            "read": "Więcej informacji",
-            "farmstead": [
+            "title": "Agrousadba Soniči",
+            "text": "Rejon grodzieński, w. Soniči 6a. Dla gości dostępny jest piękny stół na 30 osób, rosyjska bania, basen, rowery, łodzie, katamarany, kajaki, rosyjska piec, grill, wędzarnia.",
+            "read": "Dowiedz się więcej",
+            "textAll": "Na brzegu Kanału Augustowskiego, w odległości 25 kilometrów od Grodna, znajduje się agrousadba „Soniči”. Gościnny dom wykonany jest z naturalnego drewna w połączeniu z ręcznym kowalstwem. W domu do dyspozycji gości znajduje się salon, dwie sypialnie, kuchnia, łazienka, sauna z basenem i prysznic. Teren agrousadby przyciąga swoją dbałością, znajduje się tu sztuczny staw, fontanna, malowniczy mostek i altana, w której można skorzystać z grilla, wędzarni i pieca. Altana jest przystosowana dla 30 osób i służy do organizacji różnych uroczystości. Goście agrousadby mogą skorzystać z rosyjskiej sauny na drewno i basenu.",
+            "url": "https://www.youtube.com/embed/9QxlmuwdGD0",
+            "titleVideo": "Agrousadba Soniči",
+            "image": [
                 {
-                    "textAll": "Na brzegu Kanału Augustowskiego, w odległości 25 kilometrów od Grodna, rozciąga się posiadłość Sonichi. Gościnny dom jest wykonany z naturalnego drewna w połączeniu z ręcznym kute. W domu do Państwa dyspozycji są: salon, dwie sypialnie, kuchnia, łazienka, sauna z basenem, prysznic.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici_popzaw.jpg"
                 },
                 {
-                    "textAll": "Na pierwszym piętrze gościnnego domu znajduje się salon z kominkiem, w którym znajduje się duży stół bankietowy i kute ławki; kuchnia, w której znajdziesz wszystko, czego potrzebujesz do przygotowania posiłków: lodówka, kuchenka mikrofalowa, kuchenka elektryczna i wszystkie niezbędne naczynia. Jeśli chcesz zasmakować szaszłyków, są do twojej dyspozycji szpikulce. W salonie znajduje się telewizor, odtwarzacz DVD z karaoke i kino domowe. Toaleta i prysznic, sauna, basen.",
-                    "url": "https://www.youtube.com/embed/9QxlmuwdGD0",
-                    "titleVideo": "Posiadłość Sonichi"
-                },
-                {
-                    "textAll": "Na drugim piętrze znajdują się dwie przytulne sypialnie, w których wygodnie może pomieścić się 6 osób. Posiadłość Sonichi zachwyca swoim pięknem. Tutaj możesz zobaczyć, jak naturalne piękno przyrody łączy się z elementami nowoczesnego designu. Do Państwa dyspozycji są: wędkowanie, wycieczki rowerowe; pływanie łodziami, kajakami, katamaranami; boisko sportowe, plac zabaw dla dzieci, hamak i huśtawki.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici1_c7ummp.jpg"
                 },
                 {
-                    "textAll": "Teren posiadłości przyciąga swoim zadbaniem, znajduje się tu sztuczny staw, fontanna, malowniczy mostek i altana, w której można skorzystać z grilla, wędzarni i pieca. Altana pomieści 30 osób i jest przeznaczona do organizacji różnych uroczystości. Goście posiadłości mogą skorzystać z rosyjskiej sauny opalanej drewnem i basenu.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici2_mryy4z.jpg"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg",
+            "title": "Agrousadba 'Lidski khutorok'",
+            "text": "Oblast Grodzieńska, miasto Lida. Dwupiętrowa bania, weranda z piecem-kominkiem, na której można robić barbecue i szaszłyki. W domu znajduje się wszystko, co niezbędne do jakościowego odpoczynku.",
+            "read": "Więcej",
+            "textAll": "Agrousadba 'Lidski khutorok' położona jest w mieście, ale jest ukryta przed miejskim zgiełkiem i hałasem pod koronami wysokich dębów, lip i brzóz. Od najbliższych budynków oddzielają ją ponad pięćset metrów, dlatego jest swoistym zaczarowanym zakątkiem. Dom to nowoczesna budowla z białej cegły. Wszystko jest tu przemyślane do najdrobniejszych szczegółów: podgrzewane podłogi, wnętrze, w którym splatają się elementy starości i współczesności. Dla gości agrousadby przygotowano dwie sypialnie. W jednej sypialni znajduje się łóżko dwuosobowe, a w drugiej dwa łóżka pojedyncze, rozkładana sofa oraz leżanka-piecyk. W domu znajduje się sala bankietowa z ruska piecem o pojemności 30 osób. Pomieszczenie to można wykorzystać do organizacji uroczystości, wesel, a także jako sala konferencyjna, gdzie można prowadzić seminaria. Jest tu domowy kinoteatr z dużym telewizorem i dobrym systemem akustycznym. Z sali jest wyjście na taras i kuchnię, gdzie gospodarze będą gotować dla Państwa. Dla gości przeznaczono osobną łazienkę: toaletę, bidet, prysznic, umywalkę.",
+            "image": [
+                {
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg"
                 },
                 {
-                    "textAll": "Posiadłość oddalona jest o 70 metrów od lasu. Spacerując po lesie, można zbierać grzyby i jagody, zwiedzić okolicę, niedaleko posiadłości znajduje się 8 umocnień z czasów II wojny światowej. Na życzenie klientów można zorganizować wycieczki po Kanale Augustowskim oraz różne koncerty, pokazy ognia, występy zespołów ludowych, tancerzy, instrumentalistów i klaunów. Możemy nawet zorganizować fajerwerki na cześć Państwa! Usługi kucharza. Gospodarze posiadłości zawsze są do Państwa dyspozycji."
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpgg"
+                },
+                {
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida1_ge5jms.jpg"
                 }
             ]
         },
         {
             "id": 8,
-            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg",
-            "title": "Posiadłość \"Lidzki dworek\"",
-            "text": "Rejon grodzieński, miasto Lida. Dwupiętrowa łaźnia, weranda z kuchnią i kominkiem, idealna do grillowania i przygotowywania szaszłyków. W domu znajduje się wszystko, czego potrzeba, aby odpocząć komfortowo.",
-            "read": "Dowiedz się więcej",
-            "farmstead": [
-                {
-                    "textAll": "Posiadłość \"Lidzki dworek\" położona jest w mieście, ale ukryta przed miejskim zgiełkiem i hałasem w koronach wysokich dębów, lip i brzóz. Od najbliższych budynków dzieli ją ponad pięćset metrów, dlatego jest swoistym gospodarstwem wiejskim. Dom jest nowoczesną budowlą z białej cegły. Wszystko tutaj jest przemyślane w najdrobniejszych szczegółach: ogrzewane podłogi, wnętrze, w którym łączą się elementy starości i nowoczesności.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg"
-                },
-                {
-                    "textAll": "Dla gości posiadłości przygotowano dwie sypialnie. Jedna sypialnia jest wyposażona w łóżko dwuosobowe, a druga w dwa łóżka pojedyncze, rozkładaną sofę oraz ławę-kaczkę. W domu znajduje się sala bankietowa z rosyjskim piecem o pojemności 30 osób. Pomieszczenie to można wykorzystać do organizacji uroczystości, wesel, a także jako sala konferencyjna do prowadzenia seminariów. Jest tu również domowe kino z dużym telewizorem i dobrą instalacją dźwiękową. Zejście z sali prowadzi na taras i do kuchni, gdzie gospodarze będą gotować dla Państwa. Dla gości przeznaczono oddzielną łazienkę: toaletę, bidet, prysznic, umywalkę.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpgg"
-                },
-                {
-                    "textAll": "Goście agroturystyki będą mogli skorzystać z sauny, która jest wyposażona w saunę parową, prysznic, miskę kąpielową, toaletę oraz pokój wypoczynkowy. Sauna w stylu polowania przypomina domek myśliwski, a na miejscu można również przygotować szaszłyki, ukha, bliny i inne potrawy. Teren wokół posiadłości jest w pełni zagospodarowany i posiada staw, huśtawki, boisko sportowe, hamaki.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida1_ge5jms.jpg"
-                },
-                {
-                    "textAll": "Jeśli będziesz zainteresowany, zorganizujemy dla Ciebie wycieczki do pobliskich posiadłości, klasztoru Żyrowickiego, fabryki szkła \"Neman\", zamku w Lidzie i browaru w Lidzie. Będziesz również mógł polować, wędkować, zobaczyć prawdziwe pojedynki rycerskie, pokazy ognia i cieszyć się muzyką na żywo."
-                }
-            ]
-        },
-        {
-            "id": 9,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/bal2_xexar1.jpg",
-            "title": "Posiadłość Bałtycki Brzeg",
-            "text": "P. Beregowoje. Posiadłość Bałtycki Brzeg to kompleks saunowy, w którym można poprawić zdrowie i wypocząć.",
-            "read": "Dowiedz się więcej",
-            "farmstead": [
+            "title": "Dwór Bałtycki Brzeg",
+            "text": "os. Brzegowy. Dwór Bałtycki Brzeg to kompleks saunowy, gdzie można poprawić zdrowie i wypocząć doskonale.",
+            "read": "Więcej",
+            "textAll": "Odpowiedzialny za wypoczynek w dworze jest kompleks saunowy z zabiegami SPA. Możesz wynająć domek z 3 pokojami (2 sypialniami i 1 salonem), a do Twojej dyspozycji będzie także wiejska sauna. W budynku gospodarza znajduje się centrum SPA, w którym znajduje się: sauna podczerwieni, basen SPA na 4 osoby, krzesło masujące, bilard, telewizor plazmowy, grill. Kajuta jest wyposażona w aneks kuchenny z wszystkimi nowoczesnymi udogodnieniami, a pokój zachwyci swoimi imponującymi rozmiarami, gdzie wygodnie usiądzie sofa z pokryciem ze skóry i ogromny stół z naturalnego drewna olchy, wokół którego swobodnie może pomieścić się do 10 osób. Możesz rozmieścić swoje rzeczy w wygodnej szafie przesuwnej Komandor. Oczywiście nie może zabraknąć także telewizora o dużym formacie z wieloma kanałami. W chłodne dni przytuli i stworzy domową atmosferę kominek, a z przyjaciółmi możesz usiąść przy barze.",
+            "coordinate": "53.993095, 25.649057",
+            "image": [
                 {
-                    "textAll": "Odpoczynek w posiadłości zapewnia sauna ze SPA. Możesz wynająć domek składający się z 3 pokoi (2 sypialnie i 1 salon) i będziesz mieć do dyspozycji wiejską saunę.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/bal2_xexar1.jpg"
                 },
                 {
-                    "textAll": "W domu gospodarza znajduje się centrum SPA, w którym znajdują się: sauna podczerwieni, basen SPA na 4 osoby, fotel do masażu, bilard, telewizor plazmowy, grill. Kabina jest wyposażona w nowoczesny aneks kuchenny z pełnym wyposażeniem, a pokój zachwyci swoimi imponującymi rozmiarami, gdzie wygodnie znajduje się kanapa z obiciem ze skóry i ogromny stół z naturalnego drewna olszowego, wokół którego swobodnie może pomieścić się do 10 osób. Wszystkie swoje rzeczy możesz rozmieścić w wygodnej szafie wnękowej Komandor. Oczywiście nie może również zabraknąć szerokoformatowego telewizora z wieloma kanałami. W chłodniejszych miesiącach ciepło i domową atmosferę stworzy kominek, a z przyjaciółmi można usiąść przy barze.",
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bal1_rrvnzp.png"
                 },
                 {
-                    "textAll": "Na terenie agroturystyki \"Bałtycki Brzeg\" znajduje się parking. Głównym miejscem relaksu jest oczywiście sauna, wykończona drewnem lipowym i olszowym. Została ona zbudowana zgodnie z wszystkimi zasadami budowy sauny. W saunie znajduje się prawdziwy sypialny piec syberyjski, który pozwala poczuć zarówno efekt rosyjskiej bani, jak i fińskiej sauny. Do uzyskania zdrowej \"lekkiej\" pary używany jest nowoczesny generator pary i rozgrzewane do odpowiedniej temperatury malinowe kamienie kwarcytowe, a specjalny system wentylacji pozwala wdychać tylko świeże powietrze.",
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bal_bkczgy.png",
-                    "coordinate": "53.993095, 25.649057"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bal_bkczgy.png"
                 }
             ]
         }

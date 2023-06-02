@@ -19,7 +19,7 @@ const getFarmstead = createAsyncThunk<FarmsteadsType[], number, { rejectValue: s
   async (farmsteadId, thunkAPI) => {
     try {
       const response = await farmsteadsApi.getFarmsteadItem(farmsteadId);
-      return [response.data]; // Wrap the response in an array
+      return [response.data];
     } catch (error) {
       return thunkAPI.rejectWithValue('Server error');
     }

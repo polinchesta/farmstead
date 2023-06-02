@@ -23,6 +23,7 @@ const useTranslation = () => {
     const setLanguage = (language: LanguageType) => {
         dispatch(settingsActions.setLanguage(language));
     };
+    
 
     return {
         t: translations[language],

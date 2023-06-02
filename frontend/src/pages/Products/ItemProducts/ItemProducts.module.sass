@@ -1,0 +1,85 @@
+.back
+    padding: 10px 10px
+    font-size: 17px
+    margin: 10px 15px
+    display: flex
+    height: 40px
+    width: fit-content
+    justify-content: center
+    align-items: center
+    background: none
+    text-decoration: none
+    border: 3px solid black
+    &:hover
+        color: white
+        background: #6b6565
+.container
+    max-width: 90%
+    margin: 20px auto
+    height: 470px
+    display: flex
+    .product
+        height: 100%
+
+        @media (max-width: 1200px)
+            width: 270px
+
+        p
+            font-family: 'PT Mono', monospace
+            color: black
+            text-align: center
+            font-size: 16px
+            margin: 0px 5px
+            line-height: 20px
+
+        .title
+            font-size: 20px
+            margin: 20px
+
+        h2
+            letter-spacing: 0px
+            margin: 0px 5px
+
+        a
+            font-family: 'PT Mono', monospace
+            color: black
+            font-size: 15px
+            margin: 0px auto 5px auto
+            line-height: 25px
+            text-decoration: none
+
+        img
+            align-items: center
+            width: 100%
+            object-fit: cover
+            height: 500px
+            border: 3px solid black
+
+        .number
+            text-align: center
+            margin: 5px 0px
+
+        .price
+            font-size: 23px
+            text-align: center
+            margin: 10px 0px
+
+        .button
+            position: absolute
+            bottom: -40px
+            left: 0
+            right: 0
+            margin: 0px auto 50px auto
+            width: 150px
+            height: 50px
+            font-family: 'PT Mono', monospace
+            color: white
+            border-radius: 4px
+            color: black
+            cursor: pointer
+            border: 3px solid black
+            background: none
+            font-size: 18px
+
+            .button:hover
+                background-color: #333

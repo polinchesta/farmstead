@@ -5,9 +5,10 @@ import { CurrencyConverter } from '../../ui/currency/currency';
 import Loader from '../../ui/loader/loader';
 import axios from 'axios';
 import { useAppSelector } from '../../hooks/redux-hooks';
+import { useNavigate } from 'react-router-dom';
+import { FarmsteadsType } from '../../types/farmsteadsTypes';
 import CardFarmstead from './cardFarmstead/cardFarmstead';
 import FarmsteadsFilter from './filter/farmsteadsFilter';
-import ItemFarmstead from './farmsteadItem/farmsteadItem';
 
 
 export interface ConversionRates {
@@ -21,6 +22,8 @@ export function Farmsteads() {
     const loading = useAppSelector((state) => state.farmsteads.loading);
     const { t } = useTranslation();
     const [conversionRate, setConversionRate] = useState<ConversionRates | null>(null);
+    const [selectedCurrency, setSelectedCurrency] = useState('BYN');
+
 
     useEffect(() => {
         const fetchConversionRate = async () => {
@@ -45,6 +48,9 @@ export function Farmsteads() {
         fetchConversionRate();
     }, []);
 
+    const handleCurrencyChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        setSelectedCurrency(event.target.value);
+    };
 
     const convertToUSD = (amount: number) => {
         if (conversionRate) {
@@ -85,22 +91,10 @@ export function Farmsteads() {
                         key={farmstead.id}
                         img={farmstead.img}
                         dataItem={farmstead}
+                        id={farmstead.id}
                         t={t}
                     />
                 ))}
-{/*                 {farmsteads.map((farmstead) => (
-                    <ItemFarmstead
-                        id={farmstead.id}
-                        key={farmstead.id}
-                        img={farmstead.img}
-                        title={farmstead.title}
-                        aboutFarmstead={farmstead.aboutFarmstead}
-                        textAll={farmstead.textAll}
-                        url={farmstead.url}
-                        titleVideo={farmstead.titleVideo}
-                        t = { t }
-                    />
-                ))} */}
             </div>
         </>
     );

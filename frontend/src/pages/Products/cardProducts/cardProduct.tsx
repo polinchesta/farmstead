@@ -1,29 +1,45 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import useTranslation from '../../../hooks/useTranslation';
 import { ProductType } from '../../../types/productsTypes';
 import styles from './cardProduct.module.sass';
 import Modal from '../../../ui/modal/modal';
+import { Link, useNavigate } from 'react-router-dom';
+/* 
+interface ConversionRate {
+    usdToBynRate: number;
+    plnToBynRate: number;
+    eurToBynRate: number;
+} */
 
 interface CardProps {
     dataItem: ProductType;
-    img: string
+    id: number;
+    img: string;
     t: any;
 }
 
 const ProductsCard: React.FC<CardProps> = ({
+    id,
     dataItem,
     img,
     t,
 }) => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/product/${dataItem.id}`);
+    };
     const [modalOpen, setModalOpen] = useState(false);
     const openModal = () => {
         setModalOpen(true);
     };
     const closeModal = () => {
         setModalOpen(false);
-    };  
+    };
+
     return (
-        <div className={styles.container}>
+        <div className={styles.container} onClick={handleClick}>
+
             <section className={styles.product}>
                 <div>
                     <img src={img} alt="product title" />

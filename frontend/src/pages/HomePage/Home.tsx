@@ -22,7 +22,6 @@ export function Home() {
             <div className={styles.flexDiv}>
                 <div className={styles.flexContainer}>
                     <h4>{t.main.leftInformation.latestPosts}</h4>
-                    <Farmsteads />
                 </div>
                 <div className={styles.news}>
                     <h4>{t.main.rightInformation.news}</h4>

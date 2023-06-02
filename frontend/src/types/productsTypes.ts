@@ -15,5 +15,8 @@ export interface ProductsFilterType {
     sortField: string;
     query: string;
     limit: number;
-    page: number
+    page: number;
+    minPrice?: number; 
+    maxPrice?: number;
+    sortOrder?: "asc" | "desc";
 }

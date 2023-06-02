@@ -21,7 +21,7 @@ const FarmsteadsFilter: React.FC = () => {
             farmsteadsActions.getFarmsteadsList({
                 sortField,
                 query: debounceQuery,
-                limit: 4,
+                limit: 6,
                 page,
                 ...filter,
             })
@@ -62,7 +62,7 @@ const FarmsteadsFilter: React.FC = () => {
     }, [query, sortField]);
 
     useEffect(() => {
-        if (page === 2) {
+        if (page === 3) {
             setIsLastPage(true);
         } else {
             setIsLastPage(false);
@@ -99,7 +99,7 @@ const FarmsteadsFilter: React.FC = () => {
                     type="button"
                     onClick={handlePrevPage}
                 >
-                    -
+                    ❮
                 </button>
                 <div className={styles.pageText}>
                     <p className="page">{page}</p>
@@ -111,7 +111,7 @@ const FarmsteadsFilter: React.FC = () => {
                     onClick={handleNextPage}
                     disabled={isLastPage}
                 >
-                    +
+                    ❯
                 </button>
             </div>
         </form>
