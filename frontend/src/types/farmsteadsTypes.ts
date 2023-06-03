@@ -6,10 +6,11 @@ export interface FarmsteadsType {
     img: string;
     title: string;
     t: any;
+    longitude:string;
+    latitude:string;
     image: {
         img: string;
     }[];
-    coordinate?: undefined;
 }
 
 export interface FarmsteadsFilterType {

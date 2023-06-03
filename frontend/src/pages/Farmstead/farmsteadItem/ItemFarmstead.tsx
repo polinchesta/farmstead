@@ -5,6 +5,8 @@ import { farmsteadActions } from '../../../store/farmstead/farmsteadSlice';
 import Loader from '../../../ui/loader/loader';
 import styles from './ItemFarmstead.module.sass';
 import useTranslation from '../../../hooks/useTranslation';
+import { MapContainer, TileLayer, Marker } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 export default function ItemFarmstead() {
     const dispatch = useAppDispatch();
@@ -17,15 +19,16 @@ export default function ItemFarmstead() {
     const handleClick = () => {
         navigate(`/farmstead`);
     };
+
     useEffect(() => {
         if (farmsteadId) {
             dispatch(farmsteadActions.getFarmstead(farmsteadId));
         }
-    }, [id]);
+    }, [farmsteadId]);
 
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(0);
 
-    const handleThumbnailClick = (index: any) => {
+    const handleThumbnailClick = (index: number) => {
         setSelectedImage(index);
     };
 
@@ -43,11 +46,10 @@ export default function ItemFarmstead() {
                             <div key={t.farmsteads[farmsteadId].textAll}>
                                 <div className={styles.gallery}>
                                     <div className={styles.thumbnailContainer}>
-                                        {farmsteads[farmsteadId].image.map((step, index) => (
+                                        {t.farmsteads[farmsteadId].image.map((step: { img: string }, index: number) => (
                                             <div
                                                 key={index}
-                                                className={`${styles.thumbnail} ${selectedImage === index ? styles.activeThumbnail : ''
-                                                    }`}
+                                                className={`${styles.thumbnail} ${selectedImage === index ? styles.activeThumbnail : ''}`}
                                                 onClick={() => handleThumbnailClick(index)}
                                             >
                                                 <img className={styles.img} src={step.img} alt="thumbnail" />
@@ -58,7 +60,7 @@ export default function ItemFarmstead() {
                                         {selectedImage !== null && (
                                             <img
                                                 className={styles.bigImage}
-                                                src={farmsteads[farmsteadId].image[selectedImage].img}
+                                                src={t.farmsteads[farmsteadId].image[selectedImage].img}
                                                 alt="bigImage"
                                             />
                                         )}
@@ -67,6 +69,18 @@ export default function ItemFarmstead() {
                                 <p className={styles.text}>{t.farmsteads[farmsteadId].textAll}</p>
                             </div>
                         </div>
+                    </div>
+                    <div className={styles.mapContainer}>
+                        <MapContainer
+                            center={[parseFloat(t.farmsteads[farmsteadId].latitude), parseFloat(t.farmsteads[farmsteadId].longitude)]}
+                            zoom={10}
+                            style={{ height: '400px', width: '100%' }}
+                        >
+                            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                            <Marker
+                                position={[parseFloat(t.farmsteads[farmsteadId].latitude), parseFloat(t.farmsteads[farmsteadId].longitude)]}
+                            />
+                        </MapContainer>
                     </div>
                 </>
             )}

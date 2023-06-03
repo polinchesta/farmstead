@@ -2,6 +2,7 @@
     "products": [
         {
             "id": 0,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/meat_eoc6li.jpg",
             "title": "Мяса",
             "price": "21 BYN",
             "count": "1 кілаграм",
@@ -10,6 +11,7 @@
         },
         {
             "id": 1,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/cheese_beslk8.jpg",
             "title": "Сыр",
             "price": "39 BYN",
             "count": "1 кілаграм",
@@ -18,6 +20,7 @@
         },
         {
             "id": 2,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/med_o1juud.jpg",
             "title": "Мёд",
             "price": "73 BYN",
             "count": "1 кілаграм",
@@ -26,6 +29,7 @@
         },
         {
             "id": 3,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/perga_pg59l3.jpg",
             "title": "Перга",
             "price": "13 BYN",
             "count": "150 грамаў",
@@ -34,14 +38,16 @@
         },
         {
             "id": 4,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Картошка",
-            "price": "8 BYN",
+            "price": "2 BYN",
             "count": "1 кілаграм",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
         },
         {
             "id": 5,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/propolis_sukeae.jpg",
             "title": "Прополіс",
             "price": "26 BYN",
             "count": "10 грамаў",
@@ -50,6 +56,7 @@
         },
         {
             "id": 6,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/pshenica_latvnz.jpg",
             "title": "Пшэніца",
             "price": "73 BYN",
             "count": "1 тюк",
@@ -58,6 +65,7 @@
         },
         {
             "id": 7,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/roz_h7pacv.jpg",
             "title": "Раж",
             "price": "18 BYN",
             "count": "1 тюк",
@@ -66,6 +74,7 @@
         },
         {
             "id": 8,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/vosk_jxbter.jpg",
             "title": "Воск",
             "price": "73 BYN",
             "count": "1 кг",
@@ -167,6 +176,8 @@
             "textAll": "У 10 кіламетрах ад Ваўковішча ў вёсцы, дзе жывуць толькі дзевяць чалавек, пяць гадоў таму сям'я медыкаў рашыла пабудаваць фальварк. Сёння фальварк «У Рыся» — камплекс, які складаецца з пяці домікаў і шасці гектараў ваднай зоны. Заўважнае месца тым, што ўсё, пачынаючы ад выразу на стульцы, канчаючы домікам ганчара, было створана пасіленням адной сям'і. Фальварку «У Рыся» было куды ўрастаць. Побач села Карэвічы тэрыторыі хапала. Фальварк прадугледжаны для актыўнага турыста. Гаспадары паставілі сабе мэтай — здзіўляць і разважаць турыста. Таму ў кожным доміку прадугледжана «фішка». Проект Еўрасаюзу «Цікавае развіццё на мясцовым узроўні», у якім ўзяла ўдзел Яніна і выйграла грант. І праз палтора года падняліся з цяперашняга пущанскага дрэва домікі рэзчыка, ткачыні і ганчара. У доміку рэзчыка стоіць руская печ. На ёй жа гатуюць нацыянальную страву беларусаў, палякаў і літоўцаў — пірог на дрэве.",
             "url": "https://www.youtube.com/embed/XLrZOfytIaY",
             "titleVideo": "Дзе адпачыць у Беларусі - «Фальварак «У Рыся»",
+            "latitude":"53.046787",
+            "longitude":"24.423744",
             "read": "Падрабязней",
             "image": [
                 {
@@ -192,6 +203,8 @@
             "textAll": "Аграсядзіба ў арэнду \"Каля Нёмана\" знаходзіцца 10 км ад беларускага гарадка Івье на тэрыторыі запаведніка \"Раздоры\" Гродзенскай вобласьці. Гэта сапраўдная беларуская вёска з традыцыйнымі дамікамі і ладам жыцьця! Побач з вёскай - сасновыя лясы і шырокія лугі. Малюнкавыя пейзажы і касьцёлы, размешчаныя побач з аграсядзібай, маюць заспакойлівы эфект. Красавікі вёскавыя дамікі заклікаюць адвядзіць іх. І, не зважаючы на спакойны лад жыцьця, у вёсцы ўсё роўна ёсьць чым займацца - тут нуднаць сапраўды не будзе! Гарадскому жыхару памяркоўваецца проста любавацца мясьцовымі пейзажамі і вёскавымі дамікамі, якія стаяць ужо па 60 гадоў. Усе падворкі ў вёсцы дагляджаныя, тапаюць у зялені і кветках. Краса вёскі, на якой знаходзіцца аграсядзіба, у тым, што ўсе выявы шчасьлівага жыцьця сапраўды сапраўды, яны створаны працай і любоўю да сваёй сярэды абітаньня.",
             "url": "https://www.youtube.com/embed/cESbsQX13Yk",
             "titleVideo": "Праект 'Турызм без валізы. Івье'",
+            "latitude":"53.870450",
+            "longitude":"25.689223",
             "image": [
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg"
@@ -317,7 +330,7 @@
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg"
                 },
                 {
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpgg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpg"
                 },
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida1_ge5jms.jpg"

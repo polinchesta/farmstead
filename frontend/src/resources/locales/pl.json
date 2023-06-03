@@ -2,6 +2,7 @@
     "products": [
         {
             "id": 0,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/meat_eoc6li.jpg",
             "title": "Mięso",
             "price": "21 BYN",
             "count": "1 kilogram",
@@ -10,6 +11,7 @@
         },
         {
             "id": 1,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/cheese_beslk8.jpg",
             "title": "Ser",
             "price": "39 BYN",
             "count": "1 kilogram",
@@ -18,6 +20,7 @@
         },
         {
             "id": 2,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/med_o1juud.jpg",
             "title": "Miód",
             "price": "73 BYN",
             "count": "1 kilogram",
@@ -26,6 +29,7 @@
         },
         {
             "id": 3,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/perga_pg59l3.jpg",
             "title": "Perga",
             "price": "13 BYN",
             "count": "150 gram",
@@ -34,14 +38,16 @@
         },
         {
             "id": 4,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Ziemniaki",
-            "price": "8 BYN",
+            "price": "2 BYN",
             "count": "1 kilogram",
             "address": "Białorusia, powiat Szczuczyn, sołectwo Łady",
             "number": "+375 29 672 25 69"
         },
         {
             "id": 5,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/propolis_sukeae.jpg",
             "title": "Propolis",
             "price": "26 BYN",
             "count": "10 gram",
@@ -50,6 +56,7 @@
         },
         {
             "id": 6,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/pshenica_latvnz.jpg",
             "title": "Pszenica",
             "price": "73 BYN",
             "count": "1 belka",
@@ -58,6 +65,7 @@
         },
         {
             "id": 7,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/roz_h7pacv.jpg",
             "title": "Żyto",
             "price": "18 BYN",
             "count": "1 belka",
@@ -66,6 +74,7 @@
         },
         {
             "id": 8,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/vosk_jxbter.jpg",
             "title": "Wosk",
             "price": "73 BYN",
             "count": "1 kg",
@@ -167,6 +176,8 @@
             "textAll": "10 kilometrów od Wołkowyska, w wiosce zamieszkałej przez tylko dziewięć osób, pięć lat temu rodzina lekarzy postanowiła zbudować folwark. Dziś folwark „U Ryśka” to kompleks składający się z pięciu domeczków i sześciu hektarów strefy wodnej. Miejsce jest niezwykłe, ponieważ wszystko, począwszy od rzeźby na krzesłach, a kończąc na domku garncarza, zostało stworzone przez jedną rodzinę. Folwark „U Ryśka” miał się rozrastać. W okolicy wsi Korowicze były odpowiednie tereny. Folwark jest przeznaczony dla aktywnych turystów. Gospodarze postawili sobie za cel zaskakiwanie i zabawę dla turystów. Dlatego w każdym domku przewidziano „atrakcję”. Projekt Unii Europejskiej „Zrównoważony rozwój na poziomie lokalnym”, w którym wzięła udział Janina i wygrała grant. Po półtora roku wzniesiono drewniane domki rzeźbiarza, tkaczki i garncarza. W domku rzeźbiarza stoi rosyjska piec. To na niej przygotowuje się narodowe danie Białorusinów, Polaków i Litwinów - drewniany placek.",
             "url": "https://www.youtube.com/embed/XLrZOfytIaY",
             "titleVideo": "Gdzie odpocząć na Białorusi - „Folwark „U Ryśka”",
+            "latitude":"53.046787",
+            "longitude":"24.423744",
             "read": "Czytaj więcej",
             "image": [
                 {
@@ -192,6 +203,8 @@
             "textAll": "Agrousadba \"Koło Niemana\" znajduje się 10 kilometrów od białoruskiego miasteczka Iwje, na terenie rezerwatu \"Razdory\" w obwodzie grodzieńskim. To prawdziwa białoruska wioska z tradycyjnymi domkami i stylem życia! Obok wioski znajdują się lasy iglaste i rozległe łąki. Malownicze krajobrazy i kościoły położone w pobliżu dworku mają uspokajający wpływ. Piękne wiejskie domki zapraszają do odwiedzenia. I pomimo spokojnego stylu życia, w wiosce zawsze jest co robić - na pewno tu się nie nudzisz! Czasami mieszkańcom miasta interesujące jest po prostu podziwianie lokalnych krajobrazów i wiejskich domów, które stoją już od 60 lat. Wszystkie podwórza w wiosce są zadbane, zanurzone w zieleni i kwiatach. Piękno wioski, w której znajduje się agrousadba, polega na tym, że wszystkie obrazy szczęśliwego życia są prawdziwe, zostały stworzone przez pracę i miłość do swojego środowiska.",
             "url": "https://www.youtube.com/embed/cESbsQX13Yk",
             "titleVideo": "Projekt \"Turystyka bez walizki. Iwje\"",
+            "latitude":"53.870450",
+            "longitude":"25.689223",
             "image": [
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg"
@@ -317,7 +330,7 @@
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg"
                 },
                 {
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpgg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpg"
                 },
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida1_ge5jms.jpg"

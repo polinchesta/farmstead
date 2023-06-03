@@ -29,7 +29,7 @@ export default function ItemProduct() {
             {products && (
                 <section className={styles.product}>
                     <div>
-                        <img src={products[productId].img} alt={t.products[productId].title} />
+                        <img src={t.products[productId].img} alt={t.products[productId].title} />
                     </div>
                     <div className={styles.text}>
                         <p className={styles.title}>{t.products[productId].title}</p>

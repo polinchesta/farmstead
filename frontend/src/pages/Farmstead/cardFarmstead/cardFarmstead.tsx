@@ -21,8 +21,6 @@ const CardFarmstead: React.FC<CardProps> = ({
     const handleClick = () => {
       navigate(`/farmstead/${dataItem.id}`)
     }
-
-    console.log(dataItem.id)
     return (
         <div className={styles.container} onClick={handleClick}>
             <section className={styles.farmstead}>

@@ -2,6 +2,7 @@
     "products": [
         {
             "id": 0,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/meat_eoc6li.jpg",
             "title": "Meat",
             "price": "21 BYN",
             "count": "1 kilogram",
@@ -10,6 +11,7 @@
         },
         {
             "id": 1,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/cheese_beslk8.jpg",
             "title": "Cheese",
             "price": "39 BYN",
             "count": "1 kilogram",
@@ -18,6 +20,7 @@
         },
         {
             "id": 2,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/med_o1juud.jpg",
             "title": "Honey",
             "price": "73 BYN",
             "count": "1 kilogram",
@@ -26,6 +29,7 @@
         },
         {
             "id": 3,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/perga_pg59l3.jpg",
             "title": "Pollen",
             "price": "13 BYN",
             "count": "150 grams",
@@ -34,14 +38,16 @@
         },
         {
             "id": 4,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Potatoes",
-            "price": "8 BYN",
+            "price": "2 BYN",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
         },
         {
             "id": 5,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/propolis_sukeae.jpg",
             "title": "Propolis",
             "price": "26 BYN",
             "count": "10 grams",
@@ -50,6 +56,7 @@
         },
         {
             "id": 6,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/pshenica_latvnz.jpg",
             "title": "Wheat",
             "price": "73 BYN",
             "count": "1 bale",
@@ -58,6 +65,7 @@
         },
         {
             "id": 7,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/roz_h7pacv.jpg",
             "title": "Rye",
             "price": "18 BYN",
             "count": "1 bale",
@@ -66,6 +74,7 @@
         },
         {
             "id": 8,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/vosk_jxbter.jpg",
             "title": "Beeswax",
             "price": "73 BYN",
             "count": "1 kg",
@@ -167,6 +176,8 @@
             "textAll": "Ten kilometers away from Volkovysk, in a village inhabited by only nine people, five years ago a family of medical professionals decided to build a manor. Today, the folwark \"U Ryśka\" is a complex consisting of five cottages and six hectares of water area. The place is remarkable because everything, from the carvings on the chairs to the potter's cottage, was created by the efforts of one family. The manor \"U Ryśka\" was meant to grow. There was enough territory near the village of Korevichi. The folwark is designed for active tourists. The hosts set themselves the goal of surprising and entertaining tourists. That is why each cottage has a special feature. The project \"Sustainable Development at the Local Level\" by the European Union, in which Janina participated and won a grant. After a year and a half, wooden cottages for a carver, weaver, and potter were built. The carver's cottage has a Russian stove. It is on this stove that the national dish of Belarusians, Poles, and Lithuanians - a wooden pie, is cooked.",
             "url": "https://www.youtube.com/embed/XLrZOfytIaY",
             "titleVideo": "Where to Rest in Belarus - \"Folwark \"U Ryśka\"",
+            "latitude":"53.046787",
+            "longitude":"24.423744",
             "read": "Read more",
             "image": [
                 {
@@ -192,6 +203,8 @@
             "textAll": "The \"Near the Neman River\" homestead is located 10 kilometers from the Belarusian town of Ivye in the \"Razdory\" reserve in the Grodno region. It is a real Belarusian village with traditional houses and way of life! Next to the village, there are coniferous forests and wide meadows. Picturesque landscapes and churches located near the estate have a calming effect. The beautiful rural houses make you want to visit them. And despite the peaceful way of life, there is always something to do in the village - you will definitely not be bored here! Sometimes city dwellers are interested in simply admiring the local landscapes and village houses, which have been standing for 60 years. All the yards in the village are well-maintained, immersed in greenery and flowers. The beauty of the village where the homestead is located is that all the pictures of a happy life are real, created with hard work and love for the environment.",
             "url": "https://www.youtube.com/embed/cESbsQX13Yk",
             "titleVideo": "\"Traveling Light. Ivye\" Project",
+            "latitude":"53.870450",
+            "longitude":"25.689223",
             "image": [
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg"
@@ -317,7 +330,7 @@
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/lida_skyml2.jpg"
                 },
                 {
-                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpgg"
+                    "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida2_mawlon.jpg"
                 },
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida1_ge5jms.jpg"

@@ -1,10 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './home.module.sass';
-import farmstead from '../../data/cardData.json';
 import useTranslation from '../../hooks/useTranslation';
 import { MyImageSlider } from '../../ui/carousel/carousel';
-import CardFarmstead from '../Farmstead/cardFarmstead/cardFarmstead';
-import { Farmsteads } from '../Farmstead/Farmsteads';
 
 export function Home() {
     const { t } = useTranslation();
