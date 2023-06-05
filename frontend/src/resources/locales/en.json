@@ -167,6 +167,12 @@
     "back": {
         "button": "Back"
     },
+    "infoFarmstead":{
+        "info":"Homestead information:"
+    },
+    "video":{
+        "watch":"Watch video"
+    },
     "farmsteads": [
         {
             "id": 0,
@@ -176,9 +182,14 @@
             "textAll": "Ten kilometers away from Volkovysk, in a village inhabited by only nine people, five years ago a family of medical professionals decided to build a manor. Today, the folwark \"U Ryśka\" is a complex consisting of five cottages and six hectares of water area. The place is remarkable because everything, from the carvings on the chairs to the potter's cottage, was created by the efforts of one family. The manor \"U Ryśka\" was meant to grow. There was enough territory near the village of Korevichi. The folwark is designed for active tourists. The hosts set themselves the goal of surprising and entertaining tourists. That is why each cottage has a special feature. The project \"Sustainable Development at the Local Level\" by the European Union, in which Janina participated and won a grant. After a year and a half, wooden cottages for a carver, weaver, and potter were built. The carver's cottage has a Russian stove. It is on this stove that the national dish of Belarusians, Poles, and Lithuanians - a wooden pie, is cooked.",
             "url": "https://www.youtube.com/embed/XLrZOfytIaY",
             "titleVideo": "Where to Rest in Belarus - \"Folwark \"U Ryśka\"",
-            "latitude":"53.046787",
-            "longitude":"24.423744",
-            "read": "Read more",
+            "latitude": 53.046787,
+            "longitude": 24.423744,
+            "house": "1 house",
+            "place": "16 sleeping places",
+            "price": "20 BYN/night/per person",
+            "contact": "+375 (29) 882-95-45",
+            "email": "yanina.kozyuk@mail.ru",
+            "read": "More",
             "image": [
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/falvarek_nhypuq.jpg"
@@ -199,12 +210,17 @@
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg",
             "title": "Agro Homestead \"Near the Neman River\"",
             "text": "134 km along the Minsk-Grodno highway. A wooden house with a Russian stove, sauna, terrace, pool, barbecue area. Organization of excursions around the Golden Ring of the Ivye region. Fishing (pike, carp, tench, roach).",
-            "read": "Read more",
+            "read": "More",
             "textAll": "The \"Near the Neman River\" homestead is located 10 kilometers from the Belarusian town of Ivye in the \"Razdory\" reserve in the Grodno region. It is a real Belarusian village with traditional houses and way of life! Next to the village, there are coniferous forests and wide meadows. Picturesque landscapes and churches located near the estate have a calming effect. The beautiful rural houses make you want to visit them. And despite the peaceful way of life, there is always something to do in the village - you will definitely not be bored here! Sometimes city dwellers are interested in simply admiring the local landscapes and village houses, which have been standing for 60 years. All the yards in the village are well-maintained, immersed in greenery and flowers. The beauty of the village where the homestead is located is that all the pictures of a happy life are real, created with hard work and love for the environment.",
             "url": "https://www.youtube.com/embed/cESbsQX13Yk",
             "titleVideo": "\"Traveling Light. Ivye\" Project",
-            "latitude":"53.870450",
-            "longitude":"25.689223",
+            "house": "1 house",
+            "place": "7 sleeping places",
+            "price": "25 BYN/night/per person",
+            "contact": "+375 (29) 313-65-82",
+            "email": "archil1966@tut.by",
+            "latitude": 53.87045,
+            "longitude": 25.689223,
             "image": [
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman_zwcrax.jpg"
@@ -223,6 +239,13 @@
             "title": "Agro-homestead \"Dubrava\"",
             "text": "Grodno region, Novogrudok district, Olkhovka village. Cozy living room with a fireplace and access to the terrace, TV, kitchen, four bedrooms.",
             "read": "More",
+            "latitude": 53.810184,
+            "longitude": 25.623536,
+            "house": "1 house",
+            "place": "11 sleeping places",
+            "price": "70 BYN/night/per person",
+            "contact": "+375 (29) 656-18-30",
+            "email": "trevik64@gmail.com",
             "textAll": "If you are tired of the hustle and bustle of everyday life, the noise of the city, unresolved problems, and excessive burdens, then leave it all behind for a while. The \"Dubrava\" agro-homestead, located 160 km from Minsk in the village of Olkhovka, Novogrudok district, invites you to immerse yourself in silence, listen to the sounds of nature, become a part of this surrounding beauty, and finally, not to rush anywhere. The \"Dubrava\" homestead is a place where the soul rests! The \"Dubrava\" homestead is a fenced area that houses a modern wooden attic-style house with a terrace and all amenities. The house can accommodate up to 11 people overnight. It features a cozy living room with a fireplace, a fully equipped kitchen, 4 bedrooms with single and double beds, 2 bathrooms, a bathtub, a washing machine, and a television.",
             "image": [
                 {
@@ -245,6 +268,13 @@
             "title": "Agro Guesthouse \"Bubliki\"",
             "text": "Grodno Region, Ivye District, village of Sheluti. You will be pleasantly surprised by the fast-flowing river Gavia, one of the cleanest rivers in Belarus, which flows just a few meters from the guesthouse's territory.",
             "read": "More",
+            "latitude": 53.993095,
+            "longitude": 25.649057,
+            "house": "1 house",
+            "place": "10 sleeping places",
+            "price": "30 BYN/night/per person",
+            "contact": "+375 (29) 344-43-33",
+            "email": "bybliki@gmail.com",
             "textAll": "The \"Bubliki\" agro guesthouse is located in the Ivye District of the Grodno Region. The guesthouse features a spacious banquet hall for 50 people, where you can hold festive events. There is also a covered gazebo for up to 40 people for celebrations.In the house of the \"Bubliki\" guesthouse, a group of up to 10 people can be accommodated. It is equipped with all necessary amenities: furniture and appliances. On the guesthouse's territory, there is a stove-grill where you can cook shish kebabs and fish soup. There is also a parking lot available.",
             "url": "https://www.youtube.com/embed/kAzF1KaTceA",
             "titleVideo": "Agro Guesthouse Bubliki",
@@ -266,6 +296,13 @@
             "textAll": "The tourist complex \"Forest Eden\" is a peaceful corner surrounded by young pine forest, located 30 km from the city of Grodno. If you enjoy nature vacations, tired of the hustle and bustle of the city, or simply passing through Grodno, the guesthouse in the pine forest with a Russian sauna and barbecue areas will be an ideal place to recharge and relax. The guesthouse can accommodate the whole family. There is a playground with a trampoline and slides on the premises, and toys, board games, and books are freely available. Additionally, you can rent air hockey, table tennis, bicycles, jumpers, and a boat for walks on the lake.",
             "url": "https://www.youtube.com/embed/KcTNmFrT_l8",
             "titleVideo": "Forest Eden",
+            "house": "2 houses",
+            "place": "25 sleeping places",
+            "price": "100 BYN/night/per person",
+            "contact": "+375 (29) 666-51-56",
+            "email": "info@lesnojedem.by",
+            "latitude": 53.940315,
+            "longitude": 24.223546,
             "image": [
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem_dltus1.jpg"
@@ -283,7 +320,14 @@
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/zirov_kmdsvk.png",
             "title": "Agrousadba in Zhirovichi",
             "text": "Słonimska Street, Zhirovichi village. Guest house, terraces, fireplace, barbecue grills, sauna, gazebo, sports grounds, children's playground, board games, free Wi-Fi, pond, excursions to Zhirovichi Monastery.",
-            "read": "Learn more",
+            "read": "More",
+            "latitude": 53.022851,
+            "longitude": 25.345023,
+            "house": "1 house",
+            "place": "12 sleeping places",
+            "price": "50 BYN/night/per person",
+            "contact": "+375 (29) 393-95-59",
+            "email": "kshahs@mail.ru",
             "textAll": "Zhirovichi is a unique place in Belarus, and the main attraction here is the Miraculous Icon of Zhirovichi Mother of God, beautiful architecture of Zhirovichi Monastery churches, holy springs with healing water, and natural and historical landmarks. The staff can communicate freely in English, Polish, Russian, and Ukrainian. For guests, there is one type of accommodation available - a holiday home.",
             "image": [
                 {
@@ -302,7 +346,14 @@
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici_popzaw.jpg",
             "title": "Agrousadba Sonichi",
             "text": "Grodno district, village Sonichi 6a. For guests, there is a beautiful table for 30 people, a Russian bathhouse, a swimming pool, bicycles, boats, catamarans, kayaks, a Russian stove, a barbecue grill, a smokehouse.",
-            "read": "Learn more",
+            "read": "More",
+            "latitude": 53.873426,
+            "longitude": 23.67721,
+            "house": "1 house",
+            "place": "6 sleeping places",
+            "price": "50 BYN/night/per person",
+            "contact": "+375 (29) 884-48-87",
+            "email": "info@usadba-sonichi.by",
             "textAll": "Located on the banks of the Augustow Canal, 25 kilometers from Grodno, is the Sonichi agrousadba. The guest house is made of natural wood combined with hand-forged elements. The house offers a living room, two bedrooms, a kitchen, a bathroom, a sauna with a swimming pool, and a shower. The territory of the agrousadba is well-maintained and features an artificial pond, a fountain, a picturesque bridge, and a gazebo where you can use a barbecue grill, smokehouse, and oven. The gazebo is designed for 30 people and is suitable for hosting various festive events. Guests of the agrousadba can enjoy a Russian sauna with a wood-burning stove and a swimming pool.",
             "url": "https://www.youtube.com/embed/9QxlmuwdGD0",
             "titleVideo": "Agrousadba Sonichi",
@@ -324,6 +375,13 @@
             "title": "Agrousadba 'Lidski Khutorok'",
             "text": "Grodno region, city of Lida. A two-story bathhouse, a veranda with a fireplace stove for barbecues and kebabs. The house has everything necessary for a quality rest.",
             "read": "More",
+            "latitude": 53.906878,
+            "longitude": 25.271438,
+            "house": "1 house",
+            "place": "4 sleeping places",
+            "price": "120 BYN/night/per person",
+            "contact": "+375 (29) 287-87-96",
+            "email": "info@usadba-lidkiy.by",
             "textAll": "The agrousadba 'Lidski Khutorok' is located in the city, but it is hidden from the hustle and bustle of the city under the crowns of tall oaks, limes, and birches. It is more than five hundred meters away from the nearest buildings, so it is a kind of secluded village. The house is a modern construction made of white brick. Everything is thought out to the smallest detail: underfloor heating, an interior that combines elements of antiquity and modernity. Two bedrooms are prepared for guests at the agrousadba. One bedroom has a double bed, and the other has two single beds, a sofa bed, and a stove-bed. The house has a banquet hall with a Russian stove that can accommodate 30 people. This room can be used for celebrations, weddings, as well as a conference hall for conducting seminars. There is a home theater with a large TV and a good sound system. The hall has an exit to the terrace and the kitchen, where the hosts will cook for you. Separate sanitary facilities are provided for guests: a toilet, bidet, shower, and washbasin.",
             "image": [
                 {
@@ -344,7 +402,13 @@
             "text": "Beregovoy village. Baltic Coast Estate is a sauna complex where you can improve your health and have a great rest.",
             "read": "More",
             "textAll": "The estate offers a sauna with SPA procedures for relaxation. You can rent a cottage with 3 rooms (2 bedrooms and 1 living room), and you will also have a traditional village sauna at your disposal. The host's house has a SPA center, which includes an infrared sauna, a 4-seat SPA pool, a massage chair, a billiard table, a plasma TV, and a grill. The cabin is equipped with a kitchenette with all modern amenities, and the room will impress with its impressive size, where a leather-covered sofa and a huge table made of natural alder wood comfortably accommodate up to 10 people. You can store your belongings in a convenient sliding wardrobe by Komandor. And, of course, there is a large widescreen TV with multiple channels. During cool weather, the fireplace will warm you up and create a cozy atmosphere, and you can sit at the bar with friends.",
-            "coordinate": "53.993095, 25.649057",
+            "latitude": 53.993095,
+            "longitude": 25.649057,
+            "house": "1 house",
+            "place": "6 sleeping places",
+            "price": "60 BYN/night/per person",
+            "contact": "+375 (29) 888-18-81",
+            "email": "info@bb-grodno.by",
             "image": [
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/bal2_xexar1.jpg"

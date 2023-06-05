@@ -6,8 +6,13 @@ export interface FarmsteadsType {
     img: string;
     title: string;
     t: any;
-    longitude:string;
-    latitude:string;
+    longitude:number;
+    house:string;
+    place:string;
+    price: string;
+    contact:string;
+    email:string;
+    latitude:number;
     image: {
         img: string;
     }[];

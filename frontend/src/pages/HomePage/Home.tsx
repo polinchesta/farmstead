@@ -1,10 +1,34 @@
 import { Link } from 'react-router-dom';
-import styles from './home.module.sass';
+import styles from './Home.module.sass';
 import useTranslation from '../../hooks/useTranslation';
 import { MyImageSlider } from '../../ui/carousel/carousel';
+import { useEffect, useState } from 'react';
 
 export function Home() {
     const { t } = useTranslation();
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 100) {
+            setShowScrollToTop(true);
+        } else {
+            setShowScrollToTop(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
     return (
         <div>
@@ -17,9 +41,7 @@ export function Home() {
                 </nav>
             </div>
             <div className={styles.flexDiv}>
-                <div className={styles.flexContainer}>
-                    <h4>{t.main.leftInformation.latestPosts}</h4>
-                </div>
+                <h4>{t.main.leftInformation.latestPosts}</h4>
                 <div className={styles.news}>
                     <h4>{t.main.rightInformation.news}</h4>
                     <p>
@@ -27,7 +49,7 @@ export function Home() {
                     </p>
                     <img src={'/promo.svg'} alt="WebSite Logo" />
                     <h4>{t.main.rightInformation.connect}</h4>
-                    <p>{t.main.rightInformation.email}: polinchesta@gmail.com</p>
+                    <p>{t.main.rightInformation.email}:<a href="mailto:polinchesta@gmail.com">polinchesta@gmail.com</a></p>
                     <p>GitHub: https://github.com/polinchesta</p>
                     <p>Telegram: @polinchesta</p>
                     <h4>{t.main.rightInformation.aboutMessage}</h4>
@@ -56,6 +78,11 @@ export function Home() {
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen></iframe>
+            {showScrollToTop && (
+                <div className={styles.scrollToTop} onClick={scrollToTop}>
+                    &uarr;
+                </div>
+            )}
         </div>
     )
 }

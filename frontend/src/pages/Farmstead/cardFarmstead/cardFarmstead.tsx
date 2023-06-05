@@ -6,7 +6,7 @@ import { YMaps, Map } from "react-yandex-maps";
 import { FarmsteadsType } from '../../../types/farmsteadsTypes';
 interface CardProps {
     dataItem: FarmsteadsType;
-    id:number;
+    id: number;
     img: string;
     t: any;
 }
@@ -30,7 +30,8 @@ const CardFarmstead: React.FC<CardProps> = ({
                 <div className={styles.text}>
                     <h2 className={styles.title}>{t.farmsteads[dataItem.id].title}</h2>
                     <p className={styles.information}>{t.farmsteads[dataItem.id].text}</p>
-                    <Link to={`/farmstead/${dataItem.id}`} className={styles.readMore}>{t.farmsteads[dataItem.id].read}</Link>
+                    <p className={styles.information}>{t.farmsteads[dataItem.id].price}, {t.farmsteads[dataItem.id].house}, {t.farmsteads[dataItem.id].place}</p>
+                    <p className={styles.information}>{t.farmsteads[dataItem.id].contact}, {t.farmsteads[dataItem.id].email}</p>
                 </div>
             </section>
         </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from './farmsteads.module.sass';
+import styles from './Farmsteads.module.sass';
 import useTranslation from '../../hooks/useTranslation';
 import { CurrencyConverter } from '../../ui/currency/currency';
 import Loader from '../../ui/loader/loader';
@@ -73,6 +73,31 @@ export function Farmsteads() {
         return '';
     };
 
+    const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+    const handleScroll = () => {
+        if (window.pageYOffset > 100) {
+            setShowScrollToTop(true);
+        } else {
+            setShowScrollToTop(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
+
     return (
         <>
             {loading && <Loader />}
@@ -96,6 +121,11 @@ export function Farmsteads() {
                     />
                 ))}
             </div>
+            {showScrollToTop && (
+                <div className={styles.scrollToTop} onClick={scrollToTop}>
+                    &uarr;
+                </div>
+            )}
         </>
     );
 }
