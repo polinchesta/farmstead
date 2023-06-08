@@ -5,6 +5,7 @@ import styles from "./ItemProducts.module.sass"
 import Loader from '../../../ui/loader/loader'
 import { productActions } from '../../../store/product/productSlice'
 import useTranslation from '../../../hooks/useTranslation'
+import ProductsCard from '../cardProducts/cardProduct'
 
 export default function ItemProduct() {
     const dispatch = useAppDispatch()
@@ -23,7 +24,7 @@ export default function ItemProduct() {
         }
     }, [id])
     return (
-        <div className={styles.container}>
+        <div className={styles.containerProd}>
             {loading && <Loader />}
             <button onClick={handleClick} className={styles.back}>{t.back.button}</button>
             {products && (
@@ -42,6 +43,19 @@ export default function ItemProduct() {
                     </div>
                 </section >
             )}
+            <h2>С этим покупают:</h2>
+            <div className={styles.productContainer}>
+                {products &&
+                    products.map((product, index) => (
+                        <ProductsCard
+                            key={index}
+                            dataItem={product}
+                            id={index}
+                            img={product.img}
+                            t={t}
+                        />
+                    ))}
+            </div>
         </div >
     )
 }

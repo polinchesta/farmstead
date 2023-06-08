@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Farmsteads.module.sass';
 import useTranslation from '../../hooks/useTranslation';
-import { CurrencyConverter } from '../../ui/currency/currency';
 import Loader from '../../ui/loader/loader';
 import axios from 'axios';
 import { useAppSelector } from '../../hooks/redux-hooks';
@@ -9,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { FarmsteadsType } from '../../types/farmsteadsTypes';
 import CardFarmstead from './cardFarmstead/cardFarmstead';
 import FarmsteadsFilter from './filter/farmsteadsFilter';
+import CurrencyConverter from '../../ui/currency/currency';
 
 
 export interface ConversionRates {
@@ -101,14 +101,6 @@ export function Farmsteads() {
     return (
         <>
             {loading && <Loader />}
-            {conversionRate !== null && (
-                <CurrencyConverter
-                    convertToUSD={convertToUSD}
-                    convertToPLN={convertToPLN}
-                    convertToEUR={convertToEUR}
-                    conversionRate={conversionRate}
-                />
-            )}
             <FarmsteadsFilter />
             <div className={styles.gridContainer}>
                 {farmsteads.map((farmstead) => (

@@ -4,8 +4,8 @@ import styles from "./select.module.sass";
 import MenuItem from "@mui/material/MenuItem/MenuItem";
 
 interface OptionType {
-  value: string;
-  text: string;
+    value: string;
+    text: string;
 }
 
 interface PropsType extends Omit<React.HTMLProps<HTMLInputElement>, "ref" | "as"> {
@@ -30,6 +30,7 @@ const Select: React.FC<PropsType> = ({
 
     return (
         <MuiSelect
+            className={styles.select}
             // label
             value={value}
             onChange={onChange}

@@ -7,6 +7,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { useAppDispatch } from '../../hooks/redux-hooks';
 import useTranslation from '../../hooks/useTranslation';
 import { LanguageType } from '../../types/languageTypes';
+import CurrencyConverter from '../currency/currency';
 
 export function Header() {
     const { t, setLanguage } = useTranslation();
@@ -14,6 +15,14 @@ export function Header() {
     const dispatch = useAppDispatch();
     const { isAuth, email } = useAuth();
     const [showTip, setShowTip] = useState(false);
+    const [showPopover, setShowPopover] = useState(false);
+    const handlePopoverClick = () => {
+      setShowPopover(true);
+    };
+    const handleClose = (event: React.MouseEvent<HTMLButtonElement>) => {
+      event.stopPropagation();
+      setShowPopover(false);
+    };
 
     const handleLanguageChange = (language: LanguageType) => {
         setLanguage(language);
@@ -34,32 +43,50 @@ export function Header() {
                             </div>
                         </Link>
                     </div>
-                    <div className={styles.language}>
-                        <button
-                            className={styles.language}
-                            onClick={() => handleLanguageChange('ru')}
-                        >
-                            RU
-                        </button>
-                        <button
-                            className={styles.language}
-                            onClick={() => handleLanguageChange('en')}
-                        >
-                            ENG
-                        </button>
-                        <button
-                            className={styles.language}
-                            onClick={() => handleLanguageChange('pl')}
-                        >
-                            PL
-                        </button>
-                        <button
-                            className={styles.language}
-                            onClick={() => handleLanguageChange('by')}
-                        >
-                            BY
-                        </button>
+                    <div className={styles.block}>
+                        <div className={styles.language}>
+                            <button
+                                className={styles.language}
+                                onClick={() => handleLanguageChange('ru')}
+                            >
+                                RU
+                            </button>
+                            <button
+                                className={styles.language}
+                                onClick={() => handleLanguageChange('en')}
+                            >
+                                ENG
+                            </button>
+                            <button
+                                className={styles.language}
+                                onClick={() => handleLanguageChange('pl')}
+                            >
+                                PL
+                            </button>
+                            <button
+                                className={styles.language}
+                                onClick={() => handleLanguageChange('by')}
+                            >
+                                BY
+                            </button>
+                        </div>
+                        <div className={styles.line}></div>
+                        <div className={styles.converterPopover} onClick={handlePopoverClick}>
+                            <button className={styles.openButton}>{t.open.currency}</button>
+                            {showPopover && (
+                                <>
+                                    <div className={styles.modalOverlay}></div>
+                                    <div className={styles.modalContainer}>
+                                        <button className={styles.closeButton} onClick={handleClose}>
+                                            &times;
+                                        </button>
+                                        <CurrencyConverter />
+                                    </div>
+                                </>
+                            )}
+                        </div>
                     </div>
+
                     <button
                         className={styles.login}
                         style={{ display: `${Token ? 'block' : 'none'}` }}

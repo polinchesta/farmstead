@@ -4,7 +4,7 @@
             "id":0,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/meat_eoc6li.jpg",
             "title": "Мясо",
-            "price": "21 byn",
+            "price": "21",
             "count": "1 килограмм",
             "adress": "г.п.Большая Берестовица,пл.Ратушная, 15",
             "number": "+375(29)758-41-80"
@@ -14,7 +14,7 @@
             "id":1,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/cheese_beslk8.jpg",
             "title": "Сыр",
-            "price": "39 byn",
+            "price": "39",
             "count": "1 килограмм",
             "adress": "Деревня Ольговцы, Лидский район",
             "number": "+375(29)975-52-86"
@@ -24,7 +24,7 @@
             "id":2,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/med_o1juud.jpg",
             "title": "Мёд",
-            "price": "73 byn",
+            "price": "73",
             "count": "1 килограмм",
             "adress": "Щучинский район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
@@ -34,7 +34,7 @@
             "id":3,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/perga_pg59l3.jpg",
             "title": "Перга",
-            "price": "13 byn",
+            "price": "13",
             "count": "150 грамм",
             "adress": "Щучинский район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
@@ -44,7 +44,7 @@
             "id":4,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Картошка",
-            "price": "2 byn",
+            "price": "2",
             "count": "1 килограмм",
             "adress": "Щучинский район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
@@ -54,7 +54,7 @@
             "id":5,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/propolis_sukeae.jpg",
             "title": "Прополис",
-            "price": "26 byn",
+            "price": "26",
             "count": "10 грамм",
             "adress": "Щучинский район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
@@ -64,7 +64,7 @@
             "id":6,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/pshenica_latvnz.jpg",
             "title": "Пшеница",
-            "price": "73 byn",
+            "price": "73",
             "count": "1 тюк",
             "adress": "Щучинский район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
@@ -74,7 +74,7 @@
             "id":7,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/roz_h7pacv.jpg",
             "title": "Рожь",
-            "price": "18 byn",
+            "price": "18",
             "count": "1 тюк",
             "adress": "Щучинский район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
@@ -84,7 +84,7 @@
             "id":8,   
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/vosk_jxbter.jpg",
             "title": "Воск",
-            "price": "73 byn",
+            "price": "73",
             "count": "1 kg",
             "adress": "Щучински й район, Лядский сельсовет",
             "number": "+375 29 672 25 69"

@@ -1,99 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import ProductsCard from './cardProducts/cardProduct';
-import styles from './products.module.sass';
+import styles from './Products.module.sass';
 import { useAppSelector } from '../../hooks/redux-hooks';
 import ProductsFilter from './filter/productsFilter';
 import Loader from '../../ui/loader/loader';
 import useTranslation from '../../hooks/useTranslation';
-import { CurrencyConverter } from '../../ui/currency/currency';
-import axios from 'axios';
-import { ProductType } from '../../types/productsTypes';
-
-export interface ConversionRates {
-  usdToBynRate: number;
-  eurToBynRate: number;
-  plnToBynRate: number;
-}
 
 export function Products() {
   const products = useAppSelector((state) => state.products.products);
   const loading = useAppSelector((state) => state.products.loading);
   const { t } = useTranslation();
-  const [conversionRate, setConversionRate] = useState<ConversionRates | null>(null);
-  const [selectedFarmstead, setSelectedFarmstead] = useState<ProductType | null>(null);
-  const [selectedCurrency, setSelectedCurrency] = useState('BYN');
-
-/*   useEffect(() => {
-    const fetchConversionRate = async () => {
-      try {
-        const cachedConversionRate = localStorage.getItem('conversionRate');
-        if (cachedConversionRate) {
-          setConversionRate(JSON.parse(cachedConversionRate));
-        } else {
-          const response = await axios.get('https://v6.exchangerate-api.com/v6/9e01f749e605de6a06421c20/latest/BYN');
-          const usdToBynRate = response.data.conversion_rates.USD;
-          const eurToBynRate = response.data.conversion_rates.EUR;
-          const plnToBynRate = response.data.conversion_rates.PLN;
-          const conversionRate = { usdToBynRate, eurToBynRate, plnToBynRate };
-          setConversionRate(conversionRate);
-          localStorage.setItem('conversionRate', JSON.stringify(conversionRate));
-        }
-      } catch (error) {
-        console.error('Failed to fetch conversion rate:', error);
-      }
-    };
-
-    fetchConversionRate();
-  }, []); */
-
-/* 
-  const convertToUSD = (amount: number) => {
-    if (conversionRate) {
-      return (amount * conversionRate.usdToBynRate).toFixed(2);
-    }
-    return '';
-  };
-
-  const convertToPLN = (amount: number) => {
-    if (conversionRate) {
-      return (amount * conversionRate.plnToBynRate).toFixed(2);
-    }
-    return '';
-  };
-
-  const convertToEUR = (amount: number) => {
-    if (conversionRate) {
-      return (amount * conversionRate.eurToBynRate).toFixed(2);
-    }
-    return '';
-  };
-
-
-  const convertPrice = (price: string) => {
-    const amount = parseFloat(price);
-    switch (selectedCurrency) {
-      case 'USD':
-        return convertToUSD(amount);
-      case 'PLN':
-        return convertToPLN(amount);
-      case 'EUR':
-        return convertToEUR(amount);
-      default:
-        return price;
-    }
-  }; */
-
   return (
     <>
       {loading && <Loader />}
-{/*       {conversionRate !== null && (
-        <CurrencyConverter
-          convertToUSD={convertToUSD}
-          convertToPLN={convertToPLN}
-          convertToEUR={convertToEUR}
-          conversionRate={conversionRate}
-        />
-      )} */}
+
       <ProductsFilter />
       <div className={styles.gridContainer}>
         {products.map((product) => (

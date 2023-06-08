@@ -1,97 +1,120 @@
-import { ChangeEvent, useState } from "react";
-import { ConversionRates } from "../../pages/Products/Products";
-import styles from "./currency.module.sass"
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import styles from './currency.module.sass';
 
-interface CurrencyConverterProps {
-  convertToUSD: (amount: number) => string;
-  convertToPLN: (amount: number) => string;
-  convertToEUR: (amount: number) => string;
-  conversionRate: ConversionRates | null;
+interface Currency {
+  code: string;
+  rate: number;
 }
 
-export function CurrencyConverter({
-  convertToUSD,
-  convertToPLN,
-  convertToEUR,
-  conversionRate
-}: CurrencyConverterProps) {
-  const [amountBYN, setAmountBYN] = useState<string>("");
-  const [amountUSD, setAmountUSD] = useState<string>("");
-  const [amountPLN, setAmountPLN] = useState<string>("");
-  const [amountEUR, setAmountEUR] = useState<string>("");
+const CurrencyConverter: React.FC = () => {
+  const [amount, setAmount] = useState<string>('');
+  const [fromCurrency, setFromCurrency] = useState<Currency | null>(null);
+  const [toCurrency, setToCurrency] = useState<Currency | null>(null);
+  const [convertedAmount, setConvertedAmount] = useState<number>(0);
+  const [currencies, setCurrencies] = useState<Currency[]>([]);
 
-  const handleBYNChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setAmountBYN(value);
-    if (conversionRate) {
-      setAmountUSD((parseFloat(value) * conversionRate.usdToBynRate).toFixed(2));
-      setAmountPLN((parseFloat(value) * conversionRate.plnToBynRate).toFixed(2));
-      setAmountEUR((parseFloat(value) * conversionRate.eurToBynRate).toFixed(2));
+  useEffect(() => {
+    fetchExchangeRate();
+  }, []);
+
+  const fetchExchangeRate = async () => {
+    try {
+      const response = await axios.get('https://v6.exchangerate-api.com/v6/9e01f749e605de6a06421c20/latest/BYN');
+      const data = response.data;
+
+      const bynCurrency: Currency = {
+        code: 'BYN',
+        rate: 1,
+      };
+
+      const fetchedCurrencies: Currency[] = Object.entries(data.conversion_rates).map(([code, rate]: [string, unknown]) => ({
+        code,
+        rate: rate as number,
+      }));
+
+      setCurrencies([bynCurrency, ...fetchedCurrencies]);
+      setFromCurrency(bynCurrency);
+      setToCurrency(fetchedCurrencies[0]);
+    } catch (error) {
+      console.error('Failed to fetch exchange rates:', error);
     }
   };
 
-  const handleUSDChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleAmountChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
-    setAmountUSD(value);
-    if (conversionRate) {
-      setAmountBYN((parseFloat(value) * conversionRate.usdToBynRate).toFixed(2));
-      setAmountPLN(
-        ((parseFloat(value) * conversionRate.usdToBynRate) * conversionRate.plnToBynRate).toFixed(2)
-      );
-      setAmountEUR(
-        ((parseFloat(value) * conversionRate.usdToBynRate) * conversionRate.eurToBynRate).toFixed(2)
-      );
-    }
+    setAmount(value);
   };
 
-  const handlePLNChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setAmountPLN(value);
-    if (conversionRate) {
-      setAmountBYN((parseFloat(value) / conversionRate.plnToBynRate).toFixed(2));
-      setAmountUSD(
-        ((parseFloat(value) / conversionRate.plnToBynRate) / conversionRate.usdToBynRate).toFixed(2)
-      );
-      setAmountEUR(
-        ((parseFloat(value) / conversionRate.plnToBynRate) * conversionRate.eurToBynRate).toFixed(2)
-      );
-    }
+  const handleFromCurrencyChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedCurrency = event.target.value;
+    const currency = currencies.find((curr) => curr.code === selectedCurrency) || null;
+    setFromCurrency(currency);
   };
-  
 
-  const handleEURChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const value = event.target.value;
-    setAmountEUR(value);
-    if (conversionRate) {
-      setAmountBYN((parseFloat(value) / conversionRate.eurToBynRate).toFixed(2));
-      setAmountUSD(
-        ((parseFloat(value) / conversionRate.eurToBynRate) / conversionRate.usdToBynRate).toFixed(2)
-      );
-      setAmountPLN(
-        ((parseFloat(value) / conversionRate.eurToBynRate) / conversionRate.plnToBynRate).toFixed(2)
-      );
-    }
+  const handleToCurrencyChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedCurrency = event.target.value;
+    const currency = currencies.find((curr) => curr.code === selectedCurrency) || null;
+    setToCurrency(currency);
   };
-  
+
+  const handleAmountClick = () => {
+    setAmount('');
+  };
+
+  useEffect(() => {
+    if (fromCurrency && toCurrency) {
+      const convertedValue = (parseFloat(amount) / fromCurrency.rate) * toCurrency.rate;
+      setConvertedAmount(convertedValue);
+    }
+  }, [amount, fromCurrency, toCurrency]);
 
   return (
     <div className={styles.container}>
       <div>
-        <label>BYN:</label>
-        <input className={styles.input} type="text" value={amountBYN} onChange={handleBYNChange} />
+        <label>
+          Amount:
+          <input
+            className={styles.input}
+            onClick={handleAmountClick}
+            type="number"
+            value={amount}
+            onChange={handleAmountChange}
+          />
+        </label>
       </div>
       <div>
-        <label>USD:</label>
-        <input className={styles.input} type="text" value={amountUSD} readOnly={true} onChange={handleUSDChange} />
+        <label>
+          From:
+          <select className={styles.select} value={fromCurrency?.code || ''} onChange={handleFromCurrencyChange}>
+            {currencies.map((currency, index) => (
+              <option key={index} value={currency.code}>
+                {currency.code}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
       <div>
-        <label>PLN:</label>
-        <input className={styles.input} type="text" value={amountPLN} readOnly={true} onChange={handlePLNChange} />
+        <label>
+          To:
+          <select className={styles.select} value={toCurrency?.code || ''} onChange={handleToCurrencyChange}>
+            {currencies.map((currency, index) => (
+              <option key={index} value={currency.code}>
+                {currency.code}
+              </option>
+            ))}
+          </select>
+        </label>
       </div>
       <div>
-        <label>EUR:</label>
-        <input className={styles.input} type="text" value={amountEUR} readOnly={true} onChange={handleEURChange} />
+        <label>
+          Amount:
+          <input className={styles.input} type="number" value={String(convertedAmount.toFixed(2))} readOnly />
+        </label>
       </div>
     </div>
   );
-}
+};
+
+export default CurrencyConverter;

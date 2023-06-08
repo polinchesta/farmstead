@@ -4,6 +4,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { YMaps, Map } from "react-yandex-maps";
 import { FarmsteadsType } from '../../../types/farmsteadsTypes';
+import Modal from '../../../ui/modal/modal';
 interface CardProps {
     dataItem: FarmsteadsType;
     id: number;
@@ -19,11 +20,23 @@ const CardFarmstead: React.FC<CardProps> = ({
 }) => {
     const navigate = useNavigate()
     const handleClick = () => {
-      navigate(`/farmstead/${dataItem.id}`)
+        navigate(`/farmstead/${dataItem.id}`)
     }
+
+    const [modalOpen, setModalOpen] = useState(false);
+    const openModal = () => {
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+    const handleButtonClicked = (event: React.MouseEvent<HTMLButtonElement>) => {
+        event.stopPropagation();
+        openModal();
+    };
     return (
-        <div className={styles.container} onClick={handleClick}>
-            <section className={styles.farmstead}>
+        <div className={styles.container}>
+            <section className={styles.farmstead} onClick={handleClick}>
                 <div className={styles.farmsteadImg}>
                     <img className={styles.falvarek} src={img} alt="farmstead title" />
                 </div>
@@ -32,8 +45,12 @@ const CardFarmstead: React.FC<CardProps> = ({
                     <p className={styles.information}>{t.farmsteads[dataItem.id].text}</p>
                     <p className={styles.information}>{t.farmsteads[dataItem.id].price}, {t.farmsteads[dataItem.id].house}, {t.farmsteads[dataItem.id].place}</p>
                     <p className={styles.information}>{t.farmsteads[dataItem.id].contact}, {t.farmsteads[dataItem.id].email}</p>
+                    <button className={styles.button} onClick={handleButtonClicked}>{t.order.button}</button>
                 </div>
             </section>
+            {modalOpen && (
+                <Modal title={t.farmsteads[dataItem.id].title} onClose={closeModal} />
+            )}
         </div>
     );
 };

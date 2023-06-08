@@ -12,9 +12,9 @@ export default function ItemFarmstead() {
     const dispatch = useAppDispatch();
     const farmsteads = useAppSelector((state) => state.farmsteads.farmsteads);
     const loading = useAppSelector((state) => state.farmsteads.loading);
-    const [load, setLoad] = useState(false);
     const { id } = useParams();
     const { t } = useTranslation();
+    const [showLoader, setShowLoader] = useState(false);
     const farmsteadId = +(id ?? 0);
     const navigate = useNavigate();
     const handleClick = () => {
@@ -35,8 +35,7 @@ export default function ItemFarmstead() {
     };
 
     const handlePopoverClick = () => {
-        setShowVideoPopover(true);
-        setLoad(true);
+        setShowVideoPopover(true)
     };
 
     const handleVideoClose = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -115,11 +114,7 @@ export default function ItemFarmstead() {
                                                 <p className={styles.videoIcon}>▶ {t.video.watch}</p>
                                                 {showVideoPopover && (
                                                     <>
-                                                        {loading && (
-                                                            <div className={styles.loader}>
-                                                                <div className={styles.spinner}></div>
-                                                            </div>
-                                                        )}
+                                                        {loading && <Loader />}
                                                         <div className={styles.popoverOverlay}></div>
                                                         <div className={styles.videoContainer}>
                                                             <button className={styles.closeButton} onClick={handleVideoClose}>

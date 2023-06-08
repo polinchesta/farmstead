@@ -17,9 +17,16 @@ const ProductsFilter: React.FC = () => {
     const { t } = useTranslation();
 
     const fetchData = (filter: Partial<ProductsFilterType> = {}) => {
+        let sort = sortField;
+        if (sortField === "priceAsc") {
+            sort = "price";
+        } else if (sortField === "priceDesc") {
+            sort = "-price";
+        }
+
         dispatch(
             productsActions.getProductsList({
-                sortField,
+                sortField: sort,
                 query: debounceQuery,
                 limit: 6,
                 page,
@@ -32,9 +39,8 @@ const ProductsFilter: React.FC = () => {
         { value: "id", text: t.sort.popular },
         { value: "priceAsc", text: t.sort.min },
         { value: "priceDesc", text: t.sort.max },
-        { value: "maxPrice", text: t.sort.max },
-      ];
-      
+    ];
+
 
     const updatePageAndFetchData = (newPage: number) => {
         setPage(newPage);

@@ -4,7 +4,7 @@
             "id": 0,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/meat_eoc6li.jpg",
             "title": "Мяса",
-            "price": "21 BYN",
+            "price": "21",
             "count": "1 кілаграм",
             "address": "Вялікая Бярэстоўка, плошча Ратушная, 15",
             "number": "+375(29)758-41-80"
@@ -13,7 +13,7 @@
             "id": 1,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/cheese_beslk8.jpg",
             "title": "Сыр",
-            "price": "39 BYN",
+            "price": "39",
             "count": "1 кілаграм",
             "address": "Вёска Альгаўцы, Лідскі раён",
             "number": "+375(29)975-52-86"
@@ -22,7 +22,7 @@
             "id": 2,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/med_o1juud.jpg",
             "title": "Мёд",
-            "price": "73 BYN",
+            "price": "73",
             "count": "1 кілаграм",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
@@ -31,7 +31,7 @@
             "id": 3,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/perga_pg59l3.jpg",
             "title": "Перга",
-            "price": "13 BYN",
+            "price": "13",
             "count": "150 грамаў",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
@@ -40,7 +40,7 @@
             "id": 4,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Картошка",
-            "price": "2 BYN",
+            "price": "2",
             "count": "1 кілаграм",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
@@ -49,7 +49,7 @@
             "id": 5,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/propolis_sukeae.jpg",
             "title": "Прополіс",
-            "price": "26 BYN",
+            "price": "26",
             "count": "10 грамаў",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
@@ -58,7 +58,7 @@
             "id": 6,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/pshenica_latvnz.jpg",
             "title": "Пшэніца",
-            "price": "73 BYN",
+            "price": "73",
             "count": "1 тюк",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
@@ -67,7 +67,7 @@
             "id": 7,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/roz_h7pacv.jpg",
             "title": "Раж",
-            "price": "18 BYN",
+            "price": "18",
             "count": "1 тюк",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
@@ -76,7 +76,7 @@
             "id": 8,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/vosk_jxbter.jpg",
             "title": "Воск",
-            "price": "73 BYN",
+            "price": "73",
             "count": "1 кг",
             "address": "Шчучынскі раён, Лядскі сельсавет",
             "number": "+375 29 672 25 69"
@@ -150,7 +150,7 @@
         "max": "Максімальная цана"
     },
     "field": {
-        "search": "🔎 Што вы шукаеце?"
+        "search": "Што вы шукаеце?"
     },
     "order": {
         "button": "Замова ў 1 кліце"
@@ -172,6 +172,9 @@
     },
     "video":{
         "watch":"Прагледзець відэа"
+    },
+    "open":{
+        "currency":"Канвэртар валют"
     },
     "farmsteads": [
         {

@@ -1,6 +1,7 @@
 .back
     padding: 10px 10px
     font-size: 17px
+    border-radius: 4px
     margin: 10px 15px
     display: flex
     height: 40px
@@ -13,13 +14,15 @@
     &:hover
         color: white
         background: #6b6565
-.container
+.containerProd
     max-width: 90%
     margin: 20px auto
     height: 470px
     display: flex
+    flex-direction: column
     .product
         height: 100%
+        display: flex
 
         @media (max-width: 1200px)
             width: 270px
@@ -27,14 +30,14 @@
         p
             font-family: 'PT Mono', monospace
             color: black
-            text-align: center
+            text-align: left
             font-size: 16px
             margin: 0px 5px
             line-height: 20px
 
         .title
             font-size: 20px
-            margin: 20px
+            margin: 20px 0px
 
         h2
             letter-spacing: 0px
@@ -49,37 +52,20 @@
             text-decoration: none
 
         img
-            align-items: center
-            width: 100%
+            width: 90%
             object-fit: cover
-            height: 500px
-            border: 3px solid black
+            height: 85%
 
         .number
-            text-align: center
+            text-align: lefts
             margin: 5px 0px
 
         .price
             font-size: 23px
-            text-align: center
+            text-align: left
             margin: 10px 0px
 
-        .button
-            position: absolute
-            bottom: -40px
-            left: 0
-            right: 0
-            margin: 0px auto 50px auto
-            width: 150px
-            height: 50px
-            font-family: 'PT Mono', monospace
-            color: white
-            border-radius: 4px
-            color: black
-            cursor: pointer
-            border: 3px solid black
-            background: none
-            font-size: 18px
-
-            .button:hover
-                background-color: #333
+    .productContainer
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px

@@ -4,7 +4,7 @@
             "id": 0,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/meat_eoc6li.jpg",
             "title": "Meat",
-            "price": "21 BYN",
+            "price": "21",
             "count": "1 kilogram",
             "address": "Bolshaya Berestovitsa, Ratushnaya Square, 15",
             "number": "+375(29)758-41-80"
@@ -13,7 +13,7 @@
             "id": 1,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/cheese_beslk8.jpg",
             "title": "Cheese",
-            "price": "39 BYN",
+            "price": "39",
             "count": "1 kilogram",
             "address": "Village Olhovtsy, Lida district",
             "number": "+375(29)975-52-86"
@@ -22,7 +22,7 @@
             "id": 2,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/med_o1juud.jpg",
             "title": "Honey",
-            "price": "73 BYN",
+            "price": "73",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -31,7 +31,7 @@
             "id": 3,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/perga_pg59l3.jpg",
             "title": "Pollen",
-            "price": "13 BYN",
+            "price": "13",
             "count": "150 grams",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -40,7 +40,7 @@
             "id": 4,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Potatoes",
-            "price": "2 BYN",
+            "price": "2",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -49,7 +49,7 @@
             "id": 5,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/propolis_sukeae.jpg",
             "title": "Propolis",
-            "price": "26 BYN",
+            "price": "26",
             "count": "10 grams",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -58,7 +58,7 @@
             "id": 6,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/pshenica_latvnz.jpg",
             "title": "Wheat",
-            "price": "73 BYN",
+            "price": "73",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -67,7 +67,7 @@
             "id": 7,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/roz_h7pacv.jpg",
             "title": "Rye",
-            "price": "18 BYN",
+            "price": "18",
             "count": "1 bale",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -76,7 +76,7 @@
             "id": 8,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/vosk_jxbter.jpg",
             "title": "Beeswax",
-            "price": "73 BYN",
+            "price": "73",
             "count": "1 kg",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -150,7 +150,7 @@
         "max": "Max price"
     },
     "field": {
-        "search": "🔎 Looking for what?"
+        "search": "Looking for what?"
     },
     "order": {
         "button": "Order in 1 click"
@@ -172,6 +172,9 @@
     },
     "video":{
         "watch":"Watch video"
+    },
+    "open":{
+        "currency":"Currency converter"
     },
     "farmsteads": [
         {
