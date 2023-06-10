@@ -40,7 +40,7 @@
             "id": 4,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Картошка",
-            "price": "2",
+            "price": "1",
             "count": "1 килограмм",
             "address": "Щучинский район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
@@ -80,6 +80,26 @@
             "count": "1 kg",
             "address": "Щучински й район, Лядский сельсовет",
             "number": "+375 29 672 25 69"
+        },
+        {
+            "id":9,   
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686387484/chyrchela_pgb4uv.jpg",
+            "title": "Чурчхела виноградная",
+            "price": "13",
+            "count": "1 штука",
+            "rajon": "Гродно",
+            "adress": "Гродно",
+            "number": "+375 29 786 7917"
+        },
+        {
+            "id":10,   
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686387480/maslo_ct8fnm.jpg",
+            "title": "Кедровое масто",
+            "price": "28",
+            "count": "100 мл",
+            "rajon": "Гродно",
+            "adress": "Гродно",
+            "number": "+375 29 786 7917"
         }
     ],
     "header": {

@@ -31,7 +31,6 @@ const Select: React.FC<PropsType> = ({
     return (
         <MuiSelect
             className={styles.select}
-            // label
             value={value}
             onChange={onChange}
         >

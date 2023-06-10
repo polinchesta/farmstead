@@ -10,7 +10,7 @@
         "predeploy": "yarn build",
         "deploy": "gh-pages -d dist",
         "clean": "gh-pages-clean",
-        "server": "json-server -w server/productData.json -p 3001",
+        "server": "json-server -w server/productData.json -p 3003",
         "server1": "json-server -w server/farmsteadData.json -p 3002",
         "start": "concurrently \"yarn dev\" \"yarn server\" \"yarn server1\""
     },
@@ -28,6 +28,7 @@
         "leaflet": "^1.9.4",
         "node-sass": "^8.0.0",
         "react": "^18.2.0",
+        "react-auth-kit": "^2.12.2",
         "react-dom": "^18.2.0",
         "react-icons": "^4.9.0",
         "react-intl": "^6.2.5",

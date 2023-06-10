@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SignUp from '../User/signUp';
-import styles from './registration.module.sass';
+import styles from './Registration.module.sass';
 import useTranslation from '../../hooks/useTranslation';
 
 export function Registration() {

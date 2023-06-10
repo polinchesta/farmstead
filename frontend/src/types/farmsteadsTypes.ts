@@ -16,6 +16,11 @@ export interface FarmsteadsType {
     image: {
         img: string;
     }[];
+    comments:{
+        id: number;
+        author: string;
+        content: string
+    }
 }
 
 export interface FarmsteadsFilterType {

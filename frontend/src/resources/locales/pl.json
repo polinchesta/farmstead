@@ -40,7 +40,7 @@
             "id": 4,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Ziemniaki",
-            "price": "2",
+            "price": "1",
             "count": "1 kilogram",
             "address": "Białorusia, powiat Szczuczyn, sołectwo Łady",
             "number": "+375 29 672 25 69"
@@ -80,7 +80,27 @@
             "count": "1 kg",
             "address": "Białorusia, powiat Szczuczyn, sołectwo Łady",
             "number": "+375 29 672 25 69"
-        }
+        },
+        {
+            "id": 9,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686387484/chyrchela_pgb4uv.jpg",
+            "title": "Czurczhela winogronowa",
+            "price": "13",
+            "count": "1 sztuka",
+            "rajon": "Grodno",
+            "adress": "Grodno",
+            "number": "+375 29 786 7917"
+        },
+        {
+            "id": 10,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686387480/maslo_ct8fnm.jpg",
+            "title": "Masło z orzechów piniowych",
+            "price": "28",
+            "count": "100 ml",
+            "rajon": "Grodno",
+            "adress": "Grodno",
+            "number": "+375 29 786 7917"
+        }        
     ],
     "header": {
         "links": {

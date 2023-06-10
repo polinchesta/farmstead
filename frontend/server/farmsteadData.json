@@ -29,6 +29,18 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/znahorka_g7jkb6.jpg"
                 }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
+                }
             ]
         },
         {
@@ -56,6 +68,18 @@
                 },
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/neman2_dtvaea.jpg"
+                }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
         },
@@ -87,6 +111,18 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/dybrava3_a2sjqo.jpg"
                 }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
+                }
             ]
         },
         {
@@ -111,6 +147,18 @@
                 },
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084197/bybliki_xlqnku.jpg"
+                }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
         },
@@ -140,6 +188,18 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084199/edem2_qxwykn.jpg"
                 }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
+                }
             ]
         },
         {
@@ -165,6 +225,18 @@
                 },
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/zirov2_pfx2ih.png"
+                }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
         },
@@ -195,6 +267,18 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084202/sonici2_mryy4z.jpg"
                 }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
+                }
             ]
         },
 
@@ -222,6 +306,18 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/lida1_ge5jms.jpg"
                 }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
+                }
             ]
         },
         {
@@ -247,6 +343,18 @@
                 },
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084198/bal_bkczgy.png"
+                }
+            ],
+            "comments": [
+                {
+                  "id": 0,
+                  "author": "John",
+                  "content": "Great place to stay! Highly recommended!"
+                },
+                {
+                  "id": 1,
+                  "author": "Lisa",
+                  "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
         }

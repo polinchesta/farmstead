@@ -140,6 +140,20 @@ export default function ItemFarmstead() {
                             </div>
                         </div>
                     </div>
+                    {farmsteads && (
+                        <>
+                            <div className={styles.comments}>
+                                {/* <h2>Комментарии:</h2>
+                                {t.farmsteads[farmsteadId]?.comments.map((comment: { id: number, author: string, content: string }) => (
+                                    <div key={comment.id}>
+                                        <p>Автор: {comment.author}</p>
+                                        <p>Комментарий: {comment.content}</p>
+                                    </div>
+                                ))} */}
+                            </div>
+                        </>
+                    )}
+
                     <div className={styles.mapContainer}>
                         <MapContainer
                             center={[t.farmsteads[farmsteadId].latitude, t.farmsteads[farmsteadId].longitude]}

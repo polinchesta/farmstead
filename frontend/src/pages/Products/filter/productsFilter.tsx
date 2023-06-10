@@ -17,16 +17,9 @@ const ProductsFilter: React.FC = () => {
     const { t } = useTranslation();
 
     const fetchData = (filter: Partial<ProductsFilterType> = {}) => {
-        let sort = sortField;
-        if (sortField === "priceAsc") {
-            sort = "price";
-        } else if (sortField === "priceDesc") {
-            sort = "-price";
-        }
-
         dispatch(
             productsActions.getProductsList({
-                sortField: sort,
+                sortField,
                 query: debounceQuery,
                 limit: 6,
                 page,
@@ -76,7 +69,7 @@ const ProductsFilter: React.FC = () => {
     }, [query, sortField]);
 
     useEffect(() => {
-        if (page === 2) {
+        if (page === 3) {
             setIsLastPage(true);
         } else {
             setIsLastPage(false);

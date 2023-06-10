@@ -40,7 +40,7 @@
             "id": 4,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084201/potate_umtxee.jpg",
             "title": "Potatoes",
-            "price": "2",
+            "price": "1",
             "count": "1 kilogram",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
@@ -80,7 +80,28 @@
             "count": "1 kg",
             "address": "Shchuchin district, Lyadsky village council",
             "number": "+375 29 672 25 69"
+        },
+        {
+            "id": 9,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686387484/chyrchela_pgb4uv.jpg",
+            "title": "Grape Churchkhela",
+            "price": "13",
+            "count": "1 piece",
+            "rajon": "Grodno",
+            "adress": "Grodno",
+            "number": "+375 29 786 7917"
+        },
+        {
+            "id": 10,
+            "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686387480/maslo_ct8fnm.jpg",
+            "title": "Cedar Nut Oil",
+            "price": "28",
+            "count": "100 ml",
+            "rajon": "Grodno",
+            "adress": "Grodno",
+            "number": "+375 29 786 7917"
         }
+        
     ],
     "header": {
         "links": {

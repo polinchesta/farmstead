@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './page404.module.sass'
+import styles from './Page404.module.sass'
 
 export function Page404() {
   return (

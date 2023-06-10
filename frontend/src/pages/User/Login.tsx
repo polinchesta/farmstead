@@ -1,37 +1,42 @@
-import React, { useState } from 'react';
-import { setUser } from '../../store/auth/authSlice';
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { Form } from './Form';
-import { useAppDispatch } from '../../hooks/redux-hooks';
-import useTranslation from '../../hooks/useTranslation';
+import axios from "axios";
+import { LoginForm } from "../../ui/LoginForm/LoginForm";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSignIn } from "react-auth-kit";
 
-export default function Login() {
-    const [error, setError] = useState({ isError: false, message: "" });
-    const dispatch = useAppDispatch();
-    const { t } = useTranslation();
-    const handleLogin = (email: string, password: string) => {
-        const auth = getAuth();
-        signInWithEmailAndPassword(auth, email, password)
-            .then(({ user }) => {
-                dispatch(setUser({
-                    email: user.email,
-                    id: user.uid,
-                    token: user.refreshToken,
-                }))
-                    localStorage.setItem("token", user.refreshToken)
-                    alert("Вход выполнен успешно")
-                
-            })
-            .catch(() => {
-                setError({ isError: true, message: "ERROR" })
-            })
+export function Login() {
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+  const signIn = useSignIn();
+  const navigate = useNavigate();
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+    const response = await axios.post(`${backendUrl}/user/login`, {
+      email: login,
+      password,
+    });
+
+    if (response.status === 200) {
+      console.log(response);
+      signIn({
+        token: response.data.id,
+        expiresIn: 10000000,
+        tokenType: "Bearer",
+        authState: {
+          id: response.data.data.user.id,
+          email: login,
+          password,
+        },
+      });
+      navigate("/works");
     }
-    return (
-        <>
-            <Form
-                title={t.sign.signIn}
-                handleClick={handleLogin} />
-            {error.isError && <p>{error.message}</p>}
-        </>
-    )
+  }
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <LoginForm handleSubmit={handleSubmit} setLogin={setLogin} setPassword={setPassword} />
+    </div>
+  );
 }

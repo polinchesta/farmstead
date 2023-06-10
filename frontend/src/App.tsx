@@ -10,11 +10,11 @@ import { Header } from './ui/header/header';
 import { Products } from './pages/Products/Products';
 import { Grodno } from './pages/grodnoPage/grodno';
 import { Registration } from './pages/Registration/Registration';
-import { LoginPage } from './pages/loginPage/login';
 import { Page404 } from './pages/Page404/Page404';
 import { Farmsteads } from './pages/Farmstead/Farmsteads';
 import ItemProduct from './pages/Products/ItemProducts/ItemProducts';
 import ItemFarmstead from './pages/Farmstead/farmsteadItem/ItemFarmstead';
+import { Login } from './pages/User/Login';
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
                         <Route path='/farmstead' element={<Farmsteads />} />
                         <Route path="/grodno" element={<Grodno />} />
                         <Route path="/signup" element={<Registration />} />
-                        <Route path="/login" element={<LoginPage />} />
+                        <Route path="/login" element={<Login />} />
                         <Route path="/farmstead/:id" element={<ItemFarmstead />} />
                         <Route path="*" element={<Page404 />} />
                         <Route path="/product/:id" element={<ItemProduct />} />

@@ -29,12 +29,12 @@ export default function ItemProduct() {
             <button onClick={handleClick} className={styles.back}>{t.back.button}</button>
             {products && (
                 <section className={styles.product}>
-                    <div>
+                    <div className={styles.image}>
                         <img src={t.products[productId].img} alt={t.products[productId].title} />
                     </div>
                     <div className={styles.text}>
                         <p className={styles.title}>{t.products[productId].title}</p>
-                        <h2 className={styles.price}>{t.products[productId].price}</h2>
+                        <h2 className={styles.price}>{t.products[productId].price} BYN</h2>
                         <p>{t.products[productId].count}</p>
                         <p>{t.products[productId].address}</p>
                         <div className={styles.number}>
