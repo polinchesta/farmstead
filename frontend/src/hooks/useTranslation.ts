@@ -1,17 +1,17 @@
 import { useState } from 'react';
-import en from '../resources/locales/en.json';
-import ru from '../resources/locales/ru.json';
-import by from "../resources/locales/by.json";
-import pl from "../resources/locales/pl.json";
+import en from '../../public/en.json';
+import ru from '../../public/ru.json';
+import by from '../../public/by.json';
+import pl from '../../public/pl.json';
 import { LanguageType } from '../types/languageTypes';
 import { useAppDispatch, useAppSelector } from './redux-hooks';
 import { settingsActions } from '../store/settings/settingsSlice';
 
-const translations: { [name in LanguageType]: typeof ru & typeof en & typeof pl & typeof by} = {
+const translations: { [name in LanguageType]: typeof ru & typeof en & typeof pl & typeof by } = {
     ru,
     en,
     by,
-    pl
+    pl,
 };
 
 const useTranslation = () => {
@@ -23,7 +23,6 @@ const useTranslation = () => {
     const setLanguage = (language: LanguageType) => {
         dispatch(settingsActions.setLanguage(language));
     };
-    
 
     return {
         t: translations[language],

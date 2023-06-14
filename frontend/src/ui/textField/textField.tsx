@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import styled from "./textField.module.sass";
+import React, { useState } from 'react';
+import styled from './textField.module.sass';
 
-interface PropsType extends Omit<React.HTMLProps<HTMLInputElement>, "ref" | "as"> {
+interface PropsType extends Omit<React.HTMLProps<HTMLInputElement>, 'ref' | 'as'> {
     label: string;
     error?: string;
     value: string;
@@ -9,14 +9,7 @@ interface PropsType extends Omit<React.HTMLProps<HTMLInputElement>, "ref" | "as"
     inputRef?: React.RefObject<HTMLInputElement>;
 }
 
-const TextField: React.FC<PropsType> = ({
-    label,
-    value,
-    setValue,
-    error,
-    inputRef,
-    ...props
-}) => {
+const TextField: React.FC<PropsType> = ({ label, value, setValue, error, inputRef, ...props }) => {
     const [isFocused, setIsFocused] = useState(false);
 
     const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,17 +38,16 @@ const TextField: React.FC<PropsType> = ({
                     onBlur={onBlur}
                     {...props}
                 />
-                <div className={`${styled.hiddenLabel} ${isFocused || value ? styled.hiddenLabelActive : ''}`}>
+                <div
+                    className={`${styled.hiddenLabel} ${
+                        isFocused || value ? styled.hiddenLabelActive : ''
+                    }`}>
                     {label}
                 </div>
             </label>
-            {error && (
-                <div className={styled.error}>
-                    {error}
-                </div>
-            )}
+            {error && <div className={styled.error}>{error}</div>}
         </div>
     );
-}
+};
 
 export default TextField;

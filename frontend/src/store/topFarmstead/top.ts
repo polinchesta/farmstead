@@ -3,55 +3,58 @@ import { FarmsteadsType, FarmsteadsFilterType } from '../../types/farmsteadsType
 import farmsteadsApi from '../../api/farmstead/farmsteadsApi';
 
 interface FarmsteadsStateType {
-    farmsteads: Array<FarmsteadsType>;
+    topFarmsteads: Array<FarmsteadsType>;
     error?: string;
     loading: boolean;
 }
 
 const initialState: FarmsteadsStateType = {
-    farmsteads: [],
+    topFarmsteads: [],
     error: undefined,
     loading: false,
 };
 
-const getFarmsteadsList = createAsyncThunk<
-    Array<FarmsteadsType>,
-    FarmsteadsFilterType,
-    { rejectValue: string }
->('farmsteads/getFarmsteadList', async (data, thunksApi) => {
-    try {
-        const response = await farmsteadsApi.getFarmsteadsList(data);
-        return response.data;
-    } catch {
-        return thunksApi.rejectWithValue('Server error');
-    }
+const getTopFarmsteads = createAsyncThunk<
+  Array<FarmsteadsType>,
+  FarmsteadsFilterType,
+  { rejectValue: string }
+>('farmsteads/getTopFarmsteads', async (filter, thunkApi) => {
+  try {
+    const response = await farmsteadsApi.getTopFarmstead(filter);
+    const sortedFarmsteads = response.data.sort((a, b) => b.top - a.top);
+    const topFarmsteads = sortedFarmsteads.slice(0, filter.limit);
+    return topFarmsteads;
+  } catch {
+    return thunkApi.rejectWithValue('Server error');
+  }
 });
+
 
 const farmsteadsSlice = createSlice({
     name: 'farmsteads',
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(getFarmsteadsList.pending, (state) => {
+        builder.addCase(getTopFarmsteads.pending, (state) => {
             state.loading = true;
             state.error = undefined;
-            state.farmsteads = [];
+            state.topFarmsteads = [];
         });
-        builder.addCase(getFarmsteadsList.rejected, (state, { payload }) => {
+        builder.addCase(getTopFarmsteads.rejected, (state, { payload }) => {
             state.loading = false;
             state.error = payload;
         });
-        builder.addCase(getFarmsteadsList.fulfilled, (state, { payload }) => {
+        builder.addCase(getTopFarmsteads.fulfilled, (state, { payload }) => {
             state.loading = false;
-            state.farmsteads = payload;
+            state.topFarmsteads = payload;
         });
     },
 });
 
 export const farmsteadsActions = {
     ...farmsteadsSlice.actions,
-    getFarmsteadsList,
-};
+    getTopFarmsteads,
+  };
 
 const farmsteadsReducer = farmsteadsSlice.reducer;
 export default farmsteadsReducer;

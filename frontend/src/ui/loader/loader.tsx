@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./loader.module.sass";
-
+import React from 'react';
+import styles from './loader.module.sass';
 
 const Loader: React.FC = () => (
     <>

@@ -13,12 +13,7 @@ interface CardProps {
     t: any;
 }
 
-const ProductsCard: React.FC<CardProps> = ({
-    id,
-    dataItem,
-    img,
-    t,
-}) => {
+const ProductsCard: React.FC<CardProps> = ({ id, dataItem, img, t }) => {
     const navigate = useNavigate();
     const handleClick = () => {
         navigate(`/product/${dataItem.id}`);
@@ -31,7 +26,7 @@ const ProductsCard: React.FC<CardProps> = ({
         setModalOpen(false);
     };
     const handleButtonClicked = (event: React.MouseEvent<HTMLButtonElement>) => {
-        event.stopPropagation(); 
+        event.stopPropagation();
         openModal();
     };
 
@@ -41,18 +36,18 @@ const ProductsCard: React.FC<CardProps> = ({
                 <div>
                     <img src={img} alt="product title" />
                 </div>
-                <p className={styles.title}>{t.products[dataItem.id].title}</p>
-                <h2 className={styles.price}>{t.products[dataItem.id].price} BYN</h2>
-                <p>{t.products[dataItem.id].count}</p>
-                <p>{t.products[dataItem.id].address}</p>
+                <p className={styles.title}>{dataItem.title} </p>
+                <h2 className={styles.price}>{dataItem.price} BYN</h2>
+                <p>{dataItem.count}</p>
+                <p>{dataItem.address}</p>
                 <div className={styles.number}>
-                    <a href={"tel:" + t.products[dataItem.id].number}>{t.products[dataItem.id].number}</a>
+                    <a href={'tel:' + dataItem.number}>{dataItem.number}</a>
                 </div>
-                <button className={styles.button} onClick={handleButtonClicked}>{t.order.button}</button>
+                <button className={styles.button} onClick={handleButtonClicked}>
+                    {t.order.button}
+                </button>
             </section>
-            {modalOpen && (
-                <Modal title={t.products[dataItem.id].title} onClose={closeModal} />
-            )}
+            {modalOpen && <Modal title={dataItem.title} onClose={closeModal} />}
         </div>
     );
 };

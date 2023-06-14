@@ -11,7 +11,7 @@ const Modal: React.FC<ModalProps> = ({ title, onClose }) => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('+375');
     const [email, setEmail] = useState('');
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setName(e.target.value);
@@ -28,7 +28,6 @@ const Modal: React.FC<ModalProps> = ({ title, onClose }) => {
 
         setPhone(value);
     };
-
 
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
@@ -52,33 +51,20 @@ const Modal: React.FC<ModalProps> = ({ title, onClose }) => {
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="name">{t.modal.name}</label>
-                        <input
-                            type="text"
-                            id="name"
-                            value={name}
-                            onChange={handleNameChange}
-                        />
+                        <input type="text" id="name" value={name} onChange={handleNameChange} />
                     </div>
                     <div>
                         <label htmlFor="phone">{t.modal.phone}</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            value={phone}
-                            onChange={handlePhoneChange}
-                        />
+                        <input type="tel" id="phone" value={phone} onChange={handlePhoneChange} />
                     </div>
                     <div>
                         <label htmlFor="email">{t.modal.email}</label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={handleEmailChange}
-                        />
+                        <input type="email" id="email" value={email} onChange={handleEmailChange} />
                     </div>
                     <div className={styles.containerButton}>
-                        <button className={styles.buttonCall} type="submit">{t.modal.call}</button>
+                        <button className={styles.buttonCall} type="submit">
+                            {t.modal.call}
+                        </button>
                     </div>
                 </form>
             </div>

@@ -9,15 +9,14 @@ export interface ProductType {
     t: any;
 }
 
-/* export interface CreatePostType extends Omit<ProductType, "id"> {} */
 
 export interface ProductsFilterType {
     sortField: string;
     query: string;
     limit: number;
     page: number;
-    minPrice?: number; 
+    minPrice?: number;
     maxPrice?: number;
     rajon?: string;
-    sortOrder?: "asc" | "desc";
+    sortOrder?: 'asc' | 'desc';
 }

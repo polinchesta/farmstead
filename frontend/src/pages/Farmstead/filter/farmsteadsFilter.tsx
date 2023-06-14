@@ -1,19 +1,19 @@
-import { useEffect, useState } from "react";
-import Select from "../../../ui/select/select";
-import { useAppDispatch } from "../../../hooks/redux-hooks";
-import { farmsteadsActions } from "../../../store/farmsteads/farmsteadsSlice";
-import TextField from "../../../ui/textField/textField";
-import useDebounceValue from "../../../hooks/useDebounceValue";
-import styles from "./farmsteadsFilter.module.sass";
-import useTranslation from "../../../hooks/useTranslation";
-import { FarmsteadsFilterType } from "../../../types/farmsteadsTypes";
+import { useEffect, useState } from 'react';
+import Select from '../../../ui/select/select';
+import { useAppDispatch } from '../../../hooks/redux-hooks';
+import { farmsteadsActions } from '../../../store/farmsteads/farmsteadsSlice';
+import TextField from '../../../ui/textField/textField';
+import useDebounceValue from '../../../hooks/useDebounceValue';
+import styles from './farmsteadsFilter.module.sass';
+import useTranslation from '../../../hooks/useTranslation';
+import { FarmsteadsFilterType } from '../../../types/farmsteadsTypes';
 
 const FarmsteadsFilter: React.FC = () => {
     const dispatch = useAppDispatch();
-    const [sortField, setSortField] = useState("id");
+    const [sortField, setSortField] = useState('id');
     const [page, setPage] = useState(1);
     const [isLastPage, setIsLastPage] = useState(false);
-    const [query, debounceQuery, setQuery] = useDebounceValue("", 500);
+    const [query, debounceQuery, setQuery] = useDebounceValue('', 500);
     const { t } = useTranslation();
 
     const fetchData = (filter: Partial<FarmsteadsFilterType> = {}) => {
@@ -21,7 +21,7 @@ const FarmsteadsFilter: React.FC = () => {
             farmsteadsActions.getFarmsteadsList({
                 sortField,
                 query: debounceQuery,
-                limit: 6,
+                limit: 4,
                 page,
                 ...filter,
             })
@@ -32,7 +32,6 @@ const FarmsteadsFilter: React.FC = () => {
         setPage(newPage);
         fetchData({ page: newPage });
     };
-
 
     const resetPageAndFetchData = () => {
         updatePageAndFetchData(1);
@@ -69,8 +68,6 @@ const FarmsteadsFilter: React.FC = () => {
         }
     }, [page]);
 
-
-
     return (
         <form className={styles.container} onSubmit={onSortSubmit}>
             <div className="sort">
@@ -78,8 +75,8 @@ const FarmsteadsFilter: React.FC = () => {
                     label="Sort field"
                     value={sortField}
                     setValue={setSortField}
-                    options={[{ value: "id", text: t.sort.popular }]}
-                    style={{ margin: "10px" }}
+                    options={[{ value: 'id', text: t.sort.popular }]}
+                    style={{ margin: '10px' }}
                 />
                 <button className={styles.buttonSort} type="submit">
                     {t.sort.sort}
@@ -94,23 +91,17 @@ const FarmsteadsFilter: React.FC = () => {
                 />
             </div>
             <div className={styles.pagination}>
-                <button
-                    className={styles.buttonPagination}
-                    type="button"
-                    onClick={handlePrevPage}
-                >
+                <button className={styles.buttonPagination} type="button" onClick={handlePrevPage}>
                     ❮
                 </button>
                 <div className={styles.pageText}>
                     <p className="page">{page}</p>
                 </div>
                 <button
-                    className={`${styles.buttonPagination} ${isLastPage ? styles.disabled : ""
-                        }`}
+                    className={`${styles.buttonPagination} ${isLastPage ? styles.disabled : ''}`}
                     type="button"
                     onClick={handleNextPage}
-                    disabled={isLastPage}
-                >
+                    disabled={isLastPage}>
                     ❯
                 </button>
             </div>

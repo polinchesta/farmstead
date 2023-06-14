@@ -3,7 +3,7 @@ import { ProductType } from '../../types/productsTypes';
 import productsApi from '../../api/products/productsApi';
 
 interface ProductsStateType {
-  product: ProductType[] | null;
+  product: ProductType | null;
   error: string | null;
   loading: boolean;
 }
@@ -14,14 +14,14 @@ const initialState: ProductsStateType = {
   loading: false,
 };
 
-const getProduct = createAsyncThunk<ProductType[], number, { rejectValue: string }>(
-  'product/getProduct',
-  async (productId, thunkAPI) => {
+const getProduct = createAsyncThunk<ProductType, number, { rejectValue: string }>(
+  'products/getProduct',
+  async (productId, thunksAPI) => {
     try {
       const response = await productsApi.getProductItem(productId);
-      return [response.data]; 
+      return response.data; 
     } catch (error) {
-      return thunkAPI.rejectWithValue('Server error');
+      return thunksAPI.rejectWithValue('Server error');
     }
   }
 );

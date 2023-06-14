@@ -1,26 +1,11 @@
-export interface FarmsteadsType {
-    textAll: string;
-    url: string;
-    titleVideo: string;
+interface CommentType {
     id: number;
+    author: string;
+    content: string;
+}
+
+interface ImageType {
     img: string;
-    title: string;
-    t: any;
-    longitude:number;
-    house:string;
-    place:string;
-    price: string;
-    contact:string;
-    email:string;
-    latitude:number;
-    image: {
-        img: string;
-    }[];
-    comments:{
-        id: number;
-        author: string;
-        content: string
-    }
 }
 
 export interface FarmsteadsFilterType {
@@ -28,4 +13,25 @@ export interface FarmsteadsFilterType {
     query: string;
     limit: number;
     page: number;
+    top: number
+}
+export interface FarmsteadsType {
+    text: string;
+    textAll: string;
+    url: string;
+    titleVideo: string;
+    id: number;
+    img: string;
+    title: string;
+    t: any;
+    longitude: number;
+    house: string;
+    place: string;
+    price: string;
+    contact: string;
+    email: string;
+    top: number;
+    latitude: number;
+    image: Array <ImageType>
+    comments: Array<CommentType>
 }

@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    email:null,
-    token:null,
-    id:null,
-    isAutef: false
+    email: null,
+    token: null,
+    id: null,
+    isAutef: false,
 };
 
 const userSlice = createSlice({
@@ -22,10 +22,10 @@ const userSlice = createSlice({
             state.token = null;
             state.id = null;
             /* state.isAutef = null; */
-        }
+        },
     },
-})
+});
 
-export const {setUser, removeUser} = userSlice.actions;
+export const { setUser, removeUser } = userSlice.actions;
 
 export default userSlice.reducer;

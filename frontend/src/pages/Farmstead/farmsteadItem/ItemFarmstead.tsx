@@ -10,11 +10,10 @@ import 'leaflet/dist/leaflet.css';
 
 export default function ItemFarmstead() {
     const dispatch = useAppDispatch();
-    const farmsteads = useAppSelector((state) => state.farmsteads.farmsteads);
-    const loading = useAppSelector((state) => state.farmsteads.loading);
+    const farmstead = useAppSelector((state) => state.farmstead.farmstead);
+    const loading = useAppSelector((state) => state.farmstead.loading);
     const { id } = useParams();
     const { t } = useTranslation();
-    const [showLoader, setShowLoader] = useState(false);
     const farmsteadId = +(id ?? 0);
     const navigate = useNavigate();
     const handleClick = () => {
@@ -25,7 +24,7 @@ export default function ItemFarmstead() {
         if (farmsteadId) {
             dispatch(farmsteadActions.getFarmstead(farmsteadId));
         }
-    }, [farmsteadId]);
+    }, [id]);
 
     const [selectedImage, setSelectedImage] = useState(0);
     const [showVideoPopover, setShowVideoPopover] = useState(false);
@@ -35,7 +34,7 @@ export default function ItemFarmstead() {
     };
 
     const handlePopoverClick = () => {
-        setShowVideoPopover(true)
+        setShowVideoPopover(true);
     };
 
     const handleVideoClose = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -54,49 +53,61 @@ export default function ItemFarmstead() {
     };
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: "smooth",
+            behavior: 'smooth',
         });
     };
 
     return (
         <div className={styles.container}>
             {loading && <Loader />}
-            {farmsteads && (
+            {farmstead && (
                 <>
                     <div className={styles.typeContainer}>
                         <button onClick={handleClick} className={styles.back}>
                             {t.back.button}
                         </button>
                         <div className={styles.type}>
-                            <h2>{t.farmsteads[farmsteadId].title}</h2>
-                            <div key={t.farmsteads[farmsteadId].textAll}>
+                            <h2>{farmstead.title}</h2>
+                            <div key={farmstead.textAll}>
                                 <div className={styles.block}>
                                     <div className={styles.gallery}>
                                         <div className={styles.thumbnailContainer}>
-                                            {t.farmsteads[farmsteadId].image.map((step: { img: string }, index: number) => (
-                                                <div
-                                                    key={index}
-                                                    className={`${styles.thumbnail} ${selectedImage === index ? styles.activeThumbnail : ''}`}
-                                                    onClick={() => handleThumbnailClick(index)}
-                                                >
-                                                    <img className={styles.img} src={step.img} alt="thumbnail" />
-                                                </div>
-                                            ))}
+                                            {farmstead.image.map(
+                                                (step: { img: string }, index: number) => (
+                                                    <div
+                                                        key={index}
+                                                        className={`${styles.thumbnail} ${
+                                                            selectedImage === index
+                                                                ? styles.activeThumbnail
+                                                                : ''
+                                                        }`}
+                                                        onClick={() => handleThumbnailClick(index)}>
+                                                        <img
+                                                            className={styles.img}
+                                                            src={step.img}
+                                                            alt="thumbnail"
+                                                        />
+                                                    </div>
+                                                )
+                                            )}
                                         </div>
                                         <div className={styles.bigImageContainer}>
                                             {selectedImage !== null && (
                                                 <img
                                                     className={styles.bigImage}
-                                                    src={t.farmsteads[farmsteadId].image[selectedImage].img}
+                                                    src={
+                                                        farmstead.image[selectedImage]
+                                                            .img
+                                                    }
                                                     alt="bigImage"
                                                 />
                                             )}
@@ -104,43 +115,51 @@ export default function ItemFarmstead() {
                                     </div>
                                     <div className={styles.contacts}>
                                         <h3>{t.infoFarmstead.info}</h3>
-                                        <p>{t.farmsteads[farmsteadId].price}</p>
-                                        <p>{t.farmsteads[farmsteadId].house}</p>
-                                        <p>{t.farmsteads[farmsteadId].place}</p>
-                                        <p>{t.farmsteads[farmsteadId].contact}</p>
-                                        <p>{t.farmsteads[farmsteadId].email}</p>
-                                        {t.farmsteads[farmsteadId].url && (
-                                            <div className={styles.videoPopover} onClick={handlePopoverClick}>
-                                                <p className={styles.videoIcon}>▶ {t.video.watch}</p>
+                                        <p>{farmstead.price}</p>
+                                        <p>{farmstead.house}</p>
+                                        <p>{farmstead.place}</p>
+                                        <p>{farmstead.contact}</p>
+                                        <p>{farmstead.email}</p>
+                                        {farmstead.url && (
+                                            <div
+                                                className={styles.videoPopover}
+                                                onClick={handlePopoverClick}>
+                                                <p className={styles.videoIcon}>
+                                                    ▶ {t.video.watch}
+                                                </p>
                                                 {showVideoPopover && (
                                                     <>
                                                         {loading && <Loader />}
-                                                        <div className={styles.popoverOverlay}></div>
+                                                        <div
+                                                            className={styles.popoverOverlay}></div>
                                                         <div className={styles.videoContainer}>
-                                                            <button className={styles.closeButton} onClick={handleVideoClose}>
+                                                            <button
+                                                                className={styles.closeButton}
+                                                                onClick={handleVideoClose}>
                                                                 &times;
                                                             </button>
                                                             <iframe
                                                                 className={styles.video}
-                                                                src={t.farmsteads[farmsteadId].url}
-                                                                title={t.farmsteads[farmsteadId].titleVideo}
+                                                                src={farmstead.url}
+                                                                title={
+                                                                    farmstead
+                                                                        .titleVideo
+                                                                }
                                                                 frameBorder="0"
                                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                                allowFullScreen
-                                                            ></iframe>
+                                                                allowFullScreen></iframe>
                                                         </div>
                                                     </>
                                                 )}
-
                                             </div>
                                         )}
                                     </div>
                                 </div>
-                                <p className={styles.text}>{t.farmsteads[farmsteadId].textAll}</p>
+                                <p className={styles.text}>{farmstead.textAll}</p>
                             </div>
                         </div>
                     </div>
-                    {farmsteads && (
+                    {farmstead && (
                         <>
                             <div className={styles.comments}>
                                 {/* <h2>Комментарии:</h2>
@@ -156,13 +175,18 @@ export default function ItemFarmstead() {
 
                     <div className={styles.mapContainer}>
                         <MapContainer
-                            center={[t.farmsteads[farmsteadId].latitude, t.farmsteads[farmsteadId].longitude]}
+                            center={[
+                                farmstead.latitude,
+                                farmstead.longitude,
+                            ]}
                             zoom={10}
-                            style={{ height: '400px', width: '100%' }}
-                        >
+                            style={{ height: '400px', width: '100%' }}>
                             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                             <Marker
-                                position={[t.farmsteads[farmsteadId].latitude, t.farmsteads[farmsteadId].longitude]}
+                                position={[
+                                    farmstead.latitude,
+                                    farmstead.longitude,
+                                ]}
                             />
                         </MapContainer>
                     </div>

@@ -17,11 +17,11 @@ export function Header() {
     const [showTip, setShowTip] = useState(false);
     const [showPopover, setShowPopover] = useState(false);
     const handlePopoverClick = () => {
-      setShowPopover(true);
+        setShowPopover(true);
     };
     const handleClose = (event: React.MouseEvent<HTMLButtonElement>) => {
-      event.stopPropagation();
-      setShowPopover(false);
+        event.stopPropagation();
+        setShowPopover(false);
     };
 
     const handleLanguageChange = (language: LanguageType) => {
@@ -36,8 +36,7 @@ export function Header() {
                         <Link className={styles.link} to="/">
                             <div
                                 onMouseEnter={() => setShowTip(true)}
-                                onMouseLeave={() => setShowTip(false)}
-                            >
+                                onMouseLeave={() => setShowTip(false)}>
                                 <img src={logo} alt="WebSite Logo" />
                                 {showTip && <div className={styles.info}>{t.header.aboutMaik}</div>}
                             </div>
@@ -47,26 +46,22 @@ export function Header() {
                         <div className={styles.language}>
                             <button
                                 className={styles.language}
-                                onClick={() => handleLanguageChange('ru')}
-                            >
+                                onClick={() => handleLanguageChange('ru')}>
                                 RU
                             </button>
                             <button
                                 className={styles.language}
-                                onClick={() => handleLanguageChange('en')}
-                            >
+                                onClick={() => handleLanguageChange('en')}>
                                 ENG
                             </button>
                             <button
                                 className={styles.language}
-                                onClick={() => handleLanguageChange('pl')}
-                            >
+                                onClick={() => handleLanguageChange('pl')}>
                                 PL
                             </button>
                             <button
                                 className={styles.language}
-                                onClick={() => handleLanguageChange('by')}
-                            >
+                                onClick={() => handleLanguageChange('by')}>
                                 BY
                             </button>
                         </div>
@@ -77,7 +72,9 @@ export function Header() {
                                 <>
                                     <div className={styles.modalOverlay}></div>
                                     <div className={styles.modalContainer}>
-                                        <button className={styles.closeButton} onClick={handleClose}>
+                                        <button
+                                            className={styles.closeButton}
+                                            onClick={handleClose}>
                                             &times;
                                         </button>
                                         <CurrencyConverter />
@@ -93,8 +90,7 @@ export function Header() {
                         onClick={() => {
                             dispatch(removeUser());
                             localStorage.removeItem('token');
-                        }}
-                    >
+                        }}>
                         Выйти из аккаунта {email}
                     </button>
                     <div className={styles.menu}>

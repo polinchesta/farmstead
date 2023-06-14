@@ -7,19 +7,25 @@ import Loader from '../../ui/loader/loader';
 import useTranslation from '../../hooks/useTranslation';
 
 export function Products() {
-  const products = useAppSelector((state) => state.products.products);
-  const loading = useAppSelector((state) => state.products.loading);
-  const { t } = useTranslation();
-  return (
-    <>
-      {loading && <Loader />}
+    const products = useAppSelector((state) => state.products.products);
+    const loading = useAppSelector((state) => state.products.loading);
+    const { t } = useTranslation();
+    return (
+        <>
+            {loading && <Loader />}
 
-      <ProductsFilter />
-      <div className={styles.gridContainer}>
-        {products.map((product) => (
-          <ProductsCard id={product.id} key={product.id} img={product.img} dataItem={product} t={t} />
-        ))}
-      </div>
-    </>
-  );
+            <ProductsFilter />
+            <div className={styles.gridContainer}>
+                {products.map((product) => (
+                    <ProductsCard
+                        id={product.id}
+                        key={product.id}
+                        img={product.img}
+                        dataItem={product}
+                        t={t}
+                    />
+                ))}
+            </div>
+        </>
+    );
 }

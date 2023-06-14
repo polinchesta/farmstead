@@ -1,36 +1,44 @@
-import React, { useState } from 'react';
-import {setUser} from '../../store/auth/authSlice';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useAppDispatch } from '../../hooks/redux-hooks';
-import { app } from './firebase';
-import { Form } from './Form';
-import useTranslation from '../../hooks/useTranslation';
+import axios, { isAxiosError } from 'axios';
+import type { AxiosError } from 'axios';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { SignUpForm } from '../../ui/SignUpForm/SignUpForm';
 
-export default function SignUp() {
-    const [error, setError] = useState({ isError: false, message: "" });
-    const dispatch = useAppDispatch();
-    const {t}=useTranslation();
-    
-    const handleRegister = (email: string, password: string) => {
-        const auth = getAuth(app);  
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(({user}) => 
-            {
-                dispatch(setUser({
-                    email: user.email,
-                    id: user.uid,
-                    token: user.refreshToken,
-                }
-                ))
-                alert("Регистрация выполнена успешно")
-            })
-            .catch(() => {
-                setError({ isError: true, message: "ERROR" })
-            })
+export function SignUp() {
+    const [login, setLogin] = useState('');
+    const [password, setPassword] = useState('');
+    const [telegram, setTelegram] = useState('');
+    const navigate = useNavigate();
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        try {
+            e.preventDefault();
+            const backendUrl = import.meta.env.VITE_BACKEND_URL;
+            const response = await axios.post(`${backendUrl}/registration`, {
+                email: login,
+                password,
+                telegram,
+            });
+
+            if (response.status === 200) {
+                alert('Вы успешно зарегистрированы');
+                navigate('/login');
+            }
+        } catch (error: AxiosError | any) {
+            if (isAxiosError(error)) {
+                alert(error.response?.statusText);
+            }
+        }
     }
-  return (
-    <Form 
-        title = {t.sign.signUp}
-        handleClick = {handleRegister} />
-  )
+
+    return (
+        <div className="">
+            <SignUpForm
+                handleSubmit={handleSubmit}
+                setLogin={setLogin}
+                setPassword={setPassword}
+                setTelegram={setTelegram}
+            />
+        </div>
+    );
 }

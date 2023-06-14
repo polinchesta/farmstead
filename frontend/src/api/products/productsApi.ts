@@ -1,9 +1,9 @@
-import getProductItem from "./getProductItem";
-import getProductsList from "./getProductsList";
+import getProductItem from './getProductItem';
+import getProductsList from './getProductsList';
 
 const productsApi = {
     getProductsList,
-    getProductItem
+    getProductItem,
 };
 
 export default productsApi;

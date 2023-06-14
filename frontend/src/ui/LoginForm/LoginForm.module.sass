@@ -1,0 +1,57 @@
+.LoginForm
+  display: flex
+  justify-content: center
+  align-items: center
+
+.formWrapper
+  width: 300px
+  margin: 0px auto
+
+.form
+  display: flex
+  flex-direction: column
+
+.label
+  margin-bottom: 8px
+  font-family: "PT Mono", monoscape
+  font-size: 20px
+
+.input
+  font-family: 'PT Mono', monospace
+  margin: 20px auto 20px auto
+  border: 3px solid black
+  background: none
+  font-size: 16px
+  height: 40px
+  width: 100%
+  :active
+    font-family: 'PT Mono', monospace
+    background: none
+    font-size: 16px
+
+    @media (max-width: 768px)
+      width: 55%
+
+.button
+  font-family: 'PT Mono', monospace
+  font-size: 17px
+  padding: 5px 5px
+  border-radius: 4px
+  display: flex
+  height: 40px
+  width: fit-content
+  justify-content: center
+  align-items: center
+  background: none
+  border: 3px solid black
+  color: black
+  text-decoration: none
+  cursor: pointer
+  transition: background-color 0.3s ease
+
+  &:hover
+    background-color: #6b6565
+    color: white
+
+.loginLink
+  color: black
