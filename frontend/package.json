@@ -20,6 +20,7 @@
         "@mui/material": "^5.12.3",
         "@mui/styled-engine-sc": "^5.10.16",
         "@reduxjs/toolkit": "^1.9.1",
+        "@v9v/ts-react-telegram-login": "^1.1.1",
         "@vitejs/plugin-react": "^4.0.0",
         "axios": "^1.2.1",
         "firebase": "^9.15.0",

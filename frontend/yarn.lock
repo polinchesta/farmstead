@@ -2672,6 +2672,13 @@
   resolved "https://registry.yarnpkg.com/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz#b6725d5f4af24ace33b36fafd295136e75509f43"
   integrity sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==
 
+"@v9v/ts-react-telegram-login@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@v9v/ts-react-telegram-login/-/ts-react-telegram-login-1.1.1.tgz#438d43fe2b8cbd06dd3aec391078add63643f03f"
+  integrity sha512-aWzELPBBfZET5L7Ud3IPApCz2qzJUXF1lBDFIpaKnG6vehe4F9GT7Ss+A/buOTYh1VgraQ03oh3f/ncNy1AdhA==
+  dependencies:
+    react "^16.13.1"
+
 "@vanilla-extract/babel-plugin-debug-ids@^1.0.2":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/babel-plugin-debug-ids/-/babel-plugin-debug-ids-1.0.3.tgz#ce07190343b51ed658b385bdce1e79952a4e8526"

@@ -1,6 +1,7 @@
 import { useState, useTransition } from 'react';
 import { Link } from 'react-router-dom';
 import useTranslation from '../../hooks/useTranslation';
+import Telegram from '../../pages/User/TelegramLogin';
 import styles from './SignUpForm.module.sass';
 
 interface SignUpFormProps {
@@ -47,8 +48,6 @@ export function SignUpForm({ handleSubmit, setLogin, setPassword, setTelegram }:
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
-
-
                     <label htmlFor="password" className={styles.label}>
                         Telegram
                     </label>
@@ -74,6 +73,7 @@ export function SignUpForm({ handleSubmit, setLogin, setPassword, setTelegram }:
                             Log in
                         </Link>
                     </div>
+                    <Telegram />
                 </form>
             </div>
         </div>
