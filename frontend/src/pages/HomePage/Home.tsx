@@ -5,7 +5,7 @@ import { MyImageSlider } from '../../ui/carousel/carousel';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
-import { farmsteadsActions } from '../../store/topFarmstead/top';
+
 
 
 export function Home() {

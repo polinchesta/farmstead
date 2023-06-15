@@ -13,7 +13,6 @@ export interface FarmsteadsFilterType {
     query: string;
     limit: number;
     page: number;
-    top: number
 }
 export interface FarmsteadsType {
     text: string;
