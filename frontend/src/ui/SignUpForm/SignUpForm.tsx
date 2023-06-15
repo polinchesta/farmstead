@@ -10,18 +10,8 @@ interface SignUpFormProps {
     setTelegram: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export function SignUpForm({ handleSubmit, setLogin, setTelegram }: SignUpFormProps) {
+export function SignUpForm({ handleSubmit, setLogin, setPassword, setTelegram }: SignUpFormProps) {
     const { t } = useTranslation();
-    const [password, setPassword] = useState('');
-    const [passwordValid, setPasswordValid] = useState(false);
-    const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newPassword = e.target.value;
-        const passwordRegex = /^(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-      
-        setPassword(newPassword);
-        setPasswordValid(passwordRegex.test(newPassword));
-      };
-      
 
     return (
         <div className={styles.signupForm}>
@@ -53,15 +43,11 @@ export function SignUpForm({ handleSubmit, setLogin, setTelegram }: SignUpFormPr
                             autoComplete="new-password"
                             inputMode="text"
                             required
-                            className={`${styles.input} ${passwordValid ? '' : styles.invalid}`}
-                            onChange={handlePasswordChange}
+                            className={styles.input}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
-                    {!passwordValid && (
-                        <div className={styles.passwordRequirements}>
-                            Password must contain at least 8 characters, one uppercase letter, and one special symbol.
-                        </div>
-                    )}
+
 
                     <label htmlFor="password" className={styles.label}>
                         Telegram
