@@ -42,7 +42,7 @@ export default function ItemProduct() {
                         <p className={styles.title}>{product.title}</p>
                         <h2 className={styles.price}>{product.price} BYN</h2>
                         <p>{product.count}</p>
-                        <p>{product.address}</p>
+                        <p>{product.adress}</p>
                         <div className={styles.number}>
                             <a href={'tel:' + product.number}>
                                 {product.number}

@@ -39,7 +39,7 @@ const ProductsCard: React.FC<CardProps> = ({ id, dataItem, img, t }) => {
                 <p className={styles.title}>{dataItem.title} </p>
                 <h2 className={styles.price}>{dataItem.price} BYN</h2>
                 <p>{dataItem.count}</p>
-                <p>{dataItem.address}</p>
+                <p>{dataItem.adress}</p>
                 <div className={styles.number}>
                     <a href={'tel:' + dataItem.number}>{dataItem.number}</a>
                 </div>
