@@ -34,19 +34,17 @@ h4
     text-transform: uppercase
 
 .flexDiv
-    display: flex
-    margin: 0 auto
+    margin: 0px auto
     width: 95%
     border-top: 3px solid black
     border-bottom: 3px solid black
     border-radius: 2px
     padding: 20px 0px
 
-
     .news
         margin: 0px auto
         padding: 5px 40px
-        width: 40%
+        width: 60%
         p
             font-family: 'PT Mono', monospace
             color: black
@@ -140,3 +138,23 @@ h4
 
     .scrollToTop:hover
         opacity: 1
+
+.farmstead
+    margin: 0px auto
+    width: 60%
+    height: 100%
+
+    .caption
+        color: #fff
+        padding: 10px
+        font-size: 18px
+        margin: 0px 0px 20px 0px
+    .image
+        align-items: center
+        width: 100%
+        object-fit: cover
+        height: 500px
+        filter: grayscale(100%)
+        transition: filter 1.5s ease
+        &:hover
+            filter: none

@@ -72,7 +72,6 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
           </div>
           <div>
           <label htmlFor="date">Date</label>
-
           </div>
           <button type="submit">Submit</button>
         </form>

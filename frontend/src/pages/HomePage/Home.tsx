@@ -4,29 +4,48 @@ import useTranslation from '../../hooks/useTranslation';
 import { MyImageSlider } from '../../ui/carousel/carousel';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux-hooks';
-
-
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { useAppSelector } from '../../hooks/redux-hooks';
+import { FarmsteadsType } from '../../types/farmsteadsTypes';
+import getTopFarmstead from '../../api/farmstead/getTopFarmstead';
 
 export function Home() {
     const { t } = useTranslation();
     const [showScrollToTop, setShowScrollToTop] = useState(false);
-    const dispatch = useAppDispatch();
-/*     const topFarmsteads = useAppSelector((state) => state.farmsteads.topFarmsteads);
- */    const { id } = useParams();
-    const farmsteadId = +(id ?? 0);
-
-/*     useEffect(() => {
-        if (farmsteadId) {
-            dispatch(farmsteadsActions.getTopFarmsteads(farmsteadId));
-        }
-    }, [id]); */
+    const [topFarmsteads, setTopFarmsteads] = useState<FarmsteadsType[]>([]);
 
     const [formData, setFormData] = useState({
         email: '',
         topic: '',
         message: '',
     });
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    };
+
+
+    useEffect(() => {
+        const fetchTopFarmsteads = async () => {
+            try {
+                const response = await getTopFarmstead({ sortField: 'topDesc', query: '', limit: 5 });
+                const sortedFarmsteads = response.data.sort((a, b) => b.top - a.top);
+                const topFiveFarmsteads = sortedFarmsteads.slice(0, 5);
+                setTopFarmsteads(topFiveFarmsteads);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        fetchTopFarmsteads();
+    }, []);
 
 
     const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -88,15 +107,6 @@ export function Home() {
                 </nav>
             </div>
             <div className={styles.flexDiv}>
-                <h4>{t.main.leftInformation.latestPosts}</h4>
-                <div>
-                    <h4>Farmsteads by Rating:</h4>
-{/*                     {topFarmsteads.map((farmstead) => (
-                        <li key={farmstead.id}>
-                            <Link to={`/farmsteads/${farmstead.id}`}>{farmstead.name}</Link>
-                        </li>
-                    ))} */}
-                </div>
                 <div className={styles.news}>
                     <h4>{t.main.rightInformation.news}</h4>
                     <p>{t.main.rightInformation.aboutNews}</p>
@@ -139,6 +149,18 @@ export function Home() {
                             value={t.main.rightInformation.send}
                         />
                     </form>
+                </div>
+                <div className={styles.farmstead}>
+                    <h4>{t.main.leftInformation.top}</h4>
+                    <Slider {...settings}>
+                        {topFarmsteads.map((farmstead) => (
+                            <div key={farmstead.id} className={styles.caption}>
+                                <p>{farmstead.title}</p>
+                                <p>{t.main.leftInformation.rating}: {farmstead.top}</p>
+                                <img src={farmstead.img} className={styles.image} alt={farmstead.title} />
+                            </div>
+                        ))}
+                    </Slider>
                 </div>
             </div>
             <h4 className={styles.videoText}>{t.main.information.why}</h4>

@@ -13,7 +13,8 @@
             "grodnoRegion": "📍 Grodno region"
         },
         "leftInformation": {
-            "latestPosts": "LATEST POSTS"
+            "top": "Top-5 Farmsteads",
+            "rating":"Rating"
         },
         "rightInformation": {
             "news": "NEWS",
@@ -61,7 +62,8 @@
         "search": "Looking for what?"
     },
     "order": {
-        "button": "Order in 1 click"
+        "button": "Order in 1 click",
+        "buttonzakaz": "Ordered"
     },
     "modal": {
         "phone": "Your phone number:",

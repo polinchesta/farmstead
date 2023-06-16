@@ -28,6 +28,13 @@ const FarmsteadsFilter: React.FC = () => {
         );
     };
 
+    const sortOptions = [
+        { value: 'id', text: t.sort.popular },
+        { value: 'priceAsc', text: t.sort.min },
+        { value: 'priceDesc', text: t.sort.max },
+    ];
+
+
     const updatePageAndFetchData = (newPage: number) => {
         setPage(newPage);
         fetchData({ page: newPage });
@@ -75,7 +82,7 @@ const FarmsteadsFilter: React.FC = () => {
                     label="Sort field"
                     value={sortField}
                     setValue={setSortField}
-                    options={[{ value: 'id', text: t.sort.popular }]}
+                    options={sortOptions}
                     style={{ margin: '10px' }}
                 />
                 <button className={styles.buttonSort} type="submit">

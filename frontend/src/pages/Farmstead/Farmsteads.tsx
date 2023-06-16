@@ -43,13 +43,7 @@ export function Farmsteads() {
                     <CardFarmstead
                         key={farmstead.id}
                         img={farmstead.img}
-                        title={farmstead.title}
-                        text={farmstead.text}
-                        place={farmstead.place}
-                        price={farmstead.price}
-                        contact={farmstead.contact}
-                        email={farmstead.email}
-                        house={farmstead.house}
+                        dataItem={farmstead}
                         id={farmstead.id}
                         t={t}
                     />

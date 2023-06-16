@@ -13,7 +13,8 @@
             "grodnoRegion": "📍 Region Grodzieński"
         },
         "leftInformation": {
-            "latestPosts": "OSTATNIE WPISY"
+            "top": "Top-5 Zagrody",
+            "rating": "Ocena"
         },
         "rightInformation": {
             "news": "AKTUALNOŚCI",
@@ -61,7 +62,8 @@
         "search": "Czego szukasz?"
     },
     "order": {
-        "button": "Zamów w 1 kliknięciu"
+        "button": "Zamów w 1 kliknięciu",
+        "buttonzakaz": "Zamówic"
     },
     "modal": {
         "phone": "Twój numer telefonu:",

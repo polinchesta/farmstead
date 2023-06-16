@@ -7,7 +7,11 @@ const getFarmsteadsList = async (filter: FarmsteadsFilterType) => {
         method: 'GET',
         url: 'http://localhost:3002/farmsteads',
         params: {
-            _sort: filter.sortField,
+            _sort:
+                filter.sortField === 'priceAsc' || filter.sortField === 'priceDesc'
+                    ? 'price'
+                    : filter.sortField,
+            _order: filter.sortField === 'priceDesc' ? 'desc' : 'asc',
             q: filter.query,
             _page: filter.page,
             _limit: filter.limit,

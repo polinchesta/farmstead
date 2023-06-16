@@ -4,29 +4,18 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import Modal from '../../../ui/modal/modal';
 import CardFarmsteadPopover from './cardFarmsteadPopover';
+import { FarmsteadsType } from '../../../types/farmsteadsTypes';
 interface CardProps {
     id: number;
     img: string;
     t: any;
-    title: string;
-    text: string;
-    place: string;
-    price: string;
-    contact: string;
-    email: string;
-    house: string;
+    dataItem: FarmsteadsType
 }
 
 const CardFarmstead: React.FC<CardProps> = ({
     id,
     img,
-    title,
-    text,
-    place,
-    price,
-    contact,
-    email,
-    house,
+    dataItem,
     t,
 }) => {
     const [popoverOpen, setPopoverOpen] = useState(false);
@@ -65,28 +54,28 @@ const CardFarmstead: React.FC<CardProps> = ({
                     <img className={styles.falvarek} src={img} alt="farmstead title" />
                 </div>
                 <div className={styles.text}>
-                    <h2 className={styles.title}>{title}</h2>
-                    <p className={styles.information}>{text}</p>
+                    <h2 className={styles.title}>{dataItem.title}</h2>
+                    <p className={styles.information}>{dataItem.text}</p>
                     <p className={styles.information}>
-                        {price}, {house}, {place}
+                        {dataItem.price} BYN/ночь/с человека, {dataItem.house}, {dataItem.place}
                     </p>
                     <p className={styles.information}>
-                        {contact}, {email}
+                        {dataItem.contact}, {dataItem.email}
                     </p>
                     <div className={styles.buttons}>
                         <button className={styles.button} onClick={handleButtonClicked}>
                             {t.order.button}
                         </button>
                         <button className={styles.button} onClick={handleButtonClickedPopover}>
-                            {t.order.button}
+                            {t.order.buttonzakaz}
                         </button>
                     </div>
                 </div>
             </section>
-            {modalOpen && <Modal title={title} onClose={closeModal} />}
+            {modalOpen && <Modal title={dataItem.title} onClose={closeModal} />}
             {popoverOpen && (
                 <CardFarmsteadPopover
-                    title={title}
+                    title={dataItem.title}
                     onClose={closePopover}
                 />
             )}

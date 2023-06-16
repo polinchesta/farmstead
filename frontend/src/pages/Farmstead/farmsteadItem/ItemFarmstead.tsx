@@ -115,7 +115,7 @@ export default function ItemFarmstead() {
                                     </div>
                                     <div className={styles.contacts}>
                                         <h3>{t.infoFarmstead.info}</h3>
-                                        <p>{farmstead.price}</p>
+                                        <p>{farmstead.price} BYN/ночь/с человека</p>
                                         <p>{farmstead.house}</p>
                                         <p>{farmstead.place}</p>
                                         <p>{farmstead.contact}</p>

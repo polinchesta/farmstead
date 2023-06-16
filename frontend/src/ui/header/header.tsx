@@ -82,6 +82,11 @@ export function Header() {
                                 </>
                             )}
                         </div>
+                        <div className={styles.line}></div>
+                        <button className={styles.language}>
+                            <a href="https://www.instagram.com/maik_grodno/" target="_blank">Instagram</a>
+                        </button>
+
                     </div>
 
                     <button
@@ -110,7 +115,7 @@ export function Header() {
                         </nav>
                     </div>
                 </div>
-            </header>
+            </header >
         </>
     );
 }

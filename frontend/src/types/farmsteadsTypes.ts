@@ -10,9 +10,9 @@ interface ImageType {
 
 export interface FarmsteadsFilterType {
     sortField: string;
-    query: string;
+    query?: string;
     limit: number;
-    page: number;
+    page?: number;
 }
 export interface FarmsteadsType {
     text: string;
@@ -26,7 +26,7 @@ export interface FarmsteadsType {
     longitude: number;
     house: string;
     place: string;
-    price: string;
+    price: number;
     contact: string;
     email: string;
     top: number;

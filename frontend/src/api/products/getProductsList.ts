@@ -17,6 +17,6 @@ const getProductsList = async (filter: ProductsFilterType) => {
             _limit: filter.limit,
         },
     });
-};
+};  
 
 export default getProductsList;
