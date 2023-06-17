@@ -6,17 +6,20 @@ export interface ProductType {
     title: string;
     number: string;
     count: string;
+    related?: number[];
     t: any;
 }
 
 
 export interface ProductsFilterType {
     sortField: string;
+    relatedIds: number;
     query: string;
     limit: number;
     page: number;
     minPrice?: number;
     maxPrice?: number;
     rajon?: string;
+    related?: number[];
     sortOrder?: 'asc' | 'desc';
 }

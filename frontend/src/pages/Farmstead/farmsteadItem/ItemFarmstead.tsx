@@ -65,7 +65,6 @@ export default function ItemFarmstead() {
             behavior: 'smooth',
         });
     };
-
     return (
         <div className={styles.container}>
             {loading && <Loader />}
@@ -85,11 +84,10 @@ export default function ItemFarmstead() {
                                                 (step: { img: string }, index: number) => (
                                                     <div
                                                         key={index}
-                                                        className={`${styles.thumbnail} ${
-                                                            selectedImage === index
-                                                                ? styles.activeThumbnail
-                                                                : ''
-                                                        }`}
+                                                        className={`${styles.thumbnail} ${selectedImage === index
+                                                            ? styles.activeThumbnail
+                                                            : ''
+                                                            }`}
                                                         onClick={() => handleThumbnailClick(index)}>
                                                         <img
                                                             className={styles.img}
@@ -104,12 +102,7 @@ export default function ItemFarmstead() {
                                             {selectedImage !== null && (
                                                 <img
                                                     className={styles.bigImage}
-                                                    src={
-                                                        farmstead.image[selectedImage]
-                                                            .img
-                                                    }
-                                                    alt="bigImage"
-                                                />
+                                                    src={farmstead.image[selectedImage].img} alt="bigImage" />
                                             )}
                                         </div>
                                     </div>
@@ -172,7 +165,6 @@ export default function ItemFarmstead() {
                             </div>
                         </>
                     )}
-
                     <div className={styles.mapContainer}>
                         <MapContainer
                             center={[
@@ -180,6 +172,7 @@ export default function ItemFarmstead() {
                                 farmstead.longitude,
                             ]}
                             zoom={10}
+                            zoomControl={false}
                             style={{ height: '400px', width: '100%' }}>
                             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
                             <Marker

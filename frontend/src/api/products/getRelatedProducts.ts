@@ -1,8 +1,13 @@
-// api/productsAPI.ts
 import axios from 'axios';
 import { ProductType } from '../../types/productsTypes';
 
-export const getRelatedProducts = async (id: number): Promise<ProductType[]> => {
-  const response = await axios.get<ProductType[]>(`http://localhost:3003/products/${id}/related`);
-  return response.data;
+const getRelatedProducts = async (relatedIds: number[]) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const url = 'http://localhost:3003/products';  
+    const response = await axios.get<ProductType[]>(url);
+    const relatedProducts = response.data.filter(product => relatedIds.includes(product.id));
+    console.log(relatedProducts);
+    return relatedProducts;
 };
+
+export default getRelatedProducts;

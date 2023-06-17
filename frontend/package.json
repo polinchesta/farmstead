@@ -9,7 +9,7 @@
         "predeploy": "yarn build",
         "deploy": "gh-pages -d dist",
         "clean": "gh-pages-clean",
-        "server": "json-server -w server/productData.json -p 3003",
+        "server": "json-server -w server/productData.json -p 3004",
         "server1": "json-server -w server/farmsteadData.json -p 3002",
         "start": "concurrently \"yarn dev\" \"yarn server\" \"yarn server1\""
     },

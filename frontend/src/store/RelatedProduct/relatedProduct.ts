@@ -1,57 +1,57 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ThunkAction, Action } from '@reduxjs/toolkit';
-import { RootState, AppDispatch } from '../store';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { ProductType } from '../../types/productsTypes';
-import { getRelatedProducts } from '../../api/products/getRelatedProducts';
+import relatedProductsApi from '../../api/products/getRelatedProducts';
 
-interface RelatedProductsState {
+interface RelatedProductsStateType {
   relatedProducts: ProductType[];
+  error?: string;
   loading: boolean;
-  error: string | null;
 }
 
-const initialState: RelatedProductsState = {
+const initialState: RelatedProductsStateType = {
   relatedProducts: [],
+  error: undefined,
   loading: false,
-  error: null,
 };
+
+const fetchRelatedProducts = createAsyncThunk<
+  ProductType[],
+  number,
+  { rejectValue: string }
+>('relatedProducts/fetchRelatedProducts', async (productId, thunkAPI) => {
+  try {
+    const response = await relatedProductsApi(productId);
+    return response.data;
+  } catch {
+    return thunkAPI.rejectWithValue('Failed to fetch related products');
+  }
+});
 
 const relatedProductsSlice = createSlice({
   name: 'relatedProducts',
   initialState,
-  reducers: {
-    fetchRelatedProductsStart(state) {
+  reducers: {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchRelatedProducts.pending, (state) => {
       state.loading = true;
-      state.error = null;
-    },
-    fetchRelatedProductsSuccess(state, action: PayloadAction<ProductType[]>) {
-      state.relatedProducts = action.payload;
+      state.error = undefined;
+      state.relatedProducts = [];
+    });
+    builder.addCase(fetchRelatedProducts.rejected, (state, { payload }) => {
       state.loading = false;
-      state.error = null;
-    },
-    fetchRelatedProductsFailure(state, action: PayloadAction<string>) {
+      state.error = payload;
+    });
+    builder.addCase(fetchRelatedProducts.fulfilled, (state, { payload }) => {
       state.loading = false;
-      state.error = action.payload;
-    },
+      state.relatedProducts = payload;
+    });
   },
 });
 
-export const {
-  fetchRelatedProductsStart,
-  fetchRelatedProductsSuccess,
-  fetchRelatedProductsFailure,
-} = relatedProductsSlice.actions;
-
-// Async thunk action to fetch related products
-export const fetchRelatedProducts = (productId: number): ThunkAction<void, RootState, null, Action<string>> => async (dispatch) => {
-  dispatch(fetchRelatedProductsStart());
-
-  try {
-    const response = await getRelatedProducts(productId);
-    dispatch(fetchRelatedProductsSuccess(response as ProductType[]));
-  } catch (error) {
-    dispatch(fetchRelatedProductsFailure((error as any).message || 'Failed to fetch related products'));
-  }
+export const relatedProductsActions = {
+  ...relatedProductsSlice.actions,
+  fetchRelatedProducts,
 };
 
-export default relatedProductsSlice.reducer;
+const relatedProductsReducer = relatedProductsSlice.reducer;
+export default relatedProductsReducer;
