@@ -53,7 +53,6 @@ export function Home() {
 
         try {
             const response = await axios.post('/api/messages', formData);
-            console.log(response.data);
             setFormData({
                 email: '',
                 topic: '',

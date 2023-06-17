@@ -16,16 +16,17 @@ const initialState: RelatedProductsStateType = {
 
 const fetchRelatedProducts = createAsyncThunk<
   ProductType[],
-  number,
+  number[],
   { rejectValue: string }
->('relatedProducts/fetchRelatedProducts', async (productId, thunkAPI) => {
+>('relatedProducts/fetchRelatedProducts', async (productIds, thunkAPI) => {
   try {
-    const response = await relatedProductsApi(productId);
-    return response.data;
+    const response = await relatedProductsApi(productIds);
+    return response; 
   } catch {
     return thunkAPI.rejectWithValue('Failed to fetch related products');
   }
 });
+
 
 const relatedProductsSlice = createSlice({
   name: 'relatedProducts',

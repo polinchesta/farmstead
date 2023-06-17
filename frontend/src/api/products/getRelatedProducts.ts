@@ -6,7 +6,6 @@ const getRelatedProducts = async (relatedIds: number[]) => {
     const url = 'http://localhost:3003/products';  
     const response = await axios.get<ProductType[]>(url);
     const relatedProducts = response.data.filter(product => relatedIds.includes(product.id));
-    console.log(relatedProducts);
     return relatedProducts;
 };
 

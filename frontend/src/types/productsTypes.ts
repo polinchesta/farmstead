@@ -7,6 +7,7 @@ export interface ProductType {
     number: string;
     count: string;
     related?: number[];
+    data:any;
     t: any;
 }
 
