@@ -20,6 +20,7 @@ const ProductsFilter: React.FC = () => {
         dispatch(
             productsActions.getProductsList({
                 sortField,
+                relatedIds: undefined,
                 query: debounceQuery,
                 limit: 6,
                 page,

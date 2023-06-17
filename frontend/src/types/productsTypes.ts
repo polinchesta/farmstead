@@ -14,7 +14,7 @@ export interface ProductType {
 
 export interface ProductsFilterType {
     sortField: string;
-    relatedIds: number;
+    relatedIds?: number;
     query: string;
     limit: number;
     page: number;
