@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from './currency.module.sass';
+import useTranslation from '../../hooks/useTranslation';
 
 interface Currency {
     code: string;
@@ -8,6 +9,7 @@ interface Currency {
 }
 
 const CurrencyConverter: React.FC = () => {
+    const {t} = useTranslation();
     const [amount, setAmount] = useState<string>('');
     const [fromCurrency, setFromCurrency] = useState<Currency | null>(null);
     const [toCurrency, setToCurrency] = useState<Currency | null>(null);
@@ -77,7 +79,7 @@ const CurrencyConverter: React.FC = () => {
         <div className={styles.container}>
             <div>
                 <label>
-                    Amount:
+                    {t.open.amount}
                     <input
                         className={styles.input}
                         onClick={handleAmountClick}
@@ -89,7 +91,7 @@ const CurrencyConverter: React.FC = () => {
             </div>
             <div>
                 <label>
-                    From:
+                    {t.open.from}
                     <select
                         className={styles.select}
                         value={fromCurrency?.code || ''}
@@ -104,7 +106,7 @@ const CurrencyConverter: React.FC = () => {
             </div>
             <div>
                 <label>
-                    To:
+                    {t.open.to}
                     <select
                         className={styles.select}
                         value={toCurrency?.code || ''}
@@ -119,7 +121,7 @@ const CurrencyConverter: React.FC = () => {
             </div>
             <div>
                 <label>
-                    Amount:
+                    {t.open.amount}
                     <input
                         className={styles.input}
                         type="number"

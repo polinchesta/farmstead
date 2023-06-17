@@ -84,6 +84,12 @@
         "watch": "Obejrzyj wideo"
     },
     "open": {
-        "currency": "Przelicznik walut"
+        "currency": "Przelicznik walut",
+        "amount":"Kwota:",
+        "from":"Od:",
+        "to":"Do:"
+    },
+    "page404":{
+        "error":"W tej chwili strona jest w trakcie tworzenia. Przepraszamy za niedogodności. "
     }
 }

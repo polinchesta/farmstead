@@ -84,6 +84,12 @@
         "watch": "Watch video"
     },
     "open": {
-        "currency": "Currency converter"
+        "currency": "Currency converter",
+        "amount":"Amount:",
+        "from":"From:",
+        "to":"To:"
+    },
+    "page404":{
+        "error": "The page is currently under development. We apologize for the inconvenience."
     }
 }
