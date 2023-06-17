@@ -73,7 +73,7 @@ export function SignUpForm({ handleSubmit, setLogin, setPassword, setTelegram }:
                             Log in
                         </Link>
                     </div>
-                    <Telegram />
+{/*                     <Telegram /> */}
                 </form>
             </div>
         </div>
