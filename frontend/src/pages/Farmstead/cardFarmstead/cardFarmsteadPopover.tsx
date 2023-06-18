@@ -1,24 +1,39 @@
 import React, { useState } from 'react';
 import styles from '../../../ui/modal/modal.module.sass';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import useTranslation from '../../../hooks/useTranslation';
+
+
 interface CustomModalProps {
   title: string;
   onClose: () => void;
 }
 
 const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
+  const { t } = useTranslation();
   const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('+375');
   const [surname, setSurname] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
   };
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let value = e.target.value;
 
+    value = value.replace(/\D/g, '');
+    if (value.startsWith('+')) {
+      value = '+' + value.slice(1, 13);
+    } else {
+      value = '+' + value.slice(0, 12);
+    }
+
+    setPhoneNumber(value);
+  };
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // Handle form submission here
     console.log('Name:', name);
     console.log('Surname:', surname);
     console.log('Phone Number:', phoneNumber);
@@ -31,6 +46,8 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
 
     onClose();
   };
+  const minDate = new Date();
+  const maxDate = new Date(minDate.getFullYear(), minDate.getMonth() + 1, minDate.getDate() - 1);
 
   return (
     <div className={styles.modal}>
@@ -41,7 +58,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
         <h2>{title}</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">{t.modal.name}</label>
             <input
               type="text"
               id="name"
@@ -51,29 +68,30 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
             />
           </div>
           <div>
-            <label htmlFor="surname">Surname</label>
-            <input
-              type="text"
-              id="surname"
-              value={surname}
-              onChange={(e) => setSurname(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="phoneNumber">Phone Number</label>
+            <label htmlFor="phoneNumber">{t.modal.phone}</label>
             <input
               type="tel"
               id="phoneNumber"
               value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              onChange={handlePhoneChange}
               required
             />
           </div>
           <div>
-          <label htmlFor="date">Date</label>
+            <label htmlFor="date">{t.modal.date}</label>
+            <DatePicker
+              id="date"
+              selected={selectedDate}
+              minDate={minDate}
+              maxDate={maxDate}
+              onChange={handleDateChange}
+              dateFormat="yyyy-MM-dd"
+              required
+            />
           </div>
-          <button type="submit">Submit</button>
+          <div className={styles.containerButton}>
+            <button className={styles.buttonCall} type="submit">{t.modal.order}</button>
+          </div>
         </form>
       </div>
     </div>

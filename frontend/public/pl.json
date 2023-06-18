@@ -63,13 +63,15 @@
     },
     "order": {
         "button": "Zamów w 1 kliknięciu",
-        "buttonzakaz": "Zamówic"
+        "buttonzakaz": "Zamów"
     },
     "modal": {
         "phone": "Twój numer telefonu:",
         "email": "Twój adres email:",
         "name": "Jak możemy się do Ciebie zwracać:",
-        "call": "Zamów rozmowę telefoniczną"
+        "call": "Zamów rozmowę telefoniczną",
+        "date": "Wybierz datę",
+        "order": "Zamów"
     },
     "farm": {
         "error": "Brak danych o zagrodzie"
