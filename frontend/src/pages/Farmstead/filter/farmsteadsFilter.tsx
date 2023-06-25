@@ -68,7 +68,7 @@ const FarmsteadsFilter: React.FC = () => {
     }, [query, sortField]);
 
     useEffect(() => {
-        if (page === 3) {
+        if (page === 4) {
             setIsLastPage(true);
         } else {
             setIsLastPage(false);

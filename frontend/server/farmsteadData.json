@@ -31,13 +31,7 @@
             "comments": [
                 {
                     "id": 0,
-                    "author": "John",
                     "content": "Great place to stay! Highly recommended!"
-                },
-                {
-                    "id": 1,
-                    "author": "Lisa",
-                    "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
         },
@@ -73,13 +67,7 @@
             ],
             "comments": [
                 {
-                    "id": 0,
-                    "author": "John",
-                    "content": "Great place to stay! Highly recommended!"
-                },
-                {
                     "id": 1,
-                    "author": "Lisa",
                     "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
@@ -112,13 +100,7 @@
             "comments": [
                 {
                     "id": 0,
-                    "author": "John",
                     "content": "Great place to stay! Highly recommended!"
-                },
-                {
-                    "id": 1,
-                    "author": "Lisa",
-                    "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
         },
@@ -151,16 +133,7 @@
                 }
             ],
             "comments": [
-                {
-                    "id": 0,
-                    "author": "John",
-                    "content": "Great place to stay! Highly recommended!"
-                },
-                {
-                    "id": 1,
-                    "author": "Lisa",
-                    "content": "The farmstead was beautiful and the hosts were very friendly."
-                }
+
             ]
         },
         {
@@ -190,16 +163,7 @@
                 }
             ],
             "comments": [
-                {
-                    "id": 0,
-                    "author": "John",
-                    "content": "Great place to stay! Highly recommended!"
-                },
-                {
-                    "id": 1,
-                    "author": "Lisa",
-                    "content": "The farmstead was beautiful and the hosts were very friendly."
-                }
+
             ]
         },
 
@@ -234,12 +198,10 @@
             "comments": [
                 {
                     "id": 0,
-                    "author": "John",
                     "content": "Great place to stay! Highly recommended!"
                 },
                 {
                     "id": 1,
-                    "author": "Lisa",
                     "content": "The farmstead was beautiful and the hosts were very friendly."
                 }
             ]
@@ -272,16 +234,7 @@
                 }
             ],
             "comments": [
-                {
-                    "id": 0,
-                    "author": "John",
-                    "content": "Great place to stay! Highly recommended!"
-                },
-                {
-                    "id": 1,
-                    "author": "Lisa",
-                    "content": "The farmstead was beautiful and the hosts were very friendly."
-                }
+
             ]
         },
         {
@@ -311,16 +264,7 @@
                 }
             ],
             "comments": [
-                {
-                    "id": 0,
-                    "author": "John",
-                    "content": "Great place to stay! Highly recommended!"
-                },
-                {
-                    "id": 1,
-                    "author": "Lisa",
-                    "content": "The farmstead was beautiful and the hosts were very friendly."
-                }
+
             ]
         },
         {
@@ -382,6 +326,9 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686600954/nemanskaya3_oicfvt.jpg"
                 }
+            ],
+            "comments": [
+
             ]
         },
         {
@@ -409,10 +356,13 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1686601517/svyatsk1_hdhhd1.jpg"
                 }
+            ],
+            "comments": [
+
             ]
         },
         {
-            "id": 14,
+            "id": 12,
             "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084200/falvarek_nhypuq.jpg",
             "title": "Фальварак \"У рыся\"",
             "text": "В 10 километрах от Волковыска в деревне, где проживает всего девять человек, пять лет назад семья медиков решила построить усадьбу. ",
@@ -442,6 +392,9 @@
                 {
                     "img": "https://res.cloudinary.com/drnebuzob/image/upload/v1684084203/znahorka_g7jkb6.jpg"
                 }
+            ],
+            "comments": [
+
             ]
         }
     ]

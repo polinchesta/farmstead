@@ -2,18 +2,16 @@ import React, { useState } from 'react';
 import styles from './header.module.sass';
 import logo from '/logo.svg';
 import { Link } from 'react-router-dom';
-import { removeUser } from '../../store/auth/authSlice';
-import { useAuth } from '../../hooks/useAuth';
 import { useAppDispatch } from '../../hooks/redux-hooks';
 import useTranslation from '../../hooks/useTranslation';
 import { LanguageType } from '../../types/languageTypes';
 import CurrencyConverter from '../currency/currency';
+import { useAuthUser, useIsAuthenticated, useSignOut } from "react-auth-kit";
 
 export function Header() {
     const { t, setLanguage } = useTranslation();
     const Token = localStorage.getItem('token');
     const dispatch = useAppDispatch();
-    const { isAuth, email } = useAuth();
     const [showTip, setShowTip] = useState(false);
     const [showPopover, setShowPopover] = useState(false);
     const handlePopoverClick = () => {
@@ -23,9 +21,16 @@ export function Header() {
         event.stopPropagation();
         setShowPopover(false);
     };
+    const isAuthenticated = useIsAuthenticated();
+    const auth = useAuthUser();
+    const signOut = useSignOut();
 
     const handleLanguageChange = (language: LanguageType) => {
         setLanguage(language);
+    };
+
+    const handleSignOut = () => {
+        signOut();
     };
 
     return (
@@ -86,18 +91,12 @@ export function Header() {
                         <button className={styles.language}>
                             <a href="https://www.instagram.com/maik_grodno/" target="_blank">Instagram</a>
                         </button>
-
+                        {isAuthenticated() && (
+                            <button className={styles.block} onClick={handleSignOut}>
+                                {t.header.links.sign}
+                            </button>
+                        )}
                     </div>
-
-                    <button
-                        className={styles.login}
-                        style={{ display: `${Token ? 'block' : 'none'}` }}
-                        onClick={() => {
-                            dispatch(removeUser());
-                            localStorage.removeItem('token');
-                        }}>
-                        Выйти из аккаунта {email}
-                    </button>
                     <div className={styles.menu}>
                         <nav className={styles.blocks}>
                             <Link className={styles.block} to="/">
@@ -109,9 +108,11 @@ export function Header() {
                             <Link className={styles.block} to="/farmstead">
                                 {t.header.links.farmstead}
                             </Link>
-                            <Link className={styles.block} to="/login">
-                                {t.header.links.sign}
-                            </Link>
+                            {!isAuthenticated() && (
+                                <Link className={styles.block} to="/login">
+                                    {t.header.links.sign}
+                                </Link>
+                            )}
                         </nav>
                     </div>
                 </div>

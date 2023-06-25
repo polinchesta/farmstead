@@ -1,33 +1,46 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, SyntheticEvent } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux-hooks';
-import { farmsteadActions } from '../../../store/farmstead/farmsteadSlice';
 import Loader from '../../../ui/loader/loader';
 import styles from './ItemFarmstead.module.sass';
 import useTranslation from '../../../hooks/useTranslation';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import { farmsteadActions } from '../../../store/farmstead/farmsteadSlice';
+import { CommentType } from '../../../types/farmsteadsTypes';
+import axios from 'axios';
 
 export default function ItemFarmstead() {
     const dispatch = useAppDispatch();
+    const [comments, setComments] = useState<CommentType[]>([]);
     const farmstead = useAppSelector((state) => state.farmstead.farmstead);
     const loading = useAppSelector((state) => state.farmstead.loading);
+    const [selectedImage, setSelectedImage] = useState(0);
+    const [showVideoPopover, setShowVideoPopover] = useState(false);
     const { id } = useParams();
     const { t } = useTranslation();
-    const farmsteadId = +(id ?? 0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const farmsteadId = +(id ?? -1);
     const navigate = useNavigate();
+    const newCommentId = generateUUID();
+    const [newComment, setNewComment] = useState<CommentType>({
+        id: generateUUID(),
+        content: ''
+    });
     const handleClick = () => {
         navigate(`/farmstead`);
+    };
+    const handleOpenModal = () => {
+        setIsModalOpen(true);
     };
 
     useEffect(() => {
         if (farmsteadId) {
             dispatch(farmsteadActions.getFarmstead(farmsteadId));
         }
-    }, [id]);
+    }, [farmsteadId]);
 
-    const [selectedImage, setSelectedImage] = useState(0);
-    const [showVideoPopover, setShowVideoPopover] = useState(false);
+
 
     const handleThumbnailClick = (index: number) => {
         setSelectedImage(index);
@@ -65,6 +78,33 @@ export default function ItemFarmstead() {
             behavior: 'smooth',
         });
     };
+
+    function generateUUID(): number {
+        return Date.now();
+    }
+
+    const handleCommentSubmit = async (newComment: CommentType) => {
+        try {
+          const response = await axios.post<CommentType>(
+            `http://localhost:3002/farmsteads/${farmsteadId}/comments`,
+            newComment
+          );
+      
+          const addedComment = response.data;
+          setComments((prevComments) => [...prevComments, addedComment]);
+          setNewComment({
+            id: generateUUID(),
+            content: ''
+          });
+      
+          setIsModalOpen(false);
+        } catch (error) {
+          console.error('Error adding comment:', error);
+        }
+      };
+      
+      console.log(farmsteadId)
+
     return (
         <div className={styles.container}>
             {loading && <Loader />}
@@ -113,6 +153,7 @@ export default function ItemFarmstead() {
                                         <p>{farmstead.place}</p>
                                         <p>{farmstead.contact}</p>
                                         <p>{farmstead.email}</p>
+                                        <p>{farmstead.adres}</p>
                                         {farmstead.url && (
                                             <div
                                                 className={styles.videoPopover}
@@ -155,15 +196,32 @@ export default function ItemFarmstead() {
                     {farmstead && (
                         <>
                             <div className={styles.comments}>
-                                {/* <h2>Комментарии:</h2>
-                                {t.farmsteads[farmsteadId]?.comments.map((comment: { id: number, author: string, content: string }) => (
+                                <h2>Комментарии:</h2>
+                                {farmstead.comments.map((comment: { id: number, content: string }) => (
                                     <div key={comment.id}>
-                                        <p>Автор: {comment.author}</p>
                                         <p>Комментарий: {comment.content}</p>
                                     </div>
-                                ))} */}
+                                ))}
                             </div>
                         </>
+                    )}
+                    <button className={styles.button} onClick={handleOpenModal}>
+                        Написать комментарий
+                    </button>
+                    {isModalOpen && (
+                        <div className={styles.modal}>
+                            <h3>Написать комментарий:</h3>
+                            <input
+                                type="text"
+                                value={newComment.content}
+                                onChange={(e) =>
+                                    setNewComment({ ...newComment, content: e.target.value })
+                                }
+                                placeholder="Введите комментарий..."
+                            />
+                            <button onClick={() => handleCommentSubmit(newComment)}>Добавить</button>
+                            <button onClick={() => setIsModalOpen(false)}>Отмена</button>
+                        </div>
                     )}
                     <div className={styles.mapContainer}>
                         <MapContainer

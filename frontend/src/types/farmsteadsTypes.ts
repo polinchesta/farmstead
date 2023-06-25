@@ -1,11 +1,10 @@
-interface CommentType {
-    id: number;
-    author: string;
-    content: string;
-}
-
 interface ImageType {
     img: string;
+}
+
+export interface CommentType {
+    id: number;
+    content: string;
 }
 
 export interface FarmsteadsFilterType {
@@ -23,6 +22,7 @@ export interface FarmsteadsType {
     img: string;
     title: string;
     t: any;
+    adres: string;
     longitude: number;
     house: string;
     place: string;
@@ -31,6 +31,7 @@ export interface FarmsteadsType {
     email: string;
     top: number;
     latitude: number;
+    comment: Array <CommentType>
     image: Array <ImageType>
     comments: Array<CommentType>
 }

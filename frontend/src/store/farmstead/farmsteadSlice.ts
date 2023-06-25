@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { FarmsteadsType } from '../../types/farmsteadsTypes';
+import { CommentType, FarmsteadsType } from '../../types/farmsteadsTypes';
 import farmsteadsApi from '../../api/farmstead/farmsteadsApi';
 
 interface FarmsteadsStateType {
@@ -25,6 +25,7 @@ const getFarmstead = createAsyncThunk<FarmsteadsType, number, { rejectValue: str
         }
     }
 );
+
 
 const farmsteadSlice = createSlice({
     name: 'farmstead',

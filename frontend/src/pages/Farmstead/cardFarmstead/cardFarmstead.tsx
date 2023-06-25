@@ -47,6 +47,8 @@ const CardFarmstead: React.FC<CardProps> = ({
         event.stopPropagation();
         openPopover();
     };
+
+    console.log(dataItem.id)
     return (
         <div className={styles.container}>
             <section className={styles.farmstead} onClick={handleClick}>
