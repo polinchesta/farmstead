@@ -73,6 +73,7 @@
         "date": "Select a date:",
         "order": "Order",
         "day": "Enter the number of days:",
+        "number": "Contact Number",
         "oplata": "Choose the most convenient payment method for you:"
     },
     "farm": {
