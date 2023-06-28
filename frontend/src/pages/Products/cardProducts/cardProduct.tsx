@@ -3,7 +3,7 @@ import axios from 'axios';
 import useTranslation from '../../../hooks/useTranslation';
 import { ProductType } from '../../../types/productsTypes';
 import styles from './cardProduct.module.sass';
-import Modal from '../../../ui/modal/modal';
+import Modal from '../../../ui/modal/modalCopy';
 import { Link, useNavigate } from 'react-router-dom';
 
 interface CardProps {
@@ -47,7 +47,7 @@ const ProductsCard: React.FC<CardProps> = ({ id, dataItem, img, t }) => {
                     {t.order.button}
                 </button>
             </section>
-            {modalOpen && <Modal title={dataItem.title} onClose={closeModal} />}
+            {modalOpen && <Modal title={dataItem.title} onClose={closeModal} productId={dataItem.id}/>}
         </div>
     );
 };

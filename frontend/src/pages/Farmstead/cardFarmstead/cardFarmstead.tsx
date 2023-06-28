@@ -1,10 +1,12 @@
 import styles from './cardFarmstead.module.sass';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Modal from '../../../ui/modal/modal';
-import CardFarmsteadPopover from './cardFarmsteadPopover';
+import CustomModal from './cardFarmsteadPopover';
 import { FarmsteadsType } from '../../../types/farmsteadsTypes';
+import { useIsAuthenticated } from "react-auth-kit";
+
 interface CardProps {
     id: number;
     img: string;
@@ -18,6 +20,7 @@ const CardFarmstead: React.FC<CardProps> = ({
     dataItem,
     t,
 }) => {
+    const isAuthenticated = useIsAuthenticated();
     const [popoverOpen, setPopoverOpen] = useState(false);
     const navigate = useNavigate();
     const handleClick = () => {
@@ -48,7 +51,6 @@ const CardFarmstead: React.FC<CardProps> = ({
         openPopover();
     };
 
-    console.log(dataItem.id)
     return (
         <div className={styles.container}>
             <section className={styles.farmstead} onClick={handleClick}>
@@ -59,7 +61,7 @@ const CardFarmstead: React.FC<CardProps> = ({
                     <h2 className={styles.title}>{dataItem.title}</h2>
                     <p className={styles.information}>{dataItem.text}</p>
                     <p className={styles.information}>
-                        {dataItem.price} BYN/ночь/с человека, {dataItem.house}, {dataItem.place}
+                        {dataItem.price} BYN/ночь/с человека, {dataItem.house}, {dataItem.place} спальных мест
                     </p>
                     <p className={styles.information}>
                         {dataItem.contact}, {dataItem.email}
@@ -68,17 +70,20 @@ const CardFarmstead: React.FC<CardProps> = ({
                         <button className={styles.button} onClick={handleButtonClicked}>
                             {t.order.button}
                         </button>
-                        <button className={styles.button} onClick={handleButtonClickedPopover}>
-                            {t.order.buttonzakaz}
-                        </button>
+                        {isAuthenticated() && (
+                            <button className={styles.button} onClick={handleButtonClickedPopover}>
+                                {t.order.buttonzakaz}
+                            </button>
+                        )}
                     </div>
                 </div>
             </section>
-            {modalOpen && <Modal title={dataItem.title} onClose={closeModal} />}
+            {modalOpen && <Modal title={dataItem.title} onClose={closeModal} farmsteadId={dataItem.id} />}
             {popoverOpen && (
-                <CardFarmsteadPopover
+                <CustomModal
                     title={dataItem.title}
                     onClose={closePopover}
+                    farmsteadId={dataItem.id}
                 />
             )}
         </div>

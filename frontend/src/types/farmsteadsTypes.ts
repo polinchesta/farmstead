@@ -4,7 +4,22 @@ interface ImageType {
 
 export interface CommentType {
     id: number;
+    farmsteadId: number;
     content: string;
+    date:string
+}
+
+export interface FarmsteadOrder{
+    id:number;
+    name:string;
+    title: string;
+    number: string;
+    farmsteadId: number;
+    time:string;
+    orderDate: Date | null;
+    oplata: string;
+    email: string;
+    day: string
 }
 
 export interface FarmsteadsFilterType {
@@ -31,7 +46,6 @@ export interface FarmsteadsType {
     email: string;
     top: number;
     latitude: number;
-    comment: Array <CommentType>
+    comments: Array <CommentType>
     image: Array <ImageType>
-    comments: Array<CommentType>
 }

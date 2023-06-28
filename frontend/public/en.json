@@ -71,7 +71,9 @@
         "name": "How can you be contacted:",
         "call": "Request a call",
         "date": "Select a date:",
-        "order": "Order"
+        "order": "Order",
+        "day": "Enter the number of days:",
+        "oplata": "Choose the most convenient payment method for you:"
     },
     "farm": {
         "error": "Homestead data missing"
@@ -93,5 +95,11 @@
     },
     "page404":{
         "error": "The page is currently under development. We apologize for the inconvenience."
+    },
+    "comment": {
+        "comment": "Comments:",
+        "nocomment": "No comments yet, be the first! Log in and leave your opinion!",
+        "write": "Write a comment",
+        "input": "Enter a comment..."
     }
 }

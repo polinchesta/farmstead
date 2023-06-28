@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import styles from './modal.module.sass';
 import useTranslation from '../../hooks/useTranslation';
-import { FarmsteadOrder } from '../../types/farmsteadsTypes';
+import { ProductOrder } from '../../types/productsTypes';
 import axios from 'axios';
 
 interface ModalProps {
     title: string;
-    farmsteadId: number;
+    productId: number
     onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ title, onClose, farmsteadId }) => {
+const Modal: React.FC<ModalProps> = ({ title, onClose, productId }) => {
     const [phoneNumber, setPhoneNumber] = useState('+375');
-    const [order, setOrder] = useState<FarmsteadOrder[]>([]);
+    const [order, setOrder] = useState<ProductOrder[]>([]);
     const { t } = useTranslation();
     const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         let value = e.target.value;
@@ -27,28 +27,26 @@ const Modal: React.FC<ModalProps> = ({ title, onClose, farmsteadId }) => {
         setPhoneNumber(value);
     };
 
-    const [newOrder, setNewOrder] = useState<FarmsteadOrder>({
+    const [newOrder, setNewOrder] = useState<ProductOrder>({
         id: generateUUID(),
         name: '',
         number: phoneNumber,
-        farmsteadId: farmsteadId,
+        productId: productId,
         title: title,
-        orderDate: null,
-        email: '',
+        email:'',
         time: '',
-        oplata: '',
         day: ''
     });
 
     function generateUUID(): number {
         return Date.now();
     }
-    const handleSubmit = async (newOrder: FarmsteadOrder) => {
+    const handleSubmit = async (newOrder: ProductOrder) => {
         const currentDate = new Date().toISOString();
         try {
-            const updatedOrder = { ...newOrder, time: currentDate, farmsteadId: farmsteadId };
+            const updatedOrder = { ...newOrder, time: currentDate, productId: productId };
             const response = await axios.post(
-                `http://localhost:3002/orderIn1Click`,
+                `http://localhost:3003/orderIn1Click`,
                 updatedOrder
             );
 
@@ -59,11 +57,9 @@ const Modal: React.FC<ModalProps> = ({ title, onClose, farmsteadId }) => {
                 name: '',
                 number: phoneNumber,
                 title: title,
-                farmsteadId: farmsteadId,
-                orderDate: null,
+                productId: productId,
                 time: '',
-                email: '',
-                oplata: '',
+                email:'',
                 day: ''
             });
 

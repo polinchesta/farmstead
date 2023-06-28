@@ -3,18 +3,21 @@ import styles from '../../../ui/modal/modal.module.sass';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import useTranslation from '../../../hooks/useTranslation';
+import { FarmsteadOrder } from '../../../types/farmsteadsTypes';
+import Select from '../../../ui/select/select';
+import axios from 'axios';
 
 
 interface CustomModalProps {
   title: string;
+  farmsteadId: number;
   onClose: () => void;
 }
 
-const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
+const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }) => {
   const { t } = useTranslation();
-  const [name, setName] = useState('');
+  const [order, setOrder] = useState<FarmsteadOrder[]>([]);
   const [phoneNumber, setPhoneNumber] = useState('+375');
-  const [surname, setSurname] = useState('');
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   const handleDateChange = (date: Date | null) => {
     setSelectedDate(date);
@@ -31,21 +34,54 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
 
     setPhoneNumber(value);
   };
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
 
-    console.log('Name:', name);
-    console.log('Surname:', surname);
-    console.log('Phone Number:', phoneNumber);
-    console.log('Selected Date:', selectedDate);
+  const [newOrder, setNewOrder] = useState<FarmsteadOrder>({
+    id: generateUUID(),
+    name: '',
+    number: phoneNumber,
+    farmsteadId: farmsteadId,
+    title: title,
+    orderDate: selectedDate,
+    time: '',
+    email: '',
+    oplata: '',
+    day: ''
+  });
 
-    setName('');
-    setSurname('');
-    setPhoneNumber('');
-    setSelectedDate(null);
+  function generateUUID(): number {
+    return Date.now();
+  }
 
-    onClose();
+  const handleSubmit = async (newOrder: FarmsteadOrder) => {
+    try {
+      const currentDate = new Date().toISOString();
+      const updatedOrder = { ...newOrder, time: currentDate, farmsteadId: farmsteadId };
+      const response = await axios.post(
+        `http://localhost:3002/order`,
+        updatedOrder
+      );
+
+      const addedOrder = response.data;
+      setOrder((prevOrder) => [...prevOrder, addedOrder]);
+      setNewOrder({
+        id: generateUUID(),
+        name: '',
+        number: phoneNumber,
+        title: title,
+        farmsteadId: farmsteadId,
+        orderDate: selectedDate,
+        email: '',
+        time: '',
+        oplata: '',
+        day: ''
+      });
+
+      onClose();
+    } catch (error) {
+      console.error('Error adding comment:', error);
+    }
   };
+
   const minDate = new Date();
   const maxDate = new Date(minDate.getFullYear(), minDate.getMonth() + 1, minDate.getDate() - 1);
 
@@ -56,41 +92,89 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose }) => {
           &times;
         </button>
         <h2>{title}</h2>
-        <form onSubmit={handleSubmit}>
+        <form>
           <div>
             <label htmlFor="name">{t.modal.name}</label>
             <input
               type="text"
               id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={newOrder.name}
+              onChange={(e) => setNewOrder({ ...newOrder, name: e.target.value })}
               required
             />
           </div>
           <div>
-            <label htmlFor="phoneNumber">{t.modal.phone}</label>
+            <label htmlFor="number">{t.modal.phone}</label>
             <input
               type="tel"
-              id="phoneNumber"
-              value={phoneNumber}
-              onChange={handlePhoneChange}
+              id="number"
+              value={newOrder.number}
+              onChange={(number) => {
+                handlePhoneChange(number);
+                setNewOrder({ ...newOrder, number: phoneNumber });
+              }}
               required
             />
           </div>
           <div>
-            <label htmlFor="date">{t.modal.date}</label>
+            <label htmlFor="orderDate">{t.modal.date}</label>
             <DatePicker
-              id="date"
+              id="orderDate"
               selected={selectedDate}
               minDate={minDate}
               maxDate={maxDate}
-              onChange={handleDateChange}
+              onChange={(date) => {
+                handleDateChange(date);
+                setNewOrder({ ...newOrder, orderDate: date });
+              }}
               dateFormat="yyyy-MM-dd"
               required
             />
           </div>
+          <label htmlFor="day">{t.modal.oplata}</label>
+          <select
+            id="oplata"
+            value={newOrder.oplata}
+            onChange={(e) => setNewOrder({ ...newOrder, oplata: e.target.value })}
+            style={{
+              fontFamily: 'PT Mono, monospace',
+              border: '3px solid black',
+              background: 'none',
+              fontSize: '16px',
+              height: '40px',
+              width: '350px',
+              display: 'block',
+              margin: '10px 0px',
+              textAlign: 'center'
+            }}
+          >
+            <option value="cash">Наличные</option>
+            <option value="card">Карта</option>
+          </select>
+          <div>
+            <label htmlFor="day">{t.modal.day}</label>
+            <input
+              type="text"
+              id="day"
+              value={newOrder.day}
+              onChange={(e) => setNewOrder({ ...newOrder, day: e.target.value })}
+              required
+            />
+          </div>
           <div className={styles.containerButton}>
-            <button className={styles.buttonCall} type="submit">{t.modal.order}</button>
+            <button
+              className={styles.buttonCall}
+              onClick={() => {
+                if (newOrder.name && newOrder.number && newOrder.orderDate && newOrder.oplata && newOrder.day) {
+                  handleSubmit(newOrder);
+                } else {
+                  alert("Пожалуйста, заполните все поля, чтобы мы могли корректно оказать Вам услугу")
+                }
+              }}
+              type="submit"
+            >
+              {t.modal.order}
+            </button>
           </div>
         </form>
       </div>

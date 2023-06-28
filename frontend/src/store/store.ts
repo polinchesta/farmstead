@@ -6,6 +6,7 @@ import farmsteadReducer from './farmstead/farmsteadSlice';
 import farmsteadsReducer from './farmsteads/farmsteadsSlice';
 import productReducer from './product/productSlice';
 import relatedProductsReducer from './RelatedProduct/relatedProduct';
+import commentReducer from './comments/comment';
 
 const rootReducer = combineReducers({
   user: userReducer,
@@ -14,6 +15,7 @@ const rootReducer = combineReducers({
   products: productsReducer,
   farmstead: farmsteadReducer,
   farmsteads: farmsteadsReducer,
+  comment: commentReducer,
   relatedProducts: relatedProductsReducer,
 });
 

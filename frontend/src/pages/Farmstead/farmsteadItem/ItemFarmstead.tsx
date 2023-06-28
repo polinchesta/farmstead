@@ -8,12 +8,15 @@ import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { farmsteadActions } from '../../../store/farmstead/farmsteadSlice';
 import { CommentType } from '../../../types/farmsteadsTypes';
+import { commentActions } from '../../../store/comments/comment';
 import axios from 'axios';
+import { useIsAuthenticated } from "react-auth-kit";
 
 export default function ItemFarmstead() {
     const dispatch = useAppDispatch();
     const [comments, setComments] = useState<CommentType[]>([]);
     const farmstead = useAppSelector((state) => state.farmstead.farmstead);
+    const commentsInfo = useAppSelector((state) => state.comment.comment) ?? [];
     const loading = useAppSelector((state) => state.farmstead.loading);
     const [selectedImage, setSelectedImage] = useState(0);
     const [showVideoPopover, setShowVideoPopover] = useState(false);
@@ -22,10 +25,13 @@ export default function ItemFarmstead() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const farmsteadId = +(id ?? -1);
     const navigate = useNavigate();
-    const newCommentId = generateUUID();
+    const currentFarmsteadId = farmsteadId;
+    const isAuthenticated = useIsAuthenticated();
     const [newComment, setNewComment] = useState<CommentType>({
         id: generateUUID(),
-        content: ''
+        farmsteadId: farmsteadId,
+        content: '',
+        date: ''
     });
     const handleClick = () => {
         navigate(`/farmstead`);
@@ -37,8 +43,9 @@ export default function ItemFarmstead() {
     useEffect(() => {
         if (farmsteadId) {
             dispatch(farmsteadActions.getFarmstead(farmsteadId));
+            dispatch(commentActions.getComment(farmsteadId));
         }
-    }, [farmsteadId]);
+    }, [dispatch, farmsteadId]);
 
 
 
@@ -85,25 +92,29 @@ export default function ItemFarmstead() {
 
     const handleCommentSubmit = async (newComment: CommentType) => {
         try {
-          const response = await axios.post<CommentType>(
-            `http://localhost:3002/farmsteads/${farmsteadId}/comments`,
-            newComment
-          );
-      
-          const addedComment = response.data;
-          setComments((prevComments) => [...prevComments, addedComment]);
-          setNewComment({
-            id: generateUUID(),
-            content: ''
-          });
-      
-          setIsModalOpen(false);
+            const currentDate = new Date().toISOString();
+            const updatedComment = { ...newComment, date: currentDate };
+            const response = await axios.post(
+                `http://localhost:3002/comments`,
+                updatedComment
+            );
+
+            const addedComment = response.data;
+            setComments((prevComments) => [...prevComments, addedComment]);
+            setNewComment({
+                id: generateUUID(),
+                farmsteadId: farmsteadId,
+                content: '',
+                date: ''
+            });
+
+            setIsModalOpen(false);
+            window.location.reload();
         } catch (error) {
-          console.error('Error adding comment:', error);
+            console.error('Error adding comment:', error);
         }
-      };
-      
-      console.log(farmsteadId)
+    };
+
 
     return (
         <div className={styles.container}>
@@ -150,7 +161,7 @@ export default function ItemFarmstead() {
                                         <h3>{t.infoFarmstead.info}</h3>
                                         <p>{farmstead.price} BYN/ночь/с человека</p>
                                         <p>{farmstead.house}</p>
-                                        <p>{farmstead.place}</p>
+                                        <p>{farmstead.place} спальных мест</p>
                                         <p>{farmstead.contact}</p>
                                         <p>{farmstead.email}</p>
                                         <p>{farmstead.adres}</p>
@@ -193,36 +204,6 @@ export default function ItemFarmstead() {
                             </div>
                         </div>
                     </div>
-                    {farmstead && (
-                        <>
-                            <div className={styles.comments}>
-                                <h2>Комментарии:</h2>
-                                {farmstead.comments.map((comment: { id: number, content: string }) => (
-                                    <div key={comment.id}>
-                                        <p>Комментарий: {comment.content}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </>
-                    )}
-                    <button className={styles.button} onClick={handleOpenModal}>
-                        Написать комментарий
-                    </button>
-                    {isModalOpen && (
-                        <div className={styles.modal}>
-                            <h3>Написать комментарий:</h3>
-                            <input
-                                type="text"
-                                value={newComment.content}
-                                onChange={(e) =>
-                                    setNewComment({ ...newComment, content: e.target.value })
-                                }
-                                placeholder="Введите комментарий..."
-                            />
-                            <button onClick={() => handleCommentSubmit(newComment)}>Добавить</button>
-                            <button onClick={() => setIsModalOpen(false)}>Отмена</button>
-                        </div>
-                    )}
                     <div className={styles.mapContainer}>
                         <MapContainer
                             center={[
@@ -241,6 +222,41 @@ export default function ItemFarmstead() {
                             />
                         </MapContainer>
                     </div>
+                    <div className={styles.comments}>
+                        <div className={styles.blockComment}>
+                            <h2>{t.comment.comment}</h2>
+                            {isAuthenticated() && (
+                                <button className={styles.button} onClick={handleOpenModal}>
+                                    {t.comment.write}                                </button>)}
+                        </div>
+                        {commentsInfo.length === 0 ? (
+                            <p>{t.comment.nocomment}
+                            </p>
+                        ) : (
+                            commentsInfo
+                                .filter((comment) => comment.farmsteadId === currentFarmsteadId)
+                                .map((comment) => (
+                                    <div key={comment.id}>
+                                        <p className={styles.comment}>{comment.content}</p>
+                                        <p className={styles.commentDate}>{new Date(comment.date).toLocaleDateString()}</p>
+                                    </div>
+                                ))
+                        )}
+                    </div>
+
+                    {isModalOpen && (
+                        <div className={styles.modal}>
+                            <h3>{t.comment.write}</h3>
+                            <button className={styles.closeButton} onClick={() => setIsModalOpen(false)}>&times;</button>
+                            <textarea
+                                value={newComment.content}
+                                onChange={(e) => setNewComment({ ...newComment, content: e.target.value })}
+                                placeholder={t.comment.input}
+                                className={styles.textarea}
+                            />
+                            <button className={styles.button} onClick={() => handleCommentSubmit(newComment)}>Добавить</button>
+                        </div>
+                    )}
                     {showScrollToTop && (
                         <div className={styles.scrollToTop} onClick={scrollToTop}>
                             &uarr;

@@ -11,6 +11,16 @@ export interface ProductType {
     t: any;
 }
 
+export interface ProductOrder{
+    id:number;
+    name:string;
+    title: string;
+    number: string;
+    productId: number;
+    time:string;
+    email: string;
+    day: string
+}
 
 export interface ProductsFilterType {
     sortField: string;

@@ -110,7 +110,7 @@
     .videoIcon
         font-size: 21px
         color: #333
-        
+
     .videoContainer
         position: fixed
         top: 50%
@@ -164,10 +164,15 @@
     100%
         transform: rotate(360deg)
 
+.blockComment
+    display: flex
+    justify-content: space-between
+    align-items: center
 .comments
     margin: 10px 0px
 
 .modal
+    width: 40%
     position: fixed
     top: 50%
     left: 50%
@@ -177,3 +182,45 @@
     border-radius: 5px
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
     z-index: 999
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    & h3
+        margin-bottom: 10px
+
+    & textarea
+        font-family: 'PT Mono', monospace
+        margin: 0px auto 20px auto
+        border: 3px solid black
+        background: none
+        font-size: 16px
+        padding: 10px
+        width: 100%
+        height: 200px
+        resize: vertical
+
+    & button
+        margin-bottom: 10px
+
+.closeButton
+    position: absolute
+    top: 8px
+    right: 8px
+    background-color: transparent
+    border: none
+    font-size: 25px
+    color: #999
+    cursor: pointer
+    border: none
+
+.button
+    height: 50px
+    width: 150px
+    border: 3px solid black
+    background: none
+    font-size: 18px
+.comment
+    margin: 40px 0px 0px 0px
+.commentDate
+    text-align: right

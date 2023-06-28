@@ -71,7 +71,9 @@
         "name": "Jak możemy się do Ciebie zwracać:",
         "call": "Zamów rozmowę telefoniczną",
         "date": "Wybierz datę:",
-        "order": "Zamów"
+        "order": "Zamów",
+        "day": "Podaj liczbę dni:",
+        "oplata": "Wybierz najwygodniejszą dla Ciebie metodę płatności:"
     },
     "farm": {
         "error": "Brak danych o zagrodzie"
@@ -87,11 +89,18 @@
     },
     "open": {
         "currency": "Przelicznik walut",
-        "amount":"Kwota:",
-        "from":"Od:",
-        "to":"Do:"
+        "amount": "Kwota:",
+        "from": "Od:",
+        "to": "Do:"
     },
-    "page404":{
-        "error":"W tej chwili strona jest w trakcie tworzenia. Przepraszamy za niedogodności. "
+    "page404": {
+        "error": "W tej chwili strona jest w trakcie tworzenia. Przepraszamy za niedogodności. "
+    },
+    "comment": {
+        "comment": "Komentarze:",
+        "nocomment": "Brak komentarzy, bądź pierwszy! Zaloguj się i zostaw swoją opinię!",
+        "write": "Napisz komentarz",
+        "input": "Wprowadź komentarz..."
     }
+    
 }
