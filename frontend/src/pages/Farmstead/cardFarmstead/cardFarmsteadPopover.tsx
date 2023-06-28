@@ -6,7 +6,7 @@ import useTranslation from '../../../hooks/useTranslation';
 import { FarmsteadOrder } from '../../../types/farmsteadsTypes';
 import Select from '../../../ui/select/select';
 import axios from 'axios';
-
+import { useAuthUser } from "react-auth-kit";
 
 interface CustomModalProps {
   title: string;
@@ -16,6 +16,9 @@ interface CustomModalProps {
 
 const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }) => {
   const { t } = useTranslation();
+  const authUser = useAuthUser();
+  const [isDateAvailable, setIsDateAvailable] = useState(true);
+  const email = authUser()?.email ?? '';    
   const [order, setOrder] = useState<FarmsteadOrder[]>([]);
   const [phoneNumber, setPhoneNumber] = useState('+375');
   const [selectedDate, setSelectedDate] = useState<Date | null>(null);
@@ -43,7 +46,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }
     title: title,
     orderDate: selectedDate,
     time: '',
-    email: '',
+    email: email || '',
     oplata: '',
     day: ''
   });
@@ -51,17 +54,33 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }
   function generateUUID(): number {
     return Date.now();
   }
-
+  
   const handleSubmit = async (newOrder: FarmsteadOrder) => {
     try {
+      if (newOrder.orderDate === null) {
+        alert('Выберите дату заказа');
+        return;
+      }
+      const response = await axios.get('http://localhost:3002/order', {
+        params: {
+          orderDate: newOrder.orderDate.toISOString(),
+          farmsteadId: farmsteadId
+        }
+      });
+  
+      const existingOrders = response.data as FarmsteadOrder[];
+  
+      if (existingOrders.length > 0) {
+        alert('Выбранная дата уже занята');
+        setIsDateAvailable(false);
+        return;
+      }
+  
       const currentDate = new Date().toISOString();
-      const updatedOrder = { ...newOrder, time: currentDate, farmsteadId: farmsteadId };
-      const response = await axios.post(
-        `http://localhost:3002/order`,
-        updatedOrder
-      );
-
-      const addedOrder = response.data;
+      const updatedOrder = { ...newOrder, time: currentDate, farmsteadId: farmsteadId, email: email };
+      const addResponse = await axios.post('http://localhost:3002/order', updatedOrder);
+  
+      const addedOrder = addResponse.data;
       setOrder((prevOrder) => [...prevOrder, addedOrder]);
       setNewOrder({
         id: generateUUID(),
@@ -70,18 +89,18 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }
         title: title,
         farmsteadId: farmsteadId,
         orderDate: selectedDate,
-        email: '',
+        email: email || '',
         time: '',
         oplata: '',
         day: ''
       });
-
+      setIsDateAvailable(true);
       onClose();
     } catch (error) {
-      console.error('Error adding comment:', error);
+      console.error('Error adding order:', error);
     }
   };
-
+  
   const minDate = new Date();
   const maxDate = new Date(minDate.getFullYear(), minDate.getMonth() + 1, minDate.getDate() - 1);
 
@@ -162,15 +181,14 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }
             />
           </div>
           <h3>{t.modal.number} +375298412880</h3>
+          {!isDateAvailable && <p>Selected date is not available for booking</p>}
+
           <div className={styles.containerButton}>
             <button
               className={styles.buttonCall}
               onClick={() => {
-                if (newOrder.name && newOrder.number && newOrder.orderDate && newOrder.oplata && newOrder.day) {
-                  handleSubmit(newOrder);
-                } else {
-                  alert("Пожалуйста, заполните все поля, чтобы мы могли корректно оказать Вам услугу")
-                }
+                setIsDateAvailable(true); 
+                handleSubmit(newOrder);
               }}
               type="submit"
             >
