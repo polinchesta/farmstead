@@ -7,7 +7,6 @@ import { SignUpForm } from '../../ui/SignUpForm/SignUpForm';
 export function SignUp() {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-    const [telegram, setTelegram] = useState('');
     const navigate = useNavigate();
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -16,8 +15,7 @@ export function SignUp() {
             const backendUrl = import.meta.env.VITE_BACKEND_URL;
             const response = await axios.post(`${backendUrl}/registration`, {
                 email: login,
-                password,
-                telegram,
+                password
             });
 
             if (response.status === 200) {
@@ -37,7 +35,6 @@ export function SignUp() {
                 handleSubmit={handleSubmit}
                 setLogin={setLogin}
                 setPassword={setPassword}
-                setTelegram={setTelegram}
             />
         </div>
     );

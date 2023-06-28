@@ -4,7 +4,8 @@
             "main": "Strona główna",
             "products": "Produkty",
             "farmstead": "Dwory",
-            "sign": "Logowanie"
+            "sign": "Logowanie",
+            "signOut":"Wychodzić"
         },
         "aboutMaik": "*Agrobiznes Maik oczami autora"
     },
@@ -72,10 +73,14 @@
         "call": "Zamów rozmowę telefoniczną",
         "date": "Wybierz datę:",
         "order": "Zamów",
+        "delivery":"Podaj adres dostawy",
+        "cash":"Gotówka",
+        "card":"Karta",
         "day": "Podaj liczbę dni:",
         "number":"Numer kontaktowy",
         "oplata": "Wybierz najwygodniejszą dla Ciebie metodę płatności:"
     },
+
     "farm": {
         "error": "Brak danych o zagrodzie"
     },

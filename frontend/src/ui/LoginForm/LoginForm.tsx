@@ -12,6 +12,7 @@ export function LoginForm({ handleSubmit, setLogin, setPassword }: LoginFormProp
     return (
         <div className={styles.loginForm}>
             <div className={styles.formWrapper}>
+                <h2>{t.sign.input}</h2>
                 <form className={styles.form} onSubmit={handleSubmit} method="POST">
                     <label htmlFor="email" className={styles.label}>
                         {t.sign.email}
@@ -45,12 +46,12 @@ export function LoginForm({ handleSubmit, setLogin, setPassword }: LoginFormProp
                     </div>
                     <div className={styles.buttonWrapper}>
                         <button className={styles.button} type="submit">
-                            Sign in
+                        {t.sign.signIn}
                         </button>
                     </div>
                     <div>
                         <Link to="/register" className={styles.loginLink}>
-                            Sign up
+                            {t.sign.acc}
                         </Link>
                     </div>
                 </form>

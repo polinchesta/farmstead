@@ -4,6 +4,7 @@ interface ImageType {
 
 export interface CommentType {
     id: number;
+    email: string
     farmsteadId: number;
     content: string;
     date:string

@@ -4,7 +4,8 @@
             "main": "Main",
             "products": "Products",
             "farmstead": "Farmstead",
-            "sign": "Sign up"
+            "sign": "Sign up",
+            "signOut":"Sign out"
         },
         "aboutMaik": "*Maik-agribusiness through the eyes of the author"
     },
@@ -71,6 +72,9 @@
         "name": "How can you be contacted:",
         "call": "Request a call",
         "date": "Select a date:",
+        "delivery":"Provide a delivery address",
+        "cash":"Cash",
+        "card":"Card",
         "order": "Order",
         "day": "Enter the number of days:",
         "number": "Contact Number",

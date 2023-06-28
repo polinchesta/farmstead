@@ -12,11 +12,17 @@ export function Login() {
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+        if (!login || !password) {
+            alert('Пожалуйста, введите логин и пароль');
+            return;
+          }
         const backendUrl = import.meta.env.VITE_BACKEND_URL;
-        const response = await axios.post(`${backendUrl}/login`, {
-            email: login,
-            password,
-        });
+        try {
+            const response = await axios.post(`${backendUrl}/login`, {
+              email: login,
+              password,
+            });
+      
 
         if (response.status === 200) {
             alert('Вы вошли в аккаунт');
@@ -33,7 +39,11 @@ export function Login() {
             });
             navigate('/');
         }
+    } catch (error) {
+        alert('Неправильный логин или пароль. Попробуйте еще раз.');
+      }
     }
+
 
     return (
         <div className="">

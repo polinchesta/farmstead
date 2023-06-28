@@ -10,10 +10,13 @@ import { farmsteadActions } from '../../../store/farmstead/farmsteadSlice';
 import { CommentType } from '../../../types/farmsteadsTypes';
 import { commentActions } from '../../../store/comments/comment';
 import axios from 'axios';
+import { useAuthUser } from "react-auth-kit";
 import { useIsAuthenticated } from "react-auth-kit";
 
 export default function ItemFarmstead() {
     const dispatch = useAppDispatch();
+    const authUser = useAuthUser();
+    const email = authUser()?.email ?? '';    
     const [comments, setComments] = useState<CommentType[]>([]);
     const farmstead = useAppSelector((state) => state.farmstead.farmstead);
     const commentsInfo = useAppSelector((state) => state.comment.comment) ?? [];
@@ -30,6 +33,7 @@ export default function ItemFarmstead() {
     const [newComment, setNewComment] = useState<CommentType>({
         id: generateUUID(),
         farmsteadId: farmsteadId,
+        email: email || '',
         content: '',
         date: ''
     });
@@ -93,7 +97,7 @@ export default function ItemFarmstead() {
     const handleCommentSubmit = async (newComment: CommentType) => {
         try {
             const currentDate = new Date().toISOString();
-            const updatedComment = { ...newComment, date: currentDate };
+            const updatedComment = { ...newComment, date: currentDate, email: email };
             const response = await axios.post(
                 `http://localhost:3002/comments`,
                 updatedComment
@@ -104,6 +108,7 @@ export default function ItemFarmstead() {
             setNewComment({
                 id: generateUUID(),
                 farmsteadId: farmsteadId,
+                email: email || '',
                 content: '',
                 date: ''
             });
@@ -236,7 +241,8 @@ export default function ItemFarmstead() {
                             commentsInfo
                                 .filter((comment) => comment.farmsteadId === currentFarmsteadId)
                                 .map((comment) => (
-                                    <div key={comment.id}>
+                                    <div key={comment.id} className={styles.comment}>
+                                        <p className={styles.email}>{comment.email}</p>
                                         <p className={styles.comment}>{comment.content}</p>
                                         <p className={styles.commentDate}>{new Date(comment.date).toLocaleDateString()}</p>
                                     </div>

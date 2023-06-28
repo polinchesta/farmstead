@@ -148,8 +148,8 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }
               textAlign: 'center'
             }}
           >
-            <option value="cash">Наличные</option>
-            <option value="card">Карта</option>
+            <option value="cash">{t.modal.cash}</option>
+            <option value="card">{t.modal.card}</option>
           </select>
           <div>
             <label htmlFor="day">{t.modal.day}</label>
@@ -161,7 +161,7 @@ const CustomModal: React.FC<CustomModalProps> = ({ title, onClose, farmsteadId }
               required
             />
           </div>
-          <h3>+375298412880</h3>
+          <h3>{t.modal.number} +375298412880</h3>
           <div className={styles.containerButton}>
             <button
               className={styles.buttonCall}

@@ -91,11 +91,6 @@ export function Header() {
                         <button className={styles.language}>
                             <a href="https://www.instagram.com/maik_grodno/" target="_blank">Instagram</a>
                         </button>
-                        {isAuthenticated() && (
-                            <button className={styles.block} onClick={handleSignOut}>
-                                {t.header.links.sign}
-                            </button>
-                        )}
                     </div>
                     <div className={styles.menu}>
                         <nav className={styles.blocks}>
@@ -113,6 +108,11 @@ export function Header() {
                                     {t.header.links.sign}
                                 </Link>
                             )}
+                            {isAuthenticated() && (
+                            <button className={styles.block} onClick={handleSignOut}>
+                                {t.header.links.signOut}
+                            </button>
+                        )}
                         </nav>
                     </div>
                 </div>
